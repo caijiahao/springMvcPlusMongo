@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+    <!--配置springmvc-->
+    <!--1.开启springmvc注解模式-->
+    <!--简化配置：
+        (1)主动注册DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter
+        (2)提供一系列功能：数据绑定，数字和日期的format @NumberFormt @DataTimeFormat，xml json默认的读写支持-->
+    <mvc:annotation-driven/>
+    <!--servlet-mapping-->
+    <!--2静态资源默认的servlet配置，（1）允许对静态资源的处理：js，gif    （2）允许使用“/”做整体映射-->
+    <!-- 容器默认的DefaultServletHandler处理 所有静态内容与无RequestMapping处理的URL-->
+    <mvc:default-servlet-handler/>
+    <!--3:配置jsp 显示viewResolver-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 4自动扫描且只扫描@Controller -->
+    <context:component-scan base-package="com.lida.mongo.controller" />
+
+    <!-- 定义无需Controller的url<->view直接映射 -->
+    <mvc:view-controller path="/" view-name="redirect:/goMongo/list"/>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
+</beans>
