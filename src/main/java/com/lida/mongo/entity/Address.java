@@ -43,4 +43,13 @@ public class Address {
     public void setNum(int num) {
         this.num = num;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", num=" + num +
+                '}';
+    }
 }

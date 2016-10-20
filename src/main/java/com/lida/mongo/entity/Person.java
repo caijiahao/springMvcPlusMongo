@@ -21,8 +21,7 @@ public class Person implements Serializable {
     public Person() {
     }
 
-    public Person(ObjectId id, String name, int age, Address address) {
-        this.id = id;
+    public Person( String name, int age, Address address) {
         this.name = name;
         this.age = age;
         this.address = address;
@@ -58,5 +57,15 @@ public class Person implements Serializable {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", address=" + address +
+                '}';
     }
 }
