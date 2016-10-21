@@ -1,0 +1,22 @@
+db.mengwei.insert({
+    title: 'PHP PHP 教程',
+    description: 'PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言',
+    by: '菜鸟教程',
+    url: 'http://www.runoob.com',
+    tags: ['php'],
+    likes: 200
+})
+db.mengwei.insert({title: 'Java 教程',
+    description: 'Java 是由Sun Microsystems公司于1995年5月推出的高级程序设计语言。',
+    by: '菜鸟教程',
+    url: 'http://www.runoob.com',
+    tags: ['java'],
+    likes: 150
+})
+db.mengwei.insert({title: 'MongoDB 教程',
+    description: 'MongoDB 是一个 Nosql 数据库',
+    by: '菜鸟教程',
+    url: 'http://www.runoob.com',
+    tags: ['mongodb'],
+    likes: 100
+})
