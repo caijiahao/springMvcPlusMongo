@@ -8,9 +8,9 @@ import java.util.List;
  * Created by DuLida on 2016/10/21.
  */
 public interface PersonMongoDao {
-    public List<Person> findAll();
-    public void insertPerson(Person user);
-    public void removePerson(String userName);
-    public void updatePerson();
-    public List<Person> findForRequery(String userName);
+     List<Person> findAll();
+     void insertPerson(Person user);
+     void removePerson(String userName);
+     void updatePerson();
+     List<Person> findForRequery(String userName);
 }

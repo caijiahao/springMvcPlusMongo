@@ -25,6 +25,7 @@ public class PersonDaoTest {
     private PersonDao personDao;
 
 
+    /*先往数据库中插入10个person*/
     @Test
     public void testMongo() {
         List<Person> persons = new ArrayList<Person>();
