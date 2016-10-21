@@ -14,12 +14,9 @@ import javax.annotation.Resource;
 @RequestMapping(value = "/goMongo")
 public class MongoController {
 
-    @Resource
-    private PersonDao personDao;
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public String go() {
-        System.out.println(personDao);
         return "mogoList";
     }
 
