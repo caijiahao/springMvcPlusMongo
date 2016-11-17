@@ -28,7 +28,7 @@ public class MongoController {
         personMongo.insertPerson(new Person("weiwei", 24, new Address("南王", "鑫达路", 10)));
         personMongo.removePerson("name3");
         personMongo.updatePerson();
-        log.debug("========================================================");
+        log.info("========================================================");
         System.out.println(personMongo.findAll());
         System.out.println(personMongo.findForRequery("weiwei"));
         log.debug("=========================================================================");
