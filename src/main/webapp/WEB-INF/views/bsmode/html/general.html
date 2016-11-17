@@ -1,0 +1,1704 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+ <!--<![endif]-->
+<!-- 开始头部 -->
+<head>
+    <meta charset="utf-8" />
+    <title>Metro By xmfdsh</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="Mosaddek" name="author" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="css/style-default.css" rel="stylesheet" id="style_color" />
+
+    <link rel="stylesheet" type="text/css" href="assets/gritter/css/jquery.gritter.css" />
+</head>
+<!-- 结束头部 -->
+<!-- 开始 Body -->
+<body class="fixed-top">
+    <!-- 开始 header 头部菜单 -->
+    <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+        <!-- 开始顶部的 navigation bar 导航菜单 -->
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <!--开始工具条 开关-->
+                <div class="sidebar-toggle-box hidden-phone">
+                    <div class="icon-reorder tooltips" data-placement="right" data-original-title="Metro By xmfdsh"></div>
+                </div>
+                <!--结束工具条 开关-->
+                <!-- 开始 Logo -->
+                <a class="brand" href="index.html">
+                    <img src="img/logo.png" alt="Metro Lab" />
+                </a>
+                <!-- 结束Logo -->
+
+                <div id="top_menu" class="nav notify-row">
+                    <!-- 开始通知 -->
+                    <ul class="nav top-menu">
+                        <!-- 开始设置 -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-tasks"></i>
+                                <span class="badge badge-important">2</span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <li>
+                                    <p>你有2条任务</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">控制台</div>
+                                            <div class="percent">44%</div>
+                                        </div>
+                                        <div class="progress progress-striped active no-margin-bot">
+                                            <div class="bar" style="width: 44%;"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">数据库更新</div>
+                                            <div class="percent">65%</div>
+                                        </div>
+                                        <div class="progress progress-striped progress-success active no-margin-bot">
+                                            <div class="bar" style="width: 65%;"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="external">
+                                    <a href="#">查看所有任务</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 结束设置 -->
+                        <!-- 开始下拉 收件箱 -->
+                        <li class="dropdown" id="header_inbox_bar">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-envelope-alt"></i>
+                                <span class="badge badge-important">2</span>
+                            </a>
+                            <ul class="dropdown-menu extended inbox">
+                                <li>
+                                    <p>你有2条消息</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="photo"><img src="img/avatar-mini.png" alt="avatar" /></span>
+                                        <span class="subject">
+                                            <span class="from">xmfdsh</span>
+                                            <span class="time">刚刚</span>
+                                        </span>
+                                        <span class="message">
+                                            Hello, 这是个消息例子.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="photo"><img src="img/avatar-mini.png" alt="avatar" /></span>
+                                        <span class="subject">
+                                            <span class="from">张视焕</span>
+                                            <span class="time">20分钟</span>
+                                        </span>
+                                        <span class="message">
+                                            Hi, 最近咋样?
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">查看所有信息</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 结束下拉 收件箱 -->
+                        <!-- 开始下拉 通知 -->
+                        <li class="dropdown" id="header_notification_bar">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                <i class="icon-bell-alt"></i>
+                                <span class="badge badge-warning">4</span>
+                            </a>
+                            <ul class="dropdown-menu extended notification">
+                                <li>
+                                    <p>你有4条提示信息</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="label label-important"><i class="icon-bolt"></i></span>
+                                        手机欠费
+                                        <span class="small italic">4分钟</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="label label-warning"><i class="icon-bell"></i></span>
+                                        windows激活过期
+                                        <span class="small italic">1小时</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="label label-important"><i class="icon-bolt"></i></span>
+                                        数据库奔溃
+                                        <span class="small italic">4小时</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="label label-success"><i class="icon-plus"></i></span>
+                                        世界杯要下注了
+                                        <span class="small italic">刚刚</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">查看所有通知</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 结束下拉 通知 -->
+
+                    </ul>
+                </div>
+                <!-- 结束通知 -->
+                <div class="top-nav ">
+                    <ul class="nav pull-right top-menu">
+                        <!-- BEGIN SUPPORT -->
+                        <li class="dropdown mtop5">
+
+                            <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="闲聊">
+                                <i class="icon-comments-alt"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown mtop5">
+                            <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="帮助">
+                                <i class="icon-headphones"></i>
+                            </a>
+                        </li>
+                        <!-- END SUPPORT -->
+                        <!-- 开始用户登录下拉菜单 -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="img/avatar1_small.jpg" alt="">
+                                <span class="username">xmfdsh</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu extended logout">
+                                <li><a href="#"><i class="icon-user"></i>我的资料</a></li>
+                                <li><a href="#"><i class="icon-cog"></i>我的设置</a></li>
+                                <li><a href="login.html"><i class="icon-key"></i>退出</a></li>
+                            </ul>
+                        </li>
+                        <!-- 结束用户菜单 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 结束顶部的 navigation bar 导航菜单 -->
+    </div>
+    <!-- 结束 header 头部菜单 -->
+    <!-- BEGIN CONTAINER -->
+    <div id="container" class="row-fluid">
+        <!-- 开始左侧 导航菜单 -->
+        <div class="sidebar-scroll">
+            <div id="sidebar" class="nav-collapse collapse">
+                <!-- 开始左侧 工具条菜单 -->
+                <ul class="sidebar-menu">
+                    <li class="sub-menu active">
+                        <a class="" href="index.html">
+                            <i class="icon-dashboard"></i>
+                            <span>控制台</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-book"></i>
+                            <span>UI 组件</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="general.html">通用</a></li>
+                            <li><a class="" href="button.html">按钮</a></li>
+                            <li><a class="" href="slider.html">滑动</a></li>
+                            <li><a class="" href="metro_view.html">Metro风格</a></li>
+                            <li><a class="" href="tabs_accordion.html">Tab选项卡 & 手风琴</a></li>
+                            <li><a class="" href="typography.html">文字排版</a></li>
+                            <li><a class="" href="tree_view.html">树菜单</a></li>
+                            <li><a class="" href="nestable.html">嵌套列表</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-cogs"></i>
+                            <span>插件</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="calendar.html">日历</a></li>
+                            <li><a class="" href="grids.html">网格</a></li>
+                            <li><a class="" href="chartjs.html">图表统计</a></li>
+                            <li><a class="" href="flot_chart.html">Flot图表</a></li>
+                            <li><a class="" href="gallery.html">相册</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-tasks"></i>
+                            <span>表单</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="form_layout.html">表单布局</a></li>
+                            <li><a class="" href="form_component.html">表单组件</a></li>
+                            <li><a class="" href="form_wizard.html">表单提示</a></li>
+                            <li><a class="" href="form_validation.html">表单验证</a></li>
+                            <li><a class="" href="dropzone.html">文件上传</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-th"></i>
+                            <span>数据表格</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="basic_table.html">简单表格</a></li>
+                            <li><a class="" href="dynamic_table.html">动态表格</a></li>
+                            <li><a class="" href="editable_table.html">可编辑表格</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-fire"></i>
+                            <span>Icon图标</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="font_awesome.html">FontAwesome图标</a></li>
+                            <li><a class="" href="glyphicons.html">Glyphicons图标</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="" href="javascript:;">
+                            <i class="icon-trophy"></i>
+                            <span>代码片段</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="general_portlet.html" class="">通用片段</a></li>
+                            <li><a href="draggable_portlet.html" class="">可拖拽片段</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="" href="javascript:;">
+                            <i class="icon-map-marker"></i>
+                            <span>地图</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="vector_map.html" class="">Vector地图</a></li>
+                            <li><a href="google_map.html" class="">Google地图</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-file-alt"></i>
+                            <span>基本页面</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="blank.html">空白页面</a></li>
+                            <li><a class="" href="blog.html">博客</a></li>
+                            <li><a class="" href="timeline.html">时间轴</a></li>
+                            <li><a class="" href="profile.html">个人资料</a></li>
+                            <li><a class="" href="about_us.html">关于我们</a></li>
+                            <li><a class="" href="contact_us.html">联系我们</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-glass"></i>
+                            <span>其他</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="lock.html">锁屏</a></li>
+                            <li><a class="" href="invoice.html">购物单</a></li>
+                            <li><a class="" href="pricing_tables.html">价目单</a></li>
+                            <li><a class="" href="search_result.html">搜索展示</a></li>
+                            <li><a class="" href="faq.html">帮助页面</a></li>
+                            <li><a class="" href="404.html">404错误页面</a></li>
+                            <li><a class="" href="500.html">500错误页面</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="" href="login.html">
+                            <i class="icon-user"></i>
+                            <span>登录页面</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- 结束左侧 工具条菜单 -->
+            </div>
+        </div>
+        <!-- 结束左侧 导航菜单 -->
+        <!-- 开始内容页 -->
+        <div id="main-content">
+            <!-- 开始页面容器-->
+            <div class="container-fluid">
+                <!-- 开始页面顶部-->
+                <div class="row-fluid">
+                    <div class="span12">
+                        <!-- 开始主题定制器-->
+                        <div id="theme-change" class="hidden-phone">
+                            <i class="icon-cogs"></i>
+                            <span class="settings">
+                                <span class="text">主题颜色:</span>
+                                <span class="colors">
+                                    <span class="color-default" data-style="default"></span>
+                                    <span class="color-green" data-style="green"></span>
+                                    <span class="color-gray" data-style="gray"></span>
+                                    <span class="color-purple" data-style="purple"></span>
+                                    <span class="color-red" data-style="red"></span>
+                                </span>
+                            </span>
+                        </div>
+                        <!-- 结束主题定制器-->
+                        <!-- 开始页面标题 & 面包屑导航-->
+                        <h3 class="page-title">
+                            控制台
+                        </h3>
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="#">首页</a>
+                                <span class="divider">/</span>
+                            </li>
+                            <li class="active">
+                                控制台
+                            </li>
+                            <li class="pull-right search-wrap">
+                                <form action="search_result.html" class="hidden-phone">
+                                    <div class="input-append search-input-area">
+                                        <input class="" id="appendedInputButton" type="text">
+                                        <button class="btn" type="button"><i class="icon-search"></i> </button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                        <!-- 结束页面标题 & 面包屑导航-->
+                    </div>
+
+                </div>
+                <!-- 开始页面主要内容页面-->
+                <div class="row-fluid">
+                    <div class="span12">
+                        <!-- BEGIN NOTIFICATION PORTLET-->
+                        <div class="widget red">
+                            <div class="widget-title">
+                                <h4><i class="icon-bar-chart"></i> Notifications</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="alert alert-block alert-warning fade in">
+                                    <button data-dismiss="alert" class="close" type="button">×</button>
+                                    <h4 class="alert-heading">Warning!</h4>
+                                    <p>
+                                        Best check yo self, you're not looking too good. Nulla vi
+                                    </p>
+                                </div>
+                                <pre>&lt;div class=&quot;alert alert-block alert-warning fade in&quot;&gt;
+    &lt;button data-dismiss=&quot;alert&quot; class=&quot;close&quot; type=&quot;button&quot;&gt;×&lt;/button&gt;
+    &lt;h4 class=&quot;alert-heading&quot;&gt;Warning!&lt;/h4&gt;
+    &lt;p&gt;
+        Best check yo self, you're not looking too good. Nulla vi
+    &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="alert alert-block alert-success fade in">
+                                    <button data-dismiss="alert" class="close" type="button">×</button>
+                                    <h4 class="alert-heading">Success!</h4>
+                                    <p>
+                                        Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                    </p>
+                                </div>
+                                <pre>&lt;div class=&quot;alert alert-block alert-success fade in&quot;&gt;
+    &lt;button data-dismiss=&quot;alert&quot; class=&quot;close&quot; type=&quot;button&quot;&gt;×&lt;/button&gt;
+    &lt;h4 class=&quot;alert-heading&quot;&gt;Success!&lt;/h4&gt;
+    &lt;p&gt;
+        Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+    &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="alert alert-block alert-info fade in">
+                                    <button data-dismiss="alert" class="close" type="button">×</button>
+                                    <h4 class="alert-heading">Info!</h4>
+                                    <p>
+                                        Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                    </p>
+                                </div>
+                                <pre>&lt;div class=&quot;alert alert-block alert-info fade in&quot;&gt;
+    &lt;button data-dismiss=&quot;alert&quot; class=&quot;close&quot; type=&quot;button&quot;&gt;×&lt;/button&gt;
+    &lt;h4 class=&quot;alert-heading&quot;&gt;Info!&lt;/h4&gt;
+    &lt;p&gt;
+        Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+    &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="alert alert-block alert-error fade in">
+                                    <button data-dismiss="alert" class="close" type="button">×</button>
+                                    <h4 class="alert-heading">Error!</h4>
+                                    <p>
+                                        Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                    </p>
+                                </div>
+                                <pre>&lt;div class=&quot;alert alert-block alert-error fade in&quot;&gt;
+    &lt;button data-dismiss=&quot;alert&quot; class=&quot;close&quot; type=&quot;button&quot;&gt;×&lt;/button&gt;
+    &lt;h4 class=&quot;alert-heading&quot;&gt;Error!&lt;/h4&gt;
+    &lt;p&gt;
+        Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+    &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END NOTIFICATION PORTLET-->
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <!-- BEGIN NAVIGATION PORTLET-->
+                        <div class="widget blue">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Navigation</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <!--BEGIN BASIC NAV-->
+                                <div class="bs-docs-example">
+                                    <h4>Basic navbar</h4>
+                                    <div class="navbar navbar-static" id="">
+                                        <div class="navbar-inner">
+                                            <div style="width: auto;" class="container">
+                                                <a href="#" class="brand">Vector Lab</a>
+                                                <ul role="navigation" class="nav">
+                                                    <li class="active">
+                                                        <a href="#">Home</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Link</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Link</a>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav pull-right">
+                                                    <li>
+                                                        <a href="#">Sing In</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <pre>&lt;div class=&quot;bs-docs-example&quot;&gt;
+    &lt;h4&gt;Basic navbar&lt;/h4&gt;
+    &lt;div class=&quot;navbar navbar-static&quot; id=&quot;&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div style=&quot;width: auto;&quot; class=&quot;container&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Vector Lab&lt;/a&gt;
+                &lt;ul role=&quot;navigation&quot; class=&quot;nav&quot;&gt;
+                    &lt;li class=&quot;active&quot;&gt;
+                        &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul class=&quot;nav pull-right&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;Sing In&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <!--END BASIC NAV-->
+                                <!--BEGIN DROPDOWN NAV-->
+                                <div class="bs-docs-example">
+                                    <h4>Dropdown navbar</h4>
+                                    <div class="navbar navbar-static" id="navbar-example">
+                                        <div class="navbar-inner">
+                                            <div style="width: auto;" class="container">
+                                                <a href="#" class="brand">Vector Lab</a>
+                                                <ul role="navigation" class="nav">
+                                                    <li class="dropdown">
+                                                        <a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="drop1">Dropdown <b class="caret"></b></a>
+                                                        <ul aria-labelledby="drop1" role="menu" class="dropdown-menu">
+                                                            <li role="presentation"><a href="../../../../google.com/default.htm" tabindex="-1" role="menuitem">Action</a></li>
+                                                            <li role="presentation"><a href="#anotherAction" tabindex="-1" role="menuitem">Another action</a></li>
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Something else here</a></li>
+                                                            <li class="divider" role="presentation"></li>
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Separated link</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a data-toggle="dropdown" class="dropdown-toggle" role="button" id="drop2" href="#">Dropdown 2 <b class="caret"></b></a>
+                                                        <ul aria-labelledby="drop2" role="menu" class="dropdown-menu">
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Action</a></li>
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Another action</a></li>
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Something else here</a></li>
+                                                            <li class="divider" role="presentation"></li>
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Separated link</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <ul class="nav pull-right">
+                                                    <li class="dropdown" id="fat-menu">
+                                                        <a data-toggle="dropdown" class="dropdown-toggle" role="button" id="drop3" href="#">Dropdown 3 <b class="caret"></b></a>
+                                                        <ul aria-labelledby="drop3" role="menu" class="dropdown-menu">
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Action</a></li>
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Another action</a></li>
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Something else here</a></li>
+                                                            <li class="divider" role="presentation"></li>
+                                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Separated link</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END DROPDOWN NAV-->
+                                <pre>&lt;!--BEGIN DROPDOWN NAV--&gt;
+&lt;div class=&quot;bs-docs-example&quot;&gt;
+    &lt;h4&gt;Dropdown navbar&lt;/h4&gt;
+    &lt;div class=&quot;navbar navbar-static&quot; id=&quot;navbar-example&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div style=&quot;width: auto;&quot; class=&quot;container&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Vector Lab&lt;/a&gt;
+                &lt;ul role=&quot;navigation&quot; class=&quot;nav&quot;&gt;
+                    &lt;li class=&quot;dropdown&quot;&gt;
+                        &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle&quot; role=&quot;button&quot; href=&quot;#&quot; id=&quot;drop1&quot;&gt;Dropdown &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+                        &lt;ul aria-labelledby=&quot;drop1&quot; role=&quot;menu&quot; class=&quot;dropdown-menu&quot;&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;../../../../google.com/default.htm&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#anotherAction&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;divider&quot; role=&quot;presentation&quot;&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;dropdown&quot;&gt;
+                        &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle&quot; role=&quot;button&quot; id=&quot;drop2&quot; href=&quot;#&quot;&gt;Dropdown 2 &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+                        &lt;ul aria-labelledby=&quot;drop2&quot; role=&quot;menu&quot; class=&quot;dropdown-menu&quot;&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;divider&quot; role=&quot;presentation&quot;&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul class=&quot;nav pull-right&quot;&gt;
+                    &lt;li class=&quot;dropdown&quot; id=&quot;fat-menu&quot;&gt;
+                        &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle&quot; role=&quot;button&quot; id=&quot;drop3&quot; href=&quot;#&quot;&gt;Dropdown 3 &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+                        &lt;ul aria-labelledby=&quot;drop3&quot; role=&quot;menu&quot; class=&quot;dropdown-menu&quot;&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                            &lt;li class=&quot;divider&quot; role=&quot;presentation&quot;&gt;&lt;/li&gt;
+                            &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--END DROPDOWN NAV--&gt;
+</pre>
+                                <!--BEGIN RESPONSIVE NAV-->
+                                <div class="bs-docs-example">
+                                    <h4>Responsive navbar</h4>
+                                    <div class="navbar">
+                                        <div class="navbar-inner">
+                                            <div class="container">
+                                                <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </a>
+                                                <a href="#" class="brand">Vector Lab</a>
+                                                <div class="nav-collapse collapse navbar-responsive-collapse">
+                                                    <ul class="nav">
+                                                        <li class="active"><a href="#">Home</a></li>
+                                                        <li><a href="#">Link</a></li>
+                                                        <li><a href="#">Link</a></li>
+                                                        <li class="dropdown">
+                                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#">Action</a></li>
+                                                                <li><a href="#">Another action</a></li>
+                                                                <li><a href="#">Something else here</a></li>
+                                                                <li class="divider"></li>
+                                                                <li class="nav-header">Nav header</li>
+                                                                <li><a href="#">Separated link</a></li>
+                                                                <li><a href="#">One more separated link</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <form action="" class="navbar-search pull-left">
+                                                        <input type="text" placeholder="Search" class="search-query input-medium">
+                                                    </form>
+                                                    <ul class="nav pull-right">
+                                                        <li><a href="#">Link</a></li>
+                                                        <li class="divider-vertical"></li>
+                                                        <li class="dropdown">
+                                                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#">Action</a></li>
+                                                                <li><a href="#">Another action</a></li>
+                                                                <li><a href="#">Something else here</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="#">Separated link</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--END RESPONSIVE NAV-->
+                                <pre>&lt;!--BEGIN RESPONSIVE NAV--&gt;
+&lt;div class=&quot;bs-docs-example&quot;&gt;
+    &lt;h4&gt;Responsive navbar&lt;/h4&gt;
+    &lt;div class=&quot;navbar&quot;&gt;
+        &lt;div class=&quot;navbar-inner&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
+                &lt;a data-target=&quot;.navbar-responsive-collapse&quot; data-toggle=&quot;collapse&quot; class=&quot;btn btn-navbar&quot;&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;brand&quot;&gt;Vector Lab&lt;/a&gt;
+                &lt;div class=&quot;nav-collapse collapse navbar-responsive-collapse&quot;&gt;
+                    &lt;ul class=&quot;nav&quot;&gt;
+                        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;dropdown&quot;&gt;
+                            &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle&quot; href=&quot;#&quot;&gt;Dropdown &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+                            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                                &lt;li class=&quot;nav-header&quot;&gt;Nav header&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;form action=&quot;&quot; class=&quot;navbar-search pull-left&quot;&gt;
+                        &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot; class=&quot;search-query input-medium&quot;&gt;
+                    &lt;/form&gt;
+                    &lt;ul class=&quot;nav pull-right&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class=&quot;divider-vertical&quot;&gt;&lt;/li&gt;
+                        &lt;li class=&quot;dropdown&quot;&gt;
+                            &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle&quot; href=&quot;#&quot;&gt;Dropdown &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+                            &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                                &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <!--BEGIN PILLS NAV-->
+                                <div class="bs-docs-example">
+                                    <h4>Pills navbar</h4>
+                                    <ul class="nav nav-pills">
+                                        <li class="active"><a href="#">Regular link</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" data-toggle="dropdown" role="button" id="drop4" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+                                            <ul aria-labelledby="drop4" role="menu" class="dropdown-menu" id="menu1">
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Action</a></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Another action</a></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Something else here</a></li>
+                                                <li class="divider" role="presentation"></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Separated link</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" data-toggle="dropdown" role="button" id="drop5" class="dropdown-toggle">Dropdown 2 <b class="caret"></b></a>
+                                            <ul aria-labelledby="drop5" role="menu" class="dropdown-menu" id="menu2">
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Action</a></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Another action</a></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Something else here</a></li>
+                                                <li class="divider" role="presentation"></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Separated link</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" data-toggle="dropdown" role="button" id="drop6" class="dropdown-toggle">Dropdown 3 <b class="caret"></b></a>
+                                            <ul aria-labelledby="drop5" role="menu" class="dropdown-menu" id="menu3">
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Action</a></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Another action</a></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Something else here</a></li>
+                                                <li class="divider" role="presentation"></li>
+                                                <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Separated link</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--END PILLS NAV-->
+                                <pre>&lt;!--BEGIN PILLS NAV--&gt;
+&lt;div class=&quot;bs-docs-example&quot;&gt;
+    &lt;h4&gt;Pills navbar&lt;/h4&gt;
+    &lt;ul class=&quot;nav nav-pills&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; id=&quot;drop4&quot; class=&quot;dropdown-toggle&quot;&gt;Dropdown &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+            &lt;ul aria-labelledby=&quot;drop4&quot; role=&quot;menu&quot; class=&quot;dropdown-menu&quot; id=&quot;menu1&quot;&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;divider&quot; role=&quot;presentation&quot;&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; id=&quot;drop5&quot; class=&quot;dropdown-toggle&quot;&gt;Dropdown 2 &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+            &lt;ul aria-labelledby=&quot;drop5&quot; role=&quot;menu&quot; class=&quot;dropdown-menu&quot; id=&quot;menu2&quot;&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;divider&quot; role=&quot;presentation&quot;&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;dropdown&quot;&gt;
+            &lt;a href=&quot;#&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; id=&quot;drop6&quot; class=&quot;dropdown-toggle&quot;&gt;Dropdown 3 &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+            &lt;ul aria-labelledby=&quot;drop5&quot; role=&quot;menu&quot; class=&quot;dropdown-menu&quot; id=&quot;menu3&quot;&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;divider&quot; role=&quot;presentation&quot;&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot; tabindex=&quot;-1&quot; role=&quot;menuitem&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--END PILLS NAV--&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END NAVIGATION PORTLET-->
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <!-- BEGIN ALERTS PORTLET-->
+                        <div class="widget orange">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Alerts</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="alert">
+                                    <button class="close" data-dismiss="alert">×</button>
+                                    <strong>Warning!</strong> Best check yo self, you're not looking too good.
+                                </div>
+                                <pre>&lt;div class=&quot;alert&quot;&gt;
+    &lt;button class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;×&lt;/button&gt;
+    &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
+&lt;/div&gt;
+</pre>
+                                <div class="alert alert-success">
+                                    <button class="close" data-dismiss="alert">×</button>
+                                    <strong>Success!</strong> Best check yo self, you're not looking too good.
+                                </div>
+                                <pre>&lt;div class=&quot;alert alert-success&quot;&gt;
+    &lt;button class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;×&lt;/button&gt;
+    &lt;strong&gt;Success!&lt;/strong&gt; Best check yo self, you're not looking too good.
+&lt;/div&gt;
+</pre>
+                                <div class="alert alert-info">
+                                    <button class="close" data-dismiss="alert">×</button>
+                                    <strong>Info!</strong> Best check yo self, you're not looking too good.
+                                </div>
+                                <pre>&lt;div class=&quot;alert alert-info&quot;&gt;
+    &lt;button class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;×&lt;/button&gt;
+    &lt;strong&gt;Info!&lt;/strong&gt; Best check yo self, you're not looking too good.
+&lt;/div&gt;
+</pre>
+                                <div class="alert alert-error">
+                                    <button class="close" data-dismiss="alert">×</button>
+                                    <strong>Error!</strong> Best check yo self, you're not looking too good.
+                                </div>
+                                <pre>&lt;div class=&quot;alert alert-error&quot;&gt;
+    &lt;button class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;×&lt;/button&gt;
+    &lt;strong&gt;Error!&lt;/strong&gt; Best check yo self, you're not looking too good.
+&lt;/div&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END ALERTS PORTLET-->
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <!-- BEGIN PROGRESS BARS PORTLET-->
+                        <div class="widget green">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Basic Progress Bars</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="progress">
+                                    <div style="width: 20%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress&quot;&gt;
+    &lt;div style=&quot;width: 20%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-success">
+                                    <div style="width: 40%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-success&quot;&gt;
+    &lt;div style=&quot;width: 40%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-warning">
+                                    <div style="width: 60%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-warning&quot;&gt;
+    &lt;div style=&quot;width: 60%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-danger">
+                                    <div style="width: 80%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-danger&quot;&gt;
+    &lt;div style=&quot;width: 80%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <h4>Stacked</h4>
+                                <div class="progress">
+                                    <div class="bar bar-success" style="width: 25%;"></div>
+                                    <div class="bar bar-warning" style="width: 30%;"></div>
+                                    <div class="bar bar-danger" style="width: 15%;"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress&quot;&gt;
+    &lt;div class=&quot;bar bar-success&quot; style=&quot;width: 25%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar bar-warning&quot; style=&quot;width: 30%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar bar-danger&quot; style=&quot;width: 15%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-striped">
+                                    <div class="bar bar-success" style="width: 25%;"></div>
+                                    <div class="bar bar-warning" style="width: 30%;"></div>
+                                    <div class="bar bar-danger" style="width: 15%;"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped&quot;&gt;
+    &lt;div class=&quot;bar bar-success&quot; style=&quot;width: 25%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar bar-warning&quot; style=&quot;width: 30%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar bar-danger&quot; style=&quot;width: 15%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-striped active">
+                                    <div class="bar bar-success" style="width: 25%;"></div>
+                                    <div class="bar bar-warning" style="width: 30%;"></div>
+                                    <div class="bar bar-danger" style="width: 15%;"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped active&quot;&gt;
+    &lt;div class=&quot;bar bar-success&quot; style=&quot;width: 25%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar bar-warning&quot; style=&quot;width: 30%;&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bar bar-danger&quot; style=&quot;width: 15%;&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END PROGRESS BARS PORTLET-->
+                        <!-- BEGIN PROGRESS BARS PORTLET-->
+                        <div class="widget purple">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Striped Progress Bars</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="progress progress-striped">
+                                    <div style="width: 20%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped&quot;&gt;
+    &lt;div style=&quot;width: 20%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-striped progress-success">
+                                    <div style="width: 40%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped progress-success&quot;&gt;
+    &lt;div style=&quot;width: 40%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-striped progress-warning">
+                                    <div style="width: 60%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped progress-warning&quot;&gt;
+    &lt;div style=&quot;width: 60%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-striped progress-danger">
+                                    <div style="width: 80%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped progress-danger&quot;&gt;
+    &lt;div style=&quot;width: 80%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END PROGRESS BARS PORTLET-->
+                        <!-- BEGIN ANIMATED PROGRESS BARS PORTLET-->
+                        <div class="widget yellow">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Animated Progress Bars</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="progress progress-striped active">
+                                    <div style="width: 20%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped active&quot;&gt;
+    &lt;div style=&quot;width: 20%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-striped progress-success active">
+                                    <div style="width: 40%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped progress-success active&quot;&gt;
+    &lt;div style=&quot;width: 40%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-striped progress-warning active">
+                                    <div style="width: 60%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped progress-warning active&quot;&gt;
+    &lt;div style=&quot;width: 60%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                <div class="progress progress-striped progress-danger active">
+                                    <div style="width: 80%;" class="bar"></div>
+                                </div>
+                                <pre>&lt;div class=&quot;progress progress-striped progress-danger active&quot;&gt;
+    &lt;div style=&quot;width: 80%;&quot; class=&quot;bar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END ANIMATED PROGRESS BARS PORTLET-->
+                    </div>
+                    <div class="span6">
+                        <!-- BEGIN TOOLTIPS PORTLET-->
+                        <div class="widget">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Tooltips</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <p>
+                                    Tight pants next level keffiyeh
+                                    <a href="#" class="tooltips" data-original-title="Default tooltips">you probably</a> haven't heard of them.
+                                    Photo booth beard raw denim letterpress vegan messenger bag stumptown.
+                                    <a href="#" class="tooltips" data-original-title="Another tooltips">have a</a>
+                                    terry richardson vinyl chambray.
+                                    <a href="#" class="tooltips" data-original-title="The last tip!">twitter handle</a>
+                                    freegan cred raw denim single-origin coffee viral.
+                                </p>
+                                <p class="">
+                                    <button class="btn tooltips" data-placement="top" data-original-title="tooltips in top">Top</button>
+                                    <button class="btn tooltips" data-placement="left" data-original-title="tooltips in left">Left</button>
+                                    <button class="btn tooltips" data-placement="right" data-original-title="tooltips in right">Right</button>
+                                    <button class="btn tooltips" data-placement="bottom" data-original-title="tooltips in bottom">Bottom</button>
+                                </p>
+                                <pre>&lt;p&gt;
+    Tight pants next level keffiyeh
+    &lt;a href=&quot;#&quot; class=&quot;tooltips&quot; data-original-title=&quot;Default tooltips&quot;&gt;you probably&lt;/a&gt; haven't heard of them.
+    Photo booth beard raw denim letterpress vegan messenger bag stumptown.
+    &lt;a href=&quot;#&quot; class=&quot;tooltips&quot; data-original-title=&quot;Another tooltips&quot;&gt;have a&lt;/a&gt;
+    terry richardson vinyl chambray.
+    &lt;a href=&quot;#&quot; class=&quot;tooltips&quot; data-original-title=&quot;The last tip!&quot;&gt;twitter handle&lt;/a&gt;
+    freegan cred raw denim single-origin coffee viral.
+&lt;/p&gt;
+&lt;p class=&quot;&quot;&gt;
+    &lt;button class=&quot;btn tooltips&quot; data-placement=&quot;top&quot; data-original-title=&quot;tooltips in top&quot;&gt;Top&lt;/button&gt;
+    &lt;button class=&quot;btn tooltips&quot; data-placement=&quot;left&quot; data-original-title=&quot;tooltips in left&quot;&gt;Left&lt;/button&gt;
+    &lt;button class=&quot;btn tooltips&quot; data-placement=&quot;right&quot; data-original-title=&quot;tooltips in right&quot;&gt;Right&lt;/button&gt;
+    &lt;button class=&quot;btn tooltips&quot; data-placement=&quot;bottom&quot; data-original-title=&quot;tooltips in bottom&quot;&gt;Bottom&lt;/button&gt;
+&lt;/p&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END TOOLTIPS PORTLET-->
+                        <!-- BEGIN POPOVERS PORTLET-->
+                        <div class="widget green">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Popovers</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <p>
+                                    Tight pants next level keffiyeh
+                                    <a href="javascript:;" class="popovers" data-placement="left" data-content="popovers body goes here! popovers body goes here!" data-original-title="Default popovers">trigger me on click</a> haven't heard of them.
+                                    Photo booth beard raw denim letterpress vegan messenger bag stumptown. loem ipsum dolor
+                                    <a href="javascript:;" class="popovers" data-placement="top" data-trigger="hover" data-content="popovers body goes here! popovers body goes here!" data-original-title="Another popovers">trigger me on hover</a>
+                                    terry richardson vinyl chambray. Beard stumptown. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa.
+                                </p>
+                                <p class="">
+                                    <button class="btn popovers" data-trigger="hover" data-placement="top" data-content="popovers body goes here! popovers body goes here!" data-original-title="popovers in top">Top</button>
+                                    <button class="btn popovers" data-trigger="hover" data-placement="left" data-content="popovers body goes here! popovers body goes here!" data-original-title="popovers in left">Left</button>
+                                    <button class="btn popovers" data-trigger="hover" data-placement="right" data-content="popovers body goes here! popovers body goes here!" data-original-title="popovers in right">Right</button>
+                                    <button class="btn popovers" data-trigger="hover" data-placement="bottom" data-content="popovers body goes here! popovers body goes here!" data-original-title="popovers in bottom">Bottom</button>
+                                </p>
+                                <pre>&lt;p&gt;
+    Tight pants next level keffiyeh
+    &lt;a href=&quot;javascript:;&quot; class=&quot;popovers&quot; data-placement=&quot;left&quot; data-content=&quot;popovers body goes here! popovers body goes here!&quot; data-original-title=&quot;Default popovers&quot;&gt;trigger me on click&lt;/a&gt; haven't heard of them.
+    Photo booth beard raw denim letterpress vegan messenger bag stumptown. loem ipsum dolor
+    &lt;a href=&quot;javascript:;&quot; class=&quot;popovers&quot; data-placement=&quot;top&quot; data-trigger=&quot;hover&quot; data-content=&quot;popovers body goes here! popovers body goes here!&quot; data-original-title=&quot;Another popovers&quot;&gt;trigger me on hover&lt;/a&gt;
+    terry richardson vinyl chambray. Beard stumptown. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa.
+&lt;/p&gt;
+&lt;p class=&quot;&quot;&gt;
+    &lt;button class=&quot;btn popovers&quot; data-trigger=&quot;hover&quot; data-placement=&quot;top&quot; data-content=&quot;popovers body goes here! popovers body goes here!&quot; data-original-title=&quot;popovers in top&quot;&gt;Top&lt;/button&gt;
+    &lt;button class=&quot;btn popovers&quot; data-trigger=&quot;hover&quot; data-placement=&quot;left&quot; data-content=&quot;popovers body goes here! popovers body goes here!&quot; data-original-title=&quot;popovers in left&quot;&gt;Left&lt;/button&gt;
+    &lt;button class=&quot;btn popovers&quot; data-trigger=&quot;hover&quot; data-placement=&quot;right&quot; data-content=&quot;popovers body goes here! popovers body goes here!&quot; data-original-title=&quot;popovers in right&quot;&gt;Right&lt;/button&gt;
+    &lt;button class=&quot;btn popovers&quot; data-trigger=&quot;hover&quot; data-placement=&quot;bottom&quot; data-content=&quot;popovers body goes here! popovers body goes here!&quot; data-original-title=&quot;popovers in bottom&quot;&gt;Bottom&lt;/button&gt;
+&lt;/p&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END POPOVERS PORTLET-->
+                        <!-- BEGIN MODAL DIALOG PORTLET-->
+                        <div class="widget red">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Modal Dialogs</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body ">
+                                <h5>Click on below buttons to check it out.</h5>
+                                <!-- Button to trigger modal -->
+                                <a href="#myModal1" role="button" class="btn btn-primary" data-toggle="modal">Dialog</a>
+                                <a href="#myModal3" role="button" class="btn btn-warning" data-toggle="modal">Confirm</a>
+                                <a href="#myModal4" role="button" class="btn btn-success" data-toggle="modal">Success</a>
+                                <a href="#myModal2" role="button" class="btn btn-danger" data-toggle="modal">Alert</a>
+                                <!-- Modal -->
+                                <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h3 id="myModalLabel1">Modal Header</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Body goes here...</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                                        <button class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                                <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h3 id="myModalLabel2">Alert Header</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Body goes here...</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button data-dismiss="modal" class="btn btn-primary">OK</button>
+                                    </div>
+                                </div>
+                                <div id="myModal3" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h3 id="myModalLabel3">Confirm Header</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Body goes here...</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                                        <button data-dismiss="modal" class="btn btn-primary">Confirm</button>
+                                    </div>
+                                </div>
+                                <div id="myModal4" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h3 id="myModalLabel4">Success Header</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Body goes here...</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                                        <button data-dismiss="modal" class="btn btn-success">Success</button>
+                                    </div>
+                                </div>
+                                <pre>&lt;h5&gt;Click on below buttons to check it out.&lt;/h5&gt;
+&lt;!-- Button to trigger modal --&gt;
+&lt;a href=&quot;#myModal1&quot; role=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;modal&quot;&gt;Dialog&lt;/a&gt;
+&lt;a href=&quot;#myModal3&quot; role=&quot;button&quot; class=&quot;btn btn-warning&quot; data-toggle=&quot;modal&quot;&gt;Confirm&lt;/a&gt;
+&lt;a href=&quot;#myModal4&quot; role=&quot;button&quot; class=&quot;btn btn-success&quot; data-toggle=&quot;modal&quot;&gt;Success&lt;/a&gt;
+&lt;a href=&quot;#myModal2&quot; role=&quot;button&quot; class=&quot;btn btn-danger&quot; data-toggle=&quot;modal&quot;&gt;Alert&lt;/a&gt;
+&lt;!-- Modal --&gt;
+&lt;div id=&quot;myModal1&quot; class=&quot;modal hide fade&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel1&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;×&lt;/button&gt;
+        &lt;h3 id=&quot;myModalLabel1&quot;&gt;Modal Header&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;p&gt;Body goes here...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button class=&quot;btn&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;Close&lt;/button&gt;
+        &lt;button class=&quot;btn btn-primary&quot;&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;myModal2&quot; class=&quot;modal hide fade&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel2&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;×&lt;/button&gt;
+        &lt;h3 id=&quot;myModalLabel2&quot;&gt;Alert Header&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;p&gt;Body goes here...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button data-dismiss=&quot;modal&quot; class=&quot;btn btn-primary&quot;&gt;OK&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;myModal3&quot; class=&quot;modal hide fade&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel3&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;×&lt;/button&gt;
+        &lt;h3 id=&quot;myModalLabel3&quot;&gt;Confirm Header&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;p&gt;Body goes here...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button class=&quot;btn&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;Close&lt;/button&gt;
+        &lt;button data-dismiss=&quot;modal&quot; class=&quot;btn btn-primary&quot;&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;myModal4&quot; class=&quot;modal hide fade&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel3&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;×&lt;/button&gt;
+        &lt;h3 id=&quot;myModalLabel4&quot;&gt;Success Header&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;p&gt;Body goes here...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button class=&quot;btn&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;Close&lt;/button&gt;
+        &lt;button data-dismiss=&quot;modal&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END MODAL DIALOG PORTLET-->
+                        <!-- BEGIN PULSATE PORTLET-->
+                        <div class="widget purple">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Pulsate</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body ">
+                                <h5>Click on below buttons to check it out.</h5>
+                                <a href="javascript:;" class="btn" id="pulsate-regular">Pulsate regular</a>
+                                <a href="javascript:;" class="btn btn-success" id="pulsate-once">Pulsate once</a>
+                                <a href="javascript:;" class="btn btn-info" id="pulsate-hover">Pulsate hover</a>
+                                <div class="space10 visible-phone visible-tablet"></div>
+                                <a href="javascript:;" class="btn btn-danger" id="pulsate-crazy">Crazy pulsate :)</a>
+                                <pre>&lt;h5&gt;Click on below buttons to check it out.&lt;/h5&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn&quot; id=&quot;pulsate-regular&quot;&gt;Pulsate regular&lt;/a&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn btn-success&quot; id=&quot;pulsate-once&quot;&gt;Pulsate once&lt;/a&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn btn-info&quot; id=&quot;pulsate-hover&quot;&gt;Pulsate hover&lt;/a&gt;
+&lt;div class=&quot;space10 visible-phone visible-tablet&quot;&gt;&lt;/div&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn btn-danger&quot; id=&quot;pulsate-crazy&quot;&gt;Crazy pulsate :)&lt;/a&gt;
+</pre>
+                            </div>
+                            
+                        </div>
+                        <!-- END PULSATE PORTLET-->
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <!--BEGIN LABEL & BADGE PORTLET-->
+                        <div class="widget blue">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Labels and Badges</h4>
+                                <span class="tools">
+                                    <a class="icon-chevron-down" href="javascript:;"></a>
+                                    <a class="icon-remove" href="javascript:;"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Badges</th>
+                                            <th>Labels</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Default
+                                            </td>
+                                            <td>
+                                                <span class="badge">1</span>
+                                            </td>
+                                            <td>
+                                                <span class="label">Default</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Success
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">2</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-success">Success</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Warning
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">4</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-warning">Warning</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Important
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-important">6</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-important">Important</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Info
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-info">8</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-info">Info</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Inverse
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-inverse">10</span>
+                                            </td>
+                                            <td>
+                                                <span class="label label-inverse">Inverse</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <pre>&lt;table class=&quot;table table-bordered table-striped&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Badges&lt;/th&gt;
+            &lt;th&gt;Labels&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Default
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;badge&quot;&gt;1&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;label&quot;&gt;Default&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Success
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;badge badge-success&quot;&gt;2&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Warning
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;badge badge-warning&quot;&gt;4&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;label label-warning&quot;&gt;Warning&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Important
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;badge badge-important&quot;&gt;6&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;label label-important&quot;&gt;Important&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Info
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;badge badge-info&quot;&gt;8&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;label label-info&quot;&gt;Info&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                Inverse
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;badge badge-inverse&quot;&gt;10&lt;/span&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                &lt;span class=&quot;label label-inverse&quot;&gt;Inverse&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!--END LABEL & BADGE PORTLET-->
+                    </div>
+                    <div class="span6">
+                        <!-- BEGIN PAGINATION PORTLET-->
+                        <div class="widget">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Pagination</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body">
+                                <div class="pagination pagination-large">
+                                    <ul>
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li class="hidden-phone"><a href="#">4</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pagination">
+                                    <ul>
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pagination pagination-small">
+                                    <ul>
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pagination pagination-mini">
+                                    <ul>
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pagination pagination-mini pagination-centered">
+                                    <ul>
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pagination pagination-mini pagination-right">
+                                    <ul>
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div>
+                                <pre>&lt;div class=&quot;pagination pagination-large&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;«&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;hidden-phone&quot;&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;»&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;pagination&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;«&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;»&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;pagination pagination-small&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;«&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;»&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;pagination pagination-mini&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;«&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;»&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;pagination pagination-mini pagination-centered&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;«&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;»&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;pagination pagination-mini pagination-right&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;«&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;»&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END PAGINATION PORTLET-->
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span6">
+                        <!-- BEGIN GRITTER NOTIFICATIONS PORTLET-->
+                        <div class="widget orange">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Gritter Notifications</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body ">
+                                <h5>Click on below buttons to check it out.</h5>
+                                <a href="javascript:;" class="btn " id="add-regular">Regular</a>
+                                <a href="javascript:;" class="btn btn-success" id="add-sticky">Sticky</a>
+                                <a href="javascript:;" class="btn btn-info" id="add-without-image">Imageless</a>
+                                <div class="space10 visible-phone visible-tablet"></div>
+                                <a href="javascript:;" class="btn btn-warning" id="add-gritter-light">Light</a>
+                                <a href="javascript:;" class="btn btn-success" id="add-max">Max of 3</a>
+                                <a href="#" class="btn btn-info" id="remove-all">Remove all</a>
+                                <pre>&lt;h5&gt;Click on below buttons to check it out.&lt;/h5&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn &quot; id=&quot;add-regular&quot;&gt;Regular&lt;/a&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn btn-success&quot; id=&quot;add-sticky&quot;&gt;Sticky&lt;/a&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn btn-info&quot; id=&quot;add-without-image&quot;&gt;Imageless&lt;/a&gt;
+&lt;div class=&quot;space10 visible-phone visible-tablet&quot;&gt;&lt;/div&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn btn-warning&quot; id=&quot;add-gritter-light&quot;&gt;Light&lt;/a&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn btn-success&quot; id=&quot;add-max&quot;&gt;Max of 3&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-info&quot; id=&quot;remove-all&quot;&gt;Remove all&lt;/a&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END GRITTER NOTIFICATIONS PORTLET-->
+                    </div>
+                    <div class="span6">
+                        <!-- BEGIN PAGER PORTLET-->
+                        <div class="widget green">
+                            <div class="widget-title">
+                                <h4><i class="icon-reorder"></i> Pager</h4>
+                                <span class="tools">
+                                    <a href="javascript:;" class="icon-chevron-down"></a>
+                                    <a href="javascript:;" class="icon-remove"></a>
+                                </span>
+                            </div>
+                            <div class="widget-body ">
+                                <ul class="pager">
+                                    <li><a href="#">Previous</a></li>
+                                    <li><a href="#">Next</a></li>
+                                </ul>
+                                <ul class="pager">
+                                    <li class="previous">
+                                        <a href="#">&larr; Older</a>
+                                    </li>
+                                    <li class="next">
+                                        <a href="#">Newer &rarr;</a>
+                                    </li>
+                                </ul>
+                                <pre>&lt;ul class=&quot;pager&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&quot;pager&quot;&gt;
+    &lt;li class=&quot;previous&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;&amp;larr; Older&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;next&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Newer &amp;rarr;&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                            </div>
+                        </div>
+                        <!-- END PAGER PORTLET-->
+                    </div>
+                </div>
+                <!-- 结束页面主要内容页面-->
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- BEGIN FOOTER -->
+    <div id="footer">
+        Copyright © 2014 四小狼工作室 Powered by xmfdsh.
+    </div>
+    <!-- END FOOTER -->
+    <!-- 开始加载 Js文件 -->
+    <!-- 在底部加载Js文件，可以减少加载时间 -->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <!-- ie8 fixes -->
+    <!--[if lt IE 9]>
+    <script src="js/excanvas.js"></script>
+    <script src="js/respond.js"></script>
+    <![endif]-->
+    <!--为全部页面加载的公共Js文件-->
+    <script src="js/common-scripts.js"></script>
+
+    <!--仅为此页面使用的Js文件-->
+    <!-- 结束加载Js文件 -->
+</body>
+</html>

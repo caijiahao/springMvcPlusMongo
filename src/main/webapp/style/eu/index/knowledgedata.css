@@ -1,0 +1,75 @@
+.searchbox{ position: relative;}
+.searchbox input{ padding: 7px 50px 7px 10px; width: 100%; color: #49525c; font-size: 14px; line-height: 17px; background-color: #e1eaf2; border: 1px solid #045bb2; border-radius: 4px; box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1); outline: 0; box-sizing: border-box;}
+.searchbox button{ position: absolute; top: 0; right: 0; width: 40px; height: 100%; background: #0e78e7; background: -webkit-linear-gradient(top,#0e7bef,#0d73da); background: linear-gradient(to bottom,#0e7bef,#0d73da); border: 1px solid #045bb2; border-top-right-radius: 4px; border-bottom-right-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,.05),inset 0 1px 1px rgba(255,255,255,.15); box-sizing: border-box; outline: 0; cursor: pointer;}
+.searchbox button i{ background: transparent url("../images/littleicon2.png") no-repeat; }
+.searchbox button .search_icon{ background-position: -82px 0; width: 15px; height: 15px; position:absolute; top: 8px; left: 10px;}
+
+.knowledgecontent{ width: 960px; height: auto; padding: 20px 0; margin: 0 auto; overflow: hidden;}
+.knowledgecontent .widget{ width: 960px;}
+
+.selectknowledge{ width: 960px; height: 41px; background: url("../images/index/basis.png") no-repeat; position:relative}
+.selectknowledge ul{ width: 960px; height: 41px; display: block; list-style: none; padding: 0px;}
+.selectknowledge ul li{ float: left; width: 145px; height: 41px; display: block; position: relative;  margin-top: -5px;  cursor: pointer;}
+.selectknowledge .itemlabel{ width: 145px; height: 41px; z-index: -999; background: url("../images/index/label_s.png") no-repeat; position: relative;}
+.selectknowledge .selectedlabel1{ background: url("../images/index/label1.png") no-repeat; z-index: 100;}
+.selectknowledge .selectedlabel2{ background: url("../images/index/label2.png") no-repeat; z-index: 100;}
+.selectknowledge .selectedlabel3{ background: url("../images/index/label3.png") no-repeat; z-index: 100;}
+.selectknowledge .selectedlabel4{ background: url("../images/index/label4.png") no-repeat; z-index: 100;}
+.selectknowledge .searchknowledge{ width: 240px; height: 35px; background: url("../images/index/sss.png") no-repeat; position: absolute; top: -3px; right: 0px; cursor: pointer;}
+.selectknowledge .searchknowledge input{ width: 210px; height: 35px; border: 0px transparent; padding: 3px 10px; font-size: 16px; background: transparent; outline: none; font-family: "微软雅黑", "宋体", "Times New Roman";}
+
+
+.knowledgelist ul li{ float: left; width:100%; padding:10px 0; border-bottom: dashed #D5D5D5 1px;}
+.knowledge_title{ color:  #259; font-size:14px; display:block; width:100%;}
+.knowledge_expandable{ margin-top:5px; font-size:13px; line-height: 1.5;color:#999;cursor: pointer;}
+.knowledge_expandable img{ width:98px !important; height:73px !important; float:left; border-radius: 4px;margin: 1px 10px 5px 0; position: inherit !important;}
+.knowledge_expandable .toggle-expand{display: inline-block; padding: 0 3px; color: #0c5897; border-radius: 2px; font-size: .9em;}
+.knowledge_collapse{ color: #fff; float:right; z-index: 1; margin: 0; background-color: #81baeb; padding: 1px 6px; border-radius: 3px; cursor: pointer;opacity: 0.9;border: 0;}
+.knowledge_collapse i{display: inline-block;line-height: 10px;vertical-align: 0;background-image: url(../images/littleicon2.png) !important;background-repeat: no-repeat;margin-right: 5px; background-position: -70px -38px; width: 8px; height: 9px;}
+.knowledge_content{color: #333; margin: 10px 0px; line-height: 20px;}
+.knowledge_actions{ margin-top:3px; display:block;}
+.knowledge_actions a{ margin: 0 5px;}
+.knowledge_actions .highlight{ color: red; padding: 0 2px;}
+.knowledge_actions a{text-shadow: 0 1px 0 #fff;display: inline;text-decoration: none;color: #777;}
+
+
+.knowledgecategory { position:relative; width:950px; text-align:center;overflow: hidden; border: 2px dashed #89CDAC; margin: 0 auto;}
+.knowledgecategory ul { float:left; left:50%; padding: 8px 0px; position: relative; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;}
+.knowledgecategory li { float: left; position:relative; right:50%; text-align: center; list-style-type: none; position: relative; padding: 0px 5px; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;}
+.knowledgecategory li a{ border: 1px solid #ccc; padding: 5px 10px; text-decoration: none; color: #666; font-family: arial, verdana, tahoma; font-size: 11px; display: inline-block; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;}
+.knowledgecategory li a:hover{ background: #c8e4f8; color: #000; border: 1px solid #94a0b4;}
+.knowledgecategory li a.selected{ background: #c8e4f8; color: #000; border: 1px solid #94a0b4;}
+
+.knowledgecategory div.separate { clear: both; border: 1px dashed #89CDAC;}
+
+.knowledgecategory div.categoryname { position: absolute; margin-top: 10px; left: 10px;color: #666;font-family: '微软雅黑', '宋体', 'Times New Roman';}
+
+
+.tree ul { padding-top: 20px; position: relative; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;}
+.tree li { float: left; text-align: center; list-style-type: none; position: relative; padding: 20px 5px 0 5px; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;}
+/*We will use ::before and ::after to draw the connectors*/
+.tree li::before, .tree li::after{ content: ''; position: absolute; top: 0; right: 50%; border-top: 1px solid #ccc; width:50%; height: 20px;}
+.tree li::after{ right: auto; left: 50%; border-left: 1px solid #ccc;}
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before { display: none;}
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{ border: 0 none;}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{ border-right: 1px solid #ccc; border-radius: 0 5px 0 0; -webkit-border-radius: 0 5px 0 0; -moz-border-radius: 0 5px 0 0;}
+.tree li:first-child::after{ border-radius: 5px 0 0 0; -webkit-border-radius: 5px 0 0 0; -moz-border-radius: 5px 0 0 0;}
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{ content: ''; position: absolute; top: 0; left: 50%; border-left: 1px solid #ccc; width: 0; height: 20px;}
+.tree li a{ border: 1px solid #ccc; padding: 5px 10px; text-decoration: none; color: #666; font-family: arial, verdana, tahoma; font-size: 11px; display: inline-block; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; transition: all 0.5s; -webkit-transition: all 0.5s; -moz-transition: all 0.5s;}
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a { background: #c8e4f8; color: #000; border: 1px solid #94a0b4;}
+.tree li a.selectedchild { background: #c8e4f8; color: #000; border: 1px solid #94a0b4;}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{ border-color:  #94a0b4;}

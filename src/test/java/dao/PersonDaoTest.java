@@ -18,7 +18,7 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 //告诉junit spring配置文件
-@ContextConfiguration({"classpath:spring/spring-context.xml","classpath:spring/spring-mongo.xml"})
+@ContextConfiguration({"classpath:spring/spring-context.xml", "classpath:spring/spring-mongo.xml"})
 public class PersonDaoTest {
 
     @Resource
@@ -30,14 +30,14 @@ public class PersonDaoTest {
     public void testMongo() {
         List<Person> persons = new ArrayList<Person>();
         for (int i = 0; i < 10; i++) {
-           persons.add(new Person("name"+i,i,new Address("石家庄","裕华路",i)));
+            persons.add(new Person("name" + i, i, new Address("石家庄", "裕华路", i)));
         }
         personDao.save(persons);
     }
 
     @Test
     public void findMongo() {
-        System.out.println(personDao.findByAge(2,8,"name6"));
+        System.out.println(personDao.findByAge(2, 8, "name6"));
 
     }
 

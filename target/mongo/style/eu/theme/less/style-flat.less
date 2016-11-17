@@ -1,0 +1,286 @@
+/*!
+ *
+ * QuickAdmin v1.3.1
+ * Copyright MosaicPro
+ * http://www.mosaicpro.biz
+ *
+ * Designed and built exclusively for sale @Envato Marketplaces.
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600&subset=latin,latin-ext);
+@import "mixins.less";
+
+// Variables
+// -------------------------
+
+@import "variables.less";
+
+// Scaffolding
+// -------------------------
+
+@import "scaffolding.less";
+
+// Layout
+// -------------------------
+
+@import "layout.less";
+
+// Menus
+// -------------------------
+
+@import "menus.less";
+
+// Widgets
+// -------------------------
+
+@import "widgets.less";
+
+// Tabs
+// -------------------------
+
+@import "tabs.less";
+
+// Buttons
+// -------------------------
+
+@import "buttons.less";
+
+// Forms
+// -------------------------
+
+@import "forms.less";
+
+// Tables
+// -------------------------
+
+@import "tables.less";
+
+// Labels
+// -------------------------
+
+@import "labels.less";
+
+// Tooltips
+// -------------------------
+
+@import "tooltips.less";
+
+// Popovers
+// -------------------------
+
+@import "popovers.less";
+
+// Modals
+// -------------------------
+
+@import "modals.less";
+
+// Alerts
+// -------------------------
+
+@import "alerts.less";
+
+// Progress bars
+// -------------------------
+
+@import "progress-bars.less";
+
+// Accordions
+// -------------------------
+
+@import "accordions.less";
+
+// Pagination
+// -------------------------
+
+@import "pagination.less";
+
+// Notifications
+// -------------------------
+
+@import "notifications.less";
+
+// Sliders
+// -------------------------
+
+@import "sliders.less";
+
+// jQueryUI
+// -------------------------
+
+@import "jquery-ui.less";
+
+// Form Wizards
+// -------------------------
+
+@import "form-wizards.less";
+
+// Timeline
+// -------------------------
+
+@import "timeline.less";
+
+// Login
+// -------------------------
+
+@import "login.less";
+
+// Gallery
+// -------------------------
+
+@import "gallery.less";
+
+// Calendar
+// -------------------------
+
+@import "calendar.less";
+
+// Guided Tour
+// -------------------------
+
+@import "guidedtour.less";
+
+// Documentation
+// -------------------------
+
+@import "documentation.less";
+
+// Landing pages
+// -------------------------
+
+@import "landings.less";
+
+// Choose (Start) Page
+// -------------------------
+
+@import "choose.less";
+
+// Front module customizations
+// -------------------------
+
+@import "front.less";
+
+// RTL
+// -------------------------
+
+@import "rtl.less";
+
+// lt-ie9
+// -------------------------
+
+@import "lt-ie9.less";
+
+// Responsive
+// -------------------------
+
+@import "responsive.less";
+
+// Themer
+// -------------------------
+
+@import "themer.less";
+
+// Customizations
+// -------------------------
+
+/* Reset box-shadow & borders */
+.btn,
+.widget, 
+.widget-body,
+.widget-stats,
+.carousel-inner,
+.layout-timeline ul.timeline > li .date,
+.box-generic,
+.well,
+.accordion, .accordion .accordion-group { 
+	border: none !important;
+	#reset .boxShadow();
+}
+
+/* Reset box-shadow only */
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input,
+.dropdown-menu,
+.table-bordered,
+.progress .bar,
+.popover {
+	#reset .boxShadow();
+}
+
+/* Reset borders only */
+.chat-controls,
+.thumb,
+.navbar.main .topnav > li.active > a, .navbar.main .topnav > li:hover > a, .navbar.main .topnav > li.open > a,
+.navbar.main .topnav > li.glyphs ul,
+.navbar.main .topnav > li.glyphs ul li,
+.navbar.main .topnav > li.search form,
+.navbar.main .topnav > li.open.dd-1 .dropdown-menu,
+.menubar,
+.widget.widget-tabs-double-2 > .widget-head,
+.widget.widget-tabs-double-2 .widget-body-regular {
+	border: none !important;
+}
+
+/* Reset padding only */
+.thumb {
+	padding: 0 !important;
+}
+
+/* Reset rounded corners */
+#content,
+.navbar.main,
+#wrapper,
+.btn,
+.widget,
+.widget-head,
+.widget-body,
+.carousel,
+.carousel-inner,
+.carousel .item,
+.carousel .item img,
+.nav li a,
+.thumb,
+.thumb img,
+.widget-stats,
+.label, .badge,
+.navbar.main .topnav > li.active > a, .navbar.main .topnav > li:hover > a, .navbar.main .topnav > li.open > a,
+.navbar.main .topnav > li.glyphs ul,
+.navbar.main .topnav > li.glyphs ul li,
+.navbar.main .topnav > li.search form,
+.layout-timeline ul.timeline > li .date,
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input,
+.alert,
+.tooltip-inner, .popover, 
+.pagination ul, .pagination a, .pager a,
+.table-bordered, .table-bordered td, .table-bordered th,
+.box-generic,
+.progress, .progress .bar,
+.add-on,
+.well,
+.accordion .accordion-heading .accordion-toggle, .accordion .accordion-inner,
+pre,
+.widget-chat .chat-controls {
+	#reset .rounded();
+}
+
+/* Fix top menu */
+.navbar.main .topnav > li > a { padding: 0 10px; }
+.navbar.main .topnav > li > a.glyphicons { padding: 0 9px; }
+.navbar.main .topnav > li.glyphs ul li { padding: 0; }
+.navbar.main .topnav > li.glyphs ul li .glyphicons { padding: 5px 10px; }
+.navbar.main .topnav > li.active, .navbar.main .topnav > li:hover, .navbar.main .topnav > li.open { padding: 8px 0 8px 10px; }
+.navbar.main .topnav > li.active:last-child, .navbar.main .topnav > li:hover:last-child, .navbar.main .topnav > li.open:last-child { padding: 8px 9px 8px 10px; }
+.navbar.main .topnav > li.search { padding: 8px 9px !important; }
+.navbar.main .topnav > li.glyphs { padding: 8px !important; }
+.navbar.main .topnav > li.active > a.glyphicons, .navbar.main .topnav > li:hover > a.glyphicons, .navbar.main .topnav > li.open > a.glyphicons { padding: 6px 9px; }
+.navbar.main .topnav > li.open.dd-1 > .dropdown-menu:before,
+.navbar.main .topnav > li.open.dd-1 > .dropdown-menu:after { display: none; }
+.navbar.main .topnav > li.open.dd-1 > .dropdown-menu { top: 45px; }
+
+/* input + btn */
+.input-append .btn { height: 30px; }
+.fileupload-new .input-append .btn-file { height: 22px; }
+
+/* tabs */
+.tabsbar ul li a { background: #f9f9f9; }
+.tabsbar:not(.tabsbar-2) ul li.active a { background: @primaryColor; }
+.widget.widget-tabs-double-2 > .widget-head { border-bottom: 1px solid @contentBorder !important; }

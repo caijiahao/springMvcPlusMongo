@@ -1,0 +1,156 @@
+//
+// Timeline page
+// --------------------------------------------------
+
+.layout-timeline {
+	border-top-color: #d2d1d0 !important;
+	border-top-width: 2px !important;
+	> [class*="span"] ~ [class*="span"] {
+		&:after {
+			width: 2px;
+			background: #d2d1d0;
+		}
+	}
+	.media {
+		margin: 0 0 @spacing;
+		.media-body {
+			padding: 10px 0 0;
+			line-height: 17px;
+			.author { font-size: 14px; }
+		}
+	}
+	.glyphicons.pencil {
+		position: absolute;
+		top: @spacing;
+		right: @spacing;
+		margin: 0;
+		padding: 0;
+		width: 20px;
+		height: 20px;
+		i:before {
+			top: 0;
+			right: 0;
+			font-size: 17px;
+			color: #cccccc;
+		}
+	}
+	ul.timeline {
+		list-style: none;
+		margin: 0;
+		padding: @spacing @spacing @spacing @spacing*2;
+		> li {
+			position: relative;
+			padding: 0 0 @spacing;
+			.date {
+				width: 50px;
+				padding: 5px 0;
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: 600;
+				position: absolute;
+				left: -70px;
+				top: 0;
+				z-index: 2;
+				strong {
+					display: block;
+					line-height: 10px;
+					padding: 3px 0 0;
+				}
+			}
+			.type {
+				position: absolute;
+				text-transform: uppercase;
+				color: @bodyText;
+				font-weight: 600;
+				padding: 0 35px 0 0;
+				top: 15px;
+				width: 100px;
+				text-align: right;
+				left: -195px;
+				line-height: 24px;
+				z-index: 2;
+				i:before { left: auto; right: 0; color: #c6c6c5; }
+				.time { position: absolute; top: 24px; right: 0; color: #c6c6c5; }
+				&:after {
+					display: block;
+					content: "";
+					position: absolute;
+					right: -60px;
+					top: 12px;
+					width: 45px;
+					height: 2px;
+					background: #d2d1d0;
+				}
+				&:before {
+					display: block;
+					content: "";
+					position: absolute;
+					right: -20px;
+					top: 9px;
+					width: 8px;
+					height: 8px;
+					background: #d2d1d0;
+				}
+			}
+			.separator {
+				.type { top: 60px; }
+			}
+			.alert-gray {
+				background: #f8f8f8;
+				color: @bodyText;
+				.rounded();
+				border: none;
+				margin: 0;
+			}
+			p.glyphicons {
+				padding: 5px 0 5px 25px;
+				i:before { color: #dfdfdf; font-size: 17px; top: 5px; left: 0; }
+			}
+			.widget-body-gray {
+				.glyphicons i:before { color: @bodyText; }
+				a { color: #000; text-decoration: underline; }
+				strong { font-weight: 400; color: #000; }
+			}
+			&.active {
+				.type { 
+					color: @primaryColor; 
+					i:before { color: @primaryColor; }
+					&:before, &:after {
+						background: @primaryColor;
+					} 
+				}
+				&:before {
+					display: block;
+					position: absolute;
+					content: "";
+					top: 0;
+					bottom: 0;
+					left: -45px;
+					width: 2px;
+					z-index: 2;
+					background: @primaryColor;
+				}
+			}
+		}
+	}
+}
+.nav-timeline {
+	> li {
+		margin: 0 0 5px;
+		> a {
+			background: #b3b3b3;
+			border: none;
+			margin: 0 !important;
+			font-weight: 600;
+			&.glyphicons {
+				padding: 8px 12px;
+				i:before { position: absolute; left: auto; right: 8px; top: 8px; color: #fff; }
+			} 
+		}
+		&.active {
+			> a {
+				background: @primaryColor;
+			}
+		}
+	}
+}

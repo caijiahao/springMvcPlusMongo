@@ -1,0 +1,966 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- 开始头部 -->
+<head>
+    <meta charset="utf-8" />
+    <title>Metro By xmfdsh</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="Mosaddek" name="author" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="css/style-default.css" rel="stylesheet" id="style_color" />
+</head>
+<!-- 结束头部 -->
+<!-- 开始 Body -->
+<body class="fixed-top">
+    <!-- 开始 header 头部菜单 -->
+    <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+        <!-- 开始顶部的 navigation bar 导航菜单 -->
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <!--开始工具条 开关-->
+                <div class="sidebar-toggle-box hidden-phone">
+                    <div class="icon-reorder tooltips" data-placement="right" data-original-title="Metro By xmfdsh"></div>
+                </div>
+                <!--结束工具条 开关-->
+                <!-- 开始 Logo -->
+                <a class="brand" href="index.html">
+                    <img src="img/logo.png" alt="Metro Lab" />
+                </a>
+                <!-- 结束Logo -->
+
+                <div id="top_menu" class="nav notify-row">
+                    <!-- 开始通知 -->
+                    <ul class="nav top-menu">
+                        <!-- 开始设置 -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-tasks"></i>
+                                <span class="badge badge-important">2</span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <li>
+                                    <p>你有2条任务</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">控制台</div>
+                                            <div class="percent">44%</div>
+                                        </div>
+                                        <div class="progress progress-striped active no-margin-bot">
+                                            <div class="bar" style="width: 44%;"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="task-info">
+                                            <div class="desc">数据库更新</div>
+                                            <div class="percent">65%</div>
+                                        </div>
+                                        <div class="progress progress-striped progress-success active no-margin-bot">
+                                            <div class="bar" style="width: 65%;"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="external">
+                                    <a href="#">查看所有任务</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 结束设置 -->
+                        <!-- 开始下拉 收件箱 -->
+                        <li class="dropdown" id="header_inbox_bar">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-envelope-alt"></i>
+                                <span class="badge badge-important">2</span>
+                            </a>
+                            <ul class="dropdown-menu extended inbox">
+                                <li>
+                                    <p>你有2条消息</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="photo"><img src="img/avatar-mini.png" alt="avatar" /></span>
+                                        <span class="subject">
+                                            <span class="from">xmfdsh</span>
+                                            <span class="time">刚刚</span>
+                                        </span>
+                                        <span class="message">
+                                            Hello, 这是个消息例子.
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="photo"><img src="img/avatar-mini.png" alt="avatar" /></span>
+                                        <span class="subject">
+                                            <span class="from">张视焕</span>
+                                            <span class="time">20分钟</span>
+                                        </span>
+                                        <span class="message">
+                                            Hi, 最近咋样?
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">查看所有信息</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 结束下拉 收件箱 -->
+                        <!-- 开始下拉 通知 -->
+                        <li class="dropdown" id="header_notification_bar">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                                <i class="icon-bell-alt"></i>
+                                <span class="badge badge-warning">4</span>
+                            </a>
+                            <ul class="dropdown-menu extended notification">
+                                <li>
+                                    <p>你有4条提示信息</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="label label-important"><i class="icon-bolt"></i></span>
+                                        手机欠费
+                                        <span class="small italic">4分钟</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="label label-warning"><i class="icon-bell"></i></span>
+                                        windows激活过期
+                                        <span class="small italic">1小时</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="label label-important"><i class="icon-bolt"></i></span>
+                                        数据库奔溃
+                                        <span class="small italic">4小时</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="label label-success"><i class="icon-plus"></i></span>
+                                        世界杯要下注了
+                                        <span class="small italic">刚刚</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">查看所有通知</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- 结束下拉 通知 -->
+
+                    </ul>
+                </div>
+                <!-- 结束通知 -->
+                <div class="top-nav ">
+                    <ul class="nav pull-right top-menu">
+                        <!-- BEGIN SUPPORT -->
+                        <li class="dropdown mtop5">
+
+                            <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="闲聊">
+                                <i class="icon-comments-alt"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown mtop5">
+                            <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="帮助">
+                                <i class="icon-headphones"></i>
+                            </a>
+                        </li>
+                        <!-- END SUPPORT -->
+                        <!-- 开始用户登录下拉菜单 -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="img/avatar1_small.jpg" alt="">
+                                <span class="username">xmfdsh</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu extended logout">
+                                <li><a href="#"><i class="icon-user"></i>我的资料</a></li>
+                                <li><a href="#"><i class="icon-cog"></i>我的设置</a></li>
+                                <li><a href="login.html"><i class="icon-key"></i>退出</a></li>
+                            </ul>
+                        </li>
+                        <!-- 结束用户菜单 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 结束顶部的 navigation bar 导航菜单 -->
+    </div>
+    <!-- 结束 header 头部菜单 -->
+    <!-- BEGIN CONTAINER -->
+    <div id="container" class="row-fluid">
+        <!-- 开始左侧 导航菜单 -->
+        <div class="sidebar-scroll">
+            <div id="sidebar" class="nav-collapse collapse">
+                <!-- 开始左侧 工具条菜单 -->
+                <ul class="sidebar-menu">
+                    <li class="sub-menu active">
+                        <a class="" href="index.html">
+                            <i class="icon-dashboard"></i>
+                            <span>控制台</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-book"></i>
+                            <span>UI 组件</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="general.html">通用</a></li>
+                            <li><a class="" href="button.html">按钮</a></li>
+                            <li><a class="" href="slider.html">滑动</a></li>
+                            <li><a class="" href="metro_view.html">Metro风格</a></li>
+                            <li><a class="" href="tabs_accordion.html">Tab选项卡 & 手风琴</a></li>
+                            <li><a class="" href="typography.html">文字排版</a></li>
+                            <li><a class="" href="tree_view.html">树菜单</a></li>
+                            <li><a class="" href="nestable.html">嵌套列表</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-cogs"></i>
+                            <span>插件</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="calendar.html">日历</a></li>
+                            <li><a class="" href="grids.html">网格</a></li>
+                            <li><a class="" href="chartjs.html">图表统计</a></li>
+                            <li><a class="" href="flot_chart.html">Flot图表</a></li>
+                            <li><a class="" href="gallery.html">相册</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-tasks"></i>
+                            <span>表单</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="form_layout.html">表单布局</a></li>
+                            <li><a class="" href="form_component.html">表单组件</a></li>
+                            <li><a class="" href="form_wizard.html">表单提示</a></li>
+                            <li><a class="" href="form_validation.html">表单验证</a></li>
+                            <li><a class="" href="dropzone.html">文件上传</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-th"></i>
+                            <span>数据表格</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="basic_table.html">简单表格</a></li>
+                            <li><a class="" href="dynamic_table.html">动态表格</a></li>
+                            <li><a class="" href="editable_table.html">可编辑表格</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-fire"></i>
+                            <span>Icon图标</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="font_awesome.html">FontAwesome图标</a></li>
+                            <li><a class="" href="glyphicons.html">Glyphicons图标</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="" href="javascript:;">
+                            <i class="icon-trophy"></i>
+                            <span>代码片段</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="general_portlet.html" class="">通用片段</a></li>
+                            <li><a href="draggable_portlet.html" class="">可拖拽片段</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="" href="javascript:;">
+                            <i class="icon-map-marker"></i>
+                            <span>地图</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="vector_map.html" class="">Vector地图</a></li>
+                            <li><a href="google_map.html" class="">Google地图</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-file-alt"></i>
+                            <span>基本页面</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="blank.html">空白页面</a></li>
+                            <li><a class="" href="blog.html">博客</a></li>
+                            <li><a class="" href="timeline.html">时间轴</a></li>
+                            <li><a class="" href="profile.html">个人资料</a></li>
+                            <li><a class="" href="about_us.html">关于我们</a></li>
+                            <li><a class="" href="contact_us.html">联系我们</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon-glass"></i>
+                            <span>其他</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub">
+                            <li><a class="" href="lock.html">锁屏</a></li>
+                            <li><a class="" href="invoice.html">购物单</a></li>
+                            <li><a class="" href="pricing_tables.html">价目单</a></li>
+                            <li><a class="" href="search_result.html">搜索展示</a></li>
+                            <li><a class="" href="faq.html">帮助页面</a></li>
+                            <li><a class="" href="404.html">404错误页面</a></li>
+                            <li><a class="" href="500.html">500错误页面</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="" href="login.html">
+                            <i class="icon-user"></i>
+                            <span>登录页面</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- 结束左侧 工具条菜单 -->
+            </div>
+        </div>
+        <!-- 结束左侧 导航菜单 -->
+        <!-- 开始内容页 -->
+        <div id="main-content">
+            <!-- 开始页面容器-->
+            <div class="container-fluid">
+                <!-- 开始页面顶部-->
+                <div class="row-fluid">
+                    <div class="span12">
+                        <!-- 开始主题定制器-->
+                        <div id="theme-change" class="hidden-phone">
+                            <i class="icon-cogs"></i>
+                            <span class="settings">
+                                <span class="text">主题颜色:</span>
+                                <span class="colors">
+                                    <span class="color-default" data-style="default"></span>
+                                    <span class="color-green" data-style="green"></span>
+                                    <span class="color-gray" data-style="gray"></span>
+                                    <span class="color-purple" data-style="purple"></span>
+                                    <span class="color-red" data-style="red"></span>
+                                </span>
+                            </span>
+                        </div>
+                        <!-- 结束主题定制器-->
+                        <!-- 开始页面标题 & 面包屑导航-->
+                        <h3 class="page-title">
+                            控制台
+                        </h3>
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="#">首页</a>
+                                <span class="divider">/</span>
+                            </li>
+                            <li class="active">
+                                控制台
+                            </li>
+                            <li class="pull-right search-wrap">
+                                <form action="search_result.html" class="hidden-phone">
+                                    <div class="input-append search-input-area">
+                                        <input class="" id="appendedInputButton" type="text">
+                                        <button class="btn" type="button"><i class="icon-search"></i> </button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                        <!-- 结束页面标题 & 面包屑导航-->
+                    </div>
+                </div>
+                <!-- 结束页面顶部-->
+                <!-- 开始页面主要内容页面-->
+                <div class="widget purple">
+                    <div class="widget-title">
+                        <h4><i class="icon-reorder"></i>四小狼工作室 Metro风格模板</h4>
+                        <span class="tools">
+                            <a href="javascript:;" class="icon-chevron-down"></a>
+                            <a href="javascript:;" class="icon-remove"></a>
+                        </span>
+                    </div>
+                    <div class="widget-body">
+                        <div class="text-center">
+                            <h3>四小狼后台模板，教你轻松入门，简单搭建清新简洁的bootstrap的Metro后台风格</h3>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span2">
+                            </div>
+                            <div class="span8">
+                                <p>首先第一步入门工作当然是引用文件之类的啦，先来个头部文件既引用css文件应该如何去做。代码如下：</p>
+
+                                <br />
+                                <div class="widget yellow">
+                                    <div class="widget-title">
+                                        <h4><i class="icon-reorder"></i> 头文件引用</h4>
+                                        <span class="tools">
+                                            <a href="javascript:;" class="icon-chevron-down"></a>
+                                            <a href="javascript:;" class="icon-remove"></a>
+                                        </span>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="portlet-scroll-3" style="overflow: hidden; outline: none;" tabindex="5006">
+
+                                            <pre>&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie8&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 9]&gt; &lt;html lang=&quot;en&quot; class=&quot;ie9&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html lang=&quot;en&quot;&gt; &lt;!--&lt;![endif]--&gt;
+&lt;!-- 开始头部 --&gt;
+&lt;head&gt;
+   &lt;meta charset=&quot;utf-8&quot; /&gt;
+   &lt;title&gt;Metro By xmfdsh&lt;/title&gt;
+   &lt;meta content=&quot;width=device-width, initial-scale=1.0&quot; name=&quot;viewport&quot; /&gt;
+   &lt;meta content=&quot;&quot; name=&quot;description&quot; /&gt;
+   &lt;meta content=&quot;Mosaddek&quot; name=&quot;author&quot; /&gt;
+   &lt;link href=&quot;assets/bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+   &lt;link href=&quot;assets/bootstrap/css/bootstrap-responsive.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+   &lt;link href=&quot;assets/bootstrap/css/bootstrap-fileupload.css&quot; rel=&quot;stylesheet&quot; /&gt;
+   &lt;link href=&quot;assets/font-awesome/css/font-awesome.css&quot; rel=&quot;stylesheet&quot; /&gt;
+   &lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+   &lt;link href=&quot;css/style-responsive.css&quot; rel=&quot;stylesheet&quot; /&gt;
+   &lt;link href=&quot;css/style-default.css&quot; rel=&quot;stylesheet&quot; id=&quot;style_color&quot; /&gt;
+&lt;/head&gt;
+&lt;!-- 结束头部 --&gt;</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span2">
+                            </div>
+
+                            <br />
+                        </div>
+
+
+                        <div class="row-fluid">
+                            <div class="span2">
+                            </div>
+                            <div class="span8">
+                                <p>第二步：在引用了通用的css文件后，便可以开始布局了，首先是后台顶部的导航栏，其中包括了Logo，个人登陆信息，通知等。代码如下：</p>
+                                <br />
+                                <div class="widget purple">
+                                    <div class="widget-title">
+                                        <h4><i class="icon-reorder"></i> header顶部导航栏布局</h4>
+                                        <span class="tools">
+                                            <a href="javascript:;" class="icon-chevron-down"></a>
+                                            <a href="javascript:;" class="icon-remove"></a>
+                                        </span>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="portlet-scroll-3" style="overflow: hidden; outline: none;" tabindex="5006">
+                                            <pre>&lt;!-- 开始 Body --&gt;
+&lt;body class=&quot;fixed-top&quot;&gt;
+   &lt;!-- 开始 header 头部菜单 --&gt;
+   &lt;div id=&quot;header&quot; class=&quot;navbar navbar-inverse navbar-fixed-top&quot;&gt;
+       &lt;!-- 开始顶部的 navigation bar 导航菜单 --&gt;
+       &lt;div class=&quot;navbar-inner&quot;&gt;
+           &lt;div class=&quot;container-fluid&quot;&gt;
+               &lt;!--开始工具条 开关--&gt;
+               &lt;div class=&quot;sidebar-toggle-box hidden-phone&quot;&gt;
+                   &lt;div class=&quot;icon-reorder tooltips&quot; data-placement=&quot;right&quot; data-original-title=&quot;Metro By xmfdsh&quot;&gt;&lt;/div&gt;
+               &lt;/div&gt;
+               &lt;!--结束工具条 开关--&gt;
+               &lt;!-- 开始 Logo --&gt;
+               &lt;a class=&quot;brand&quot; href=&quot;index.html&quot;&gt;
+                   &lt;img src=&quot;img/logo.png&quot; alt=&quot;Metro Lab&quot; /&gt;
+               &lt;/a&gt;
+               &lt;!-- 结束Logo --&gt;
+               &lt;div id=&quot;top_menu&quot; class=&quot;nav notify-row&quot;&gt;
+                   &lt;!-- 开始通知 --&gt;
+                   &lt;ul class=&quot;nav top-menu&quot;&gt;
+                       &lt;!-- 开始设置 --&gt;
+                       &lt;li class=&quot;dropdown&quot;&gt;
+                           &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                               &lt;i class=&quot;icon-tasks&quot;&gt;&lt;/i&gt;
+                               &lt;span class=&quot;badge badge-important&quot;&gt;2&lt;/span&gt;
+                           &lt;/a&gt;
+                           &lt;ul class=&quot;dropdown-menu extended tasks-bar&quot;&gt;
+                               &lt;li&gt;
+                                   &lt;p&gt;你有2条任务&lt;/p&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;
+                                       &lt;div class=&quot;task-info&quot;&gt;
+                                         &lt;div class=&quot;desc&quot;&gt;控制台&lt;/div&gt;
+                                         &lt;div class=&quot;percent&quot;&gt;44%&lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class=&quot;progress progress-striped active no-margin-bot&quot;&gt;
+                                           &lt;div class=&quot;bar&quot; style=&quot;width: 44%;&quot;&gt;&lt;/div&gt;
+                                       &lt;/div&gt;
+                                   &lt;/a&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;
+                                       &lt;div class=&quot;task-info&quot;&gt;
+                                           &lt;div class=&quot;desc&quot;&gt;数据库更新&lt;/div&gt;
+                                           &lt;div class=&quot;percent&quot;&gt;65%&lt;/div&gt;
+                                       &lt;/div&gt;
+                                       &lt;div class=&quot;progress progress-striped progress-success active no-margin-bot&quot;&gt;
+                                           &lt;div class=&quot;bar&quot; style=&quot;width: 65%;&quot;&gt;&lt;/div&gt;
+                                       &lt;/div&gt;
+                                   &lt;/a&gt;
+                               &lt;/li&gt;
+                               
+                               &lt;li class=&quot;external&quot;&gt;
+                                   &lt;a href=&quot;#&quot;&gt;查看所有任务&lt;/a&gt;
+                               &lt;/li&gt;
+                           &lt;/ul&gt;
+                       &lt;/li&gt;
+                       &lt;!-- 结束设置 --&gt;
+                       &lt;!-- 开始下拉 收件箱 --&gt;
+                       &lt;li class=&quot;dropdown&quot; id=&quot;header_inbox_bar&quot;&gt;
+                           &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                               &lt;i class=&quot;icon-envelope-alt&quot;&gt;&lt;/i&gt;
+                               &lt;span class=&quot;badge badge-important&quot;&gt;2&lt;/span&gt;
+                           &lt;/a&gt;
+                           &lt;ul class=&quot;dropdown-menu extended inbox&quot;&gt;
+                               &lt;li&gt;
+                                   &lt;p&gt;你有2条消息&lt;/p&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;
+                                       &lt;span class=&quot;photo&quot;&gt;&lt;img src=&quot;img/avatar-mini.png&quot; alt=&quot;avatar&quot; /&gt;&lt;/span&gt;
+									&lt;span class=&quot;subject&quot;&gt;
+									&lt;span class=&quot;from&quot;&gt;xmfdsh&lt;/span&gt;
+									&lt;span class=&quot;time&quot;&gt;刚刚&lt;/span&gt;
+									&lt;/span&gt;
+									&lt;span class=&quot;message&quot;&gt;
+									    Hello, 这是个消息例子.
+									&lt;/span&gt;
+                                   &lt;/a&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;
+                                       &lt;span class=&quot;photo&quot;&gt;&lt;img src=&quot;img/avatar-mini.png&quot; alt=&quot;avatar&quot; /&gt;&lt;/span&gt;
+									&lt;span class=&quot;subject&quot;&gt;
+									&lt;span class=&quot;from&quot;&gt;张视焕&lt;/span&gt;
+									&lt;span class=&quot;time&quot;&gt;20分钟&lt;/span&gt;
+									&lt;/span&gt;
+									&lt;span class=&quot;message&quot;&gt;
+									 Hi, 最近咋样?
+									&lt;/span&gt;
+                                   &lt;/a&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;查看所有信息&lt;/a&gt;
+                               &lt;/li&gt;
+                           &lt;/ul&gt;
+                       &lt;/li&gt;
+                       &lt;!-- 结束下拉 收件箱 --&gt;
+                       &lt;!-- 开始下拉 通知 --&gt;
+                       &lt;li class=&quot;dropdown&quot; id=&quot;header_notification_bar&quot;&gt;
+                           &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                               &lt;i class=&quot;icon-bell-alt&quot;&gt;&lt;/i&gt;
+                               &lt;span class=&quot;badge badge-warning&quot;&gt;4&lt;/span&gt;
+                           &lt;/a&gt;
+                           &lt;ul class=&quot;dropdown-menu extended notification&quot;&gt;
+                               &lt;li&gt;
+                                   &lt;p&gt;你有4条提示信息&lt;/p&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;
+                                       &lt;span class=&quot;label label-important&quot;&gt;&lt;i class=&quot;icon-bolt&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                       手机欠费
+                                       &lt;span class=&quot;small italic&quot;&gt;4分钟&lt;/span&gt;
+                                   &lt;/a&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;
+                                       &lt;span class=&quot;label label-warning&quot;&gt;&lt;i class=&quot;icon-bell&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                       windows激活过期
+                                       &lt;span class=&quot;small italic&quot;&gt;1小时&lt;/span&gt;
+                                   &lt;/a&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;
+                                       &lt;span class=&quot;label label-important&quot;&gt;&lt;i class=&quot;icon-bolt&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                       数据库奔溃
+                                       &lt;span class=&quot;small italic&quot;&gt;4小时&lt;/span&gt;
+                                   &lt;/a&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;
+                                       &lt;span class=&quot;label label-success&quot;&gt;&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                       世界杯要下注了
+                                       &lt;span class=&quot;small italic&quot;&gt;刚刚&lt;/span&gt;
+                                   &lt;/a&gt;
+                               &lt;/li&gt;
+                               &lt;li&gt;
+                                   &lt;a href=&quot;#&quot;&gt;查看所有通知&lt;/a&gt;
+                               &lt;/li&gt;
+                           &lt;/ul&gt;
+                       &lt;/li&gt;
+                       &lt;!-- 结束下拉 通知 --&gt;
+                   &lt;/ul&gt;
+               &lt;/div&gt;
+               &lt;!-- 结束通知 --&gt;
+               &lt;div class=&quot;top-nav &quot;&gt;
+                   &lt;ul class=&quot;nav pull-right top-menu&quot; &gt;
+                       &lt;!-- BEGIN SUPPORT --&gt;
+                       &lt;li class=&quot;dropdown mtop5&quot;&gt;
+                           &lt;a class=&quot;dropdown-toggle element&quot; data-placement=&quot;bottom&quot; data-toggle=&quot;tooltip&quot; href=&quot;#&quot; data-original-title=&quot;闲聊&quot;&gt;
+                               &lt;i class=&quot;icon-comments-alt&quot;&gt;&lt;/i&gt;
+                           &lt;/a&gt;
+                       &lt;/li&gt;
+                       &lt;li class=&quot;dropdown mtop5&quot;&gt;
+                           &lt;a class=&quot;dropdown-toggle element&quot; data-placement=&quot;bottom&quot; data-toggle=&quot;tooltip&quot; href=&quot;#&quot; data-original-title=&quot;帮助&quot;&gt;
+                               &lt;i class=&quot;icon-headphones&quot;&gt;&lt;/i&gt;
+                           &lt;/a&gt;
+                       &lt;/li&gt;
+                       &lt;!-- END SUPPORT --&gt;
+                       &lt;!-- 开始用户登录下拉菜单 --&gt;
+                       &lt;li class=&quot;dropdown&quot;&gt;
+                           &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                               &lt;img src=&quot;img/avatar1_small.jpg&quot; alt=&quot;&quot;&gt;
+                               &lt;span class=&quot;username&quot;&gt;xmfdsh&lt;/span&gt;
+                               &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+                           &lt;/a&gt;
+                           &lt;ul class=&quot;dropdown-menu extended logout&quot;&gt;
+                               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-user&quot;&gt;&lt;/i&gt;我的资料&lt;/a&gt;&lt;/li&gt;
+                               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;icon-cog&quot;&gt;&lt;/i&gt;我的设置&lt;/a&gt;&lt;/li&gt;
+                               &lt;li&gt;&lt;a href=&quot;login.html&quot;&gt;&lt;i class=&quot;icon-key&quot;&gt;&lt;/i&gt;退出&lt;/a&gt;&lt;/li&gt;
+                           &lt;/ul&gt;
+                       &lt;/li&gt;
+                       &lt;!-- 结束用户菜单 --&gt;
+                   &lt;/ul&gt;
+               &lt;/div&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;!-- 结束顶部的 navigation bar 导航菜单 --&gt;
+   &lt;/div&gt;
+   &lt;!-- 结束 header 头部菜单 --&gt;</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span2">
+                            </div>
+                        </div>
+
+
+                        <div class="row-fluid">
+                            <div class="span2">
+                            </div>
+                            <div class="span8">
+                                <p>第三步便是左边的导航栏，以及右边待填的内容，代码如下：</p>
+                                <br />
+                                <div class="widget purple">
+                                    <div class="widget-title">
+                                        <h4><i class="icon-reorder"></i> 左侧导航栏</h4>
+                                        <span class="tools">
+                                            <a href="javascript:;" class="icon-chevron-down"></a>
+                                            <a href="javascript:;" class="icon-remove"></a>
+                                        </span>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="portlet-scroll-3" style="overflow: hidden; outline: none;" tabindex="5006">
+                                            <pre>   &lt;!-- BEGIN CONTAINER --&gt;
+   &lt;div id=&quot;container&quot; class=&quot;row-fluid&quot;&gt;
+      &lt;!-- 开始左侧 导航菜单 --&gt;
+      &lt;div class=&quot;sidebar-scroll&quot;&gt;
+        &lt;div id=&quot;sidebar&quot; class=&quot;nav-collapse collapse&quot;&gt;
+         &lt;!-- 开始左侧 工具条菜单 --&gt;
+          &lt;ul class=&quot;sidebar-menu&quot;&gt;
+              &lt;li class=&quot;sub-menu active&quot;&gt;
+                  &lt;a class=&quot;&quot; href=&quot;index.html&quot;&gt;
+                      &lt;i class=&quot;icon-dashboard&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;控制台&lt;/span&gt;
+                  &lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+                      &lt;i class=&quot;icon-book&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;UI 组件&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;general.html&quot;&gt;通用&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;button.html&quot;&gt;按钮&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;slider.html&quot;&gt;滑动&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;metro_view.html&quot;&gt;Metro风格&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;tabs_accordion.html&quot;&gt;Tab选项卡 &amp; 手风琴&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;typography.html&quot;&gt;文字排版&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;tree_view.html&quot;&gt;树菜单&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;nestable.html&quot;&gt;嵌套列表&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+                      &lt;i class=&quot;icon-cogs&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;插件&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;calendar.html&quot;&gt;日历&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;grids.html&quot;&gt;网格&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;chartjs.html&quot;&gt;图表统计&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;flot_chart.html&quot;&gt;Flot图表&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;gallery.html&quot;&gt;相册&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+                      &lt;i class=&quot;icon-tasks&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;表单&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;form_layout.html&quot;&gt;表单布局&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;form_component.html&quot;&gt;表单组件&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;form_wizard.html&quot;&gt;表单提示&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;form_validation.html&quot;&gt;表单验证&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;dropzone.html&quot;&gt;文件上传&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+                      &lt;i class=&quot;icon-th&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;数据表格&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;basic_table.html&quot;&gt;简单表格&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;dynamic_table.html&quot;&gt;动态表格&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;editable_table.html&quot;&gt;可编辑表格&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+                      &lt;i class=&quot;icon-fire&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;Icon图标&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;font_awesome.html&quot;&gt;FontAwesome图标&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;glyphicons.html&quot;&gt;Glyphicons图标&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a class=&quot;&quot; href=&quot;javascript:;&quot;&gt;
+                      &lt;i class=&quot;icon-trophy&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;代码片段&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a href=&quot;general_portlet.html&quot; class=&quot;&quot;&gt;通用片段&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;draggable_portlet.html&quot; class=&quot;&quot;&gt;可拖拽片段&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a class=&quot;&quot; href=&quot;javascript:;&quot;&gt;
+                      &lt;i class=&quot;icon-map-marker&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;地图&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a href=&quot;vector_map.html&quot; class=&quot;&quot;&gt;Vector地图&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href=&quot;google_map.html&quot; class=&quot;&quot;&gt;Google地图&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+                      &lt;i class=&quot;icon-file-alt&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;基本页面&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;blank.html&quot;&gt;空白页面&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;blog.html&quot;&gt;博客&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;timeline.html&quot;&gt;时间轴&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;profile.html&quot;&gt;个人资料&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;about_us.html&quot;&gt;关于我们&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;contact_us.html&quot;&gt;联系我们&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;sub-menu&quot;&gt;
+                  &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+                      &lt;i class=&quot;icon-glass&quot;&gt;&lt;/i&gt;
+                      &lt;span&gt;其他&lt;/span&gt;
+                      &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+                  &lt;/a&gt;
+                  &lt;ul class=&quot;sub&quot;&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;lock.html&quot;&gt;锁屏&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;invoice.html&quot;&gt;购物单&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;pricing_tables.html&quot;&gt;价目单&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;search_result.html&quot;&gt;搜索展示&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;faq.html&quot;&gt;帮助页面&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;404.html&quot;&gt;404错误页面&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;500.html&quot;&gt;500错误页面&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                  &lt;a class=&quot;&quot; href=&quot;login.html&quot;&gt;
+                    &lt;i class=&quot;icon-user&quot;&gt;&lt;/i&gt;
+                    &lt;span&gt;登录页面&lt;/span&gt;
+                  &lt;/a&gt;
+              &lt;/li&gt;
+          &lt;/ul&gt;
+         &lt;!-- 结束左侧 工具条菜单 --&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+   &lt;!-- 结束左侧 导航菜单 --&gt;
+   &lt;!-- 开始内容页 --&gt;  
+      &lt;div id=&quot;main-content&quot;&gt;
+         &lt;!-- 开始页面容器--&gt;
+         &lt;div class=&quot;container-fluid&quot;&gt;
+            &lt;!-- 开始页面顶部--&gt;   
+            &lt;div class=&quot;row-fluid&quot;&gt;
+               &lt;div class=&quot;span12&quot;&gt;
+                   &lt;!-- 开始主题定制器--&gt;
+                   &lt;div id=&quot;theme-change&quot; class=&quot;hidden-phone&quot;&gt;
+                       &lt;i class=&quot;icon-cogs&quot;&gt;&lt;/i&gt;
+                        &lt;span class=&quot;settings&quot;&gt;
+                            &lt;span class=&quot;text&quot;&gt;主题颜色:&lt;/span&gt;
+                            &lt;span class=&quot;colors&quot;&gt;
+                                &lt;span class=&quot;color-default&quot; data-style=&quot;default&quot;&gt;&lt;/span&gt;
+                                &lt;span class=&quot;color-green&quot; data-style=&quot;green&quot;&gt;&lt;/span&gt;
+                                &lt;span class=&quot;color-gray&quot; data-style=&quot;gray&quot;&gt;&lt;/span&gt;
+                                &lt;span class=&quot;color-purple&quot; data-style=&quot;purple&quot;&gt;&lt;/span&gt;
+                                &lt;span class=&quot;color-red&quot; data-style=&quot;red&quot;&gt;&lt;/span&gt;
+                            &lt;/span&gt;
+                        &lt;/span&gt;
+                   &lt;/div&gt;
+                   &lt;!-- 结束主题定制器--&gt;
+                   &lt;!-- 开始页面标题 &amp; 面包屑导航--&gt;
+                   &lt;h3 class=&quot;page-title&quot;&gt;
+                     控制台
+                   &lt;/h3&gt;
+                   &lt;ul class=&quot;breadcrumb&quot;&gt;
+                       &lt;li&gt;
+                           &lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;
+                           &lt;span class=&quot;divider&quot;&gt;/&lt;/span&gt;
+                       &lt;/li&gt;                      
+                       &lt;li class=&quot;active&quot;&gt;
+                           控制台
+                       &lt;/li&gt;
+                       &lt;li class=&quot;pull-right search-wrap&quot;&gt;
+                           &lt;form action=&quot;search_result.html&quot; class=&quot;hidden-phone&quot;&gt;
+                               &lt;div class=&quot;input-append search-input-area&quot;&gt;
+                                   &lt;input class=&quot;&quot; id=&quot;appendedInputButton&quot; type=&quot;text&quot;&gt;
+                                   &lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;&lt;i class=&quot;icon-search&quot;&gt;&lt;/i&gt; &lt;/button&gt;
+                               &lt;/div&gt;
+                           &lt;/form&gt;
+                       &lt;/li&gt;
+                   &lt;/ul&gt;
+                   &lt;!-- 结束页面标题 &amp; 面包屑导航--&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- 开始页面主要内容页面--&gt;
+          &lt;!-- 结束页面主要内容页面--&gt;
+            &lt;/div&gt;
+          
+       &lt;/div&gt;
+   &lt;/div&gt;</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span2">
+                            </div>
+                        </div>
+
+                        <div class="row-fluid">
+                            <div class="span2">
+                            </div>
+                            <div class="span8">
+                                <p>最后一步，footer，简洁一点就行，不过我本来就喜欢简洁一点的风格，然后还有的就是在页底加载的Js文件，可以减少加载时间，代码如下：</p>
+                                <br />
+                                <div class="widget purple">
+                                    <div class="widget-title">
+                                        <h4><i class="icon-reorder"></i> footer以及Js的加载</h4>
+                                        <span class="tools">
+                                            <a href="javascript:;" class="icon-chevron-down"></a>
+                                            <a href="javascript:;" class="icon-remove"></a>
+                                        </span>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="portlet-scroll-3" style="overflow: hidden; outline: none;" tabindex="5006">
+                                            <pre>   &lt;!-- BEGIN FOOTER --&gt;
+   &lt;div id=&quot;footer&quot;&gt;
+       Copyright © 2014 四小狼工作室 Powered by xmfdsh. 
+   &lt;/div&gt;
+   &lt;!-- END FOOTER --&gt;
+            
+   &lt;!-- 开始加载 Js文件 --&gt;
+   &lt;!-- 在底部加载Js文件，可以减少加载时间 --&gt;
+   &lt;script src=&quot;js/jquery-1.8.3.min.js&quot;&gt;&lt;/script&gt;
+   &lt;script src=&quot;js/jquery.nicescroll.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+   &lt;script src=&quot;assets/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+   &lt;script src=&quot;js/jquery.scrollTo.min.js&quot;&gt;&lt;/script&gt;
+   &lt;!-- ie8 fixes --&gt;
+   &lt;!--[if lt IE 9]&gt;
+   &lt;script src=&quot;js/excanvas.js&quot;&gt;&lt;/script&gt;
+   &lt;script src=&quot;js/respond.js&quot;&gt;&lt;/script&gt;
+   &lt;![endif]--&gt;
+   &lt;!--为全部页面加载的公共Js文件--&gt;
+   &lt;script src=&quot;js/common-scripts.js&quot;&gt;&lt;/script&gt;
+   &lt;!--仅为此页面使用的Js文件--&gt;
+   &lt;!-- 结束加载Js文件 --&gt;  
+ &lt;/body&gt;
+&lt;/html&gt;</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span2">
+                            </div>
+                        </div>
+                        <!-- 结束页面主要内容页面-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BEGIN FOOTER -->
+        <div id="footer">
+            Copyright © 2014 四小狼工作室 Powered by xmfdsh.
+        </div>
+        <!-- END FOOTER -->
+        <!-- 开始加载 Js文件 -->
+        <!-- 在底部加载Js文件，可以减少加载时间 -->
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+
+        <!-- ie8 fixes -->
+        <!--[if lt IE 9]>
+        <script src="js/excanvas.js"></script>
+        <script src="js/respond.js"></script>
+        <![endif]-->
+        <!--为全部页面加载的公共Js文件-->
+        <script src="js/common-scripts.js"></script>
+
+        <!--仅为此页面使用的Js文件-->
+        <!-- 结束加载Js文件 -->
+</body>
+</html>

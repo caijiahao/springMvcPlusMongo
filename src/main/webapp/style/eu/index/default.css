@@ -1,0 +1,135 @@
+/*the main demo bar (div)*/
+/*set the position of demo bar at plugin page > Look & Feel*/
+html{ }  /*padding-top:43px;*/
+#wpthemedemobar {
+  position:absolute;
+  /*top:0px;*/
+  left:0px;
+  width:100%;
+  height:43px;
+  padding:0px;
+  margin:0px;
+  background-color:#f1f1f1;
+  border-bottom:1px solid #cccccc;
+  color:#444444;
+  font-weight: bold;
+  font-family: tahoma;
+  font-size: 11px;
+  text-align:center;
+  z-index:100;
+}
+#openthemesbar{
+	 position: fixed;
+ top:0px;
+  right:0px;
+  width:29px;
+  height:20px;
+  padding:0px;
+  margin:0px;
+  background-color:#f1f1f1;
+  border-bottom:1px solid #cccccc;
+  color:#444444;
+  cursor:pointer;
+  font-weight: bold;
+  font-family: tahoma;
+  font-size: 11px;
+  text-align:center;
+  z-index:99999999999999999999;
+  background:url(http://www.themepark.com.cn/demo/wp-content/plugins/wordpress-theme-demo-bar/images/bar.jpg)
+	}
+	#ad_thmemesbar{ position:absolute; left:20px; top:10px; font-size:14px; color:#06C;}
+.wpthemedemobar_wrapper {
+  width:100%;
+  position:relative;
+  padding-top:7px;
+}
+.wptdb_left a{ line-height:53px;}#gbds_thmemesbar{ cursor:pointer;}
+/*currently not in used (a)*/
+#wpthemedemobar a,#wpthemedemobar a:link,#wpthemedemobar a:visited {
+  font-weight: bold;
+  font-family: tahoma;
+}
+  
+/*the theme's name (span)*/
+.wptdb_themename {
+  border-bottom:1px solid #cccccc;
+}
+  
+/*the left content including close button and etc (div)*/
+.wptdb_left {
+  position:absolute;
+  top:3px;
+  right:5px;
+  z-index:99999999999;
+}
+
+/*the images in the left content including close button and etc (img)*/
+.wptdb_left img {
+  margin-right:4px;
+}
+  
+/*the "currently previewing theme (previewed x times)" part (div)*/
+.wptdb_current {
+  margin:0 auto; 
+  text-align:center;
+  font-size:14px;
+  line-height:34px;
+  
+}
+  
+/*the text : previewed x times (span)*/
+.wptdb_popularity { 
+  color:#888888;
+  font-weight:normal
+}
+
+/*quick jump area (div)*/
+.wptdb_jumpbar_wrapper {
+  position:absolute;
+  top:3px;
+  right:15px;
+}
+
+/*quick jump : select menu (select)*/
+.wptdb_jumpbar_select { 
+  background-color:#f1f1f1;
+  border:1px solid #cccccc;
+  font-size:11px;
+  font-weight:bold;
+  font-family:tahoma;
+  color:#333333;
+  vertical-align:top;
+  margin-top:3px;
+}
+
+/*quick jump : select menu > option (option)*/
+.wptdb_jumpbar_select option {
+  padding:1px;
+}
+
+/*quick jump (input type=button)*/
+#wpthemedemobar .wptdb_jumpbar_preview_button {
+  background-color:#2885B7;
+  border:1px solid #cccccc;
+  font:bold 11px tahoma;
+  color:#fff;
+  margin-left:5px;
+  padding:4px;
+  padding-left:9px;
+  padding-right:9px;
+  -moz-border-radius:5px;
+}
+
+
+/* qTip - Tooltip script */
+div#wptdb_qTip {
+ padding: 6px;
+ border: 1px solid #cccccc;
+ display: none;
+ background: #fff;
+ color: #333333;
+ font: 11px Verdana, Arial, sans-serif;
+ text-align: left;
+ position: absolute;
+ z-index: 1000;
+}

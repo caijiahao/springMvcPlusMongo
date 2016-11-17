@@ -1,0 +1,15 @@
+.login{ margin: 0px; padding: 100px 0 0 0; background: #F8FFFD;}
+
+.loginform{ margin: 0px auto; width:326px; height: 292px; background:url("../images/index/Group.png") no-repeat;}
+.loginform label{ font-family: "Î¢ÈíÑÅºÚ", "ËÎÌå", "Times New Roman"; font-size: 13px; font-weight: 600;}
+.loginform input{ margin-top: 5px; width: 250px; height: auto; font-size: 13px; padding: 2px 5px; vertical-align: middle; line-height: 20px;}
+
+.username{ display: block; margin: 0px auto; width: 260px; padding-top: 85px;}
+.password{ display: block; margin: 0px auto; width: 260px; margin-top: 15px;}
+.button{ display: block; margin-top: 20px;}
+.forgetpassword{ color: #7c7c7c; text-decoration: none; float: right; font-size: 13px; font-weight: 400;}
+
+.Login_Button{width: 78px; height: 43px; background:url("../images/index/login_b.png"); cursor: pointer; margin-left: 20px; float: left; }
+.Login_Button:hover{background:url("../images/index/login_bs.png");}
+.Register_Button{width: 173px; height: 43px; background:url("../images/index/register_e.png"); cursor: pointer; margin-left: 25px; float: left;}
+.Register_Button:hover{background:url("../images/index/register_es.png");}

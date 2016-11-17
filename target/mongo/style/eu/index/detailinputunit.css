@@ -1,0 +1,20 @@
+.into_unit { width: 600px; border: 1px solid #ccc; padding: 10px 10px; overflow: hidden; background: #fff; margin-bottom: 10px; position: relative; box-shadow: 0 0 20px rgba(0,0,0,.15); border-radius: 4px; }
+.info_title{ background-color: #ffffff;  height: 30px;  line-height: 30px;  position: absolute; z-index: 1000; text-align: center; letter-spacing: 1px; font-size: 13px;}
+.info_detail { width: 500px; margin: 20px 30px; padding: 10px 20px 10px 20px; border: 1px dashed #dddddd; float: left; text-align: left; position: relative;}
+
+.info_detail div{ overflow: hidden; table-layout: fixed; word-wrap: break-word; font-size: 14px; color: #333;}
+.info_detail p{ margin-top: 15px;}
+.info_detail span input, .info_detail span textarea, .info_detail select{ outline: none; border-radius: 3px; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border 0.5s ease, box-shadow 0.5s ease; -moz-transition: border 0.5s ease, box-shadow 0.5s ease; -o-transition: border 0.5s ease, box-shadow 0.5s ease; transition: border 0.5s ease, box-shadow 0.5s ease;}
+.info_detail span input{ width: 200px; height: 14px; line-height: 20px; float: left; padding: 6px; border: 1px solid #bbb; text-align: left; font-size: 16px;}
+.info_detail span{ float: left; width: 100%; margin-top: 2px; clear: both;}
+.info_detail strong{ font-size: 14px; font-weight: bold; color: #666; float: left;}
+.info_detail select{ height: 28px; float: left; padding: 4px; border: 1px solid #bbb; text-align: left; font-size: 16px;}
+.info_detail select option, .info_detail span textarea{ font-size: 16px;}
+
+
+.edit_password_btn { width: 120px; height: 36px; padding: 0; background: #fff; zoom: 1; cursor: pointer; color: #fff; font-size: 20px; font-family: "Î¢ÈíÑÅºÚ"; text-shadow: 0 1px 0 #fff, 0 2px 0 #333; border-radius: 4px; border: 1px solid #0095d8; border-color: #009de4 #0095d8 #0073a7; box-shadow: 0 2px 2px rgba(0, 0, 0, .15), inset 0 1px 0 rgba(255, 255, 255, .5), 0 0 15px rgba(0,0,0,.3); background: #0095d8;}
+.edit_password_btn:hover{ border-color: #00b0ff #009fe6 #0081bb; background: #009fe6; background: -webkit-gradient(linear, left top, left bottom, from(#00a3ec),to(#0093d5));}
+
+
+.edit_publish_btn { width: 120px; height: 36px; padding: 0; background: #fff; zoom: 1; cursor: pointer; color: #fff; font-size: 20px; font-family: "Î¢ÈíÑÅºÚ"; text-shadow: 0 1px 0 #fff, 0 2px 0 #333; border-radius: 4px; border: 1px solid #0095d8; border-color: #009de4 #0095d8 #0073a7; box-shadow: 0 2px 2px rgba(0, 0, 0, .15), inset 0 1px 0 rgba(255, 255, 255, .5), 0 0 15px rgba(0,0,0,.3); background: #0095d8;}
+.edit_publish_btn:hover{ border-color: #00b0ff #009fe6 #0081bb; background: #009fe6; background: -webkit-gradient(linear, left top, left bottom, from(#00a3ec),to(#0093d5));}

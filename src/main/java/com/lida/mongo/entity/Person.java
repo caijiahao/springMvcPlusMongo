@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * Created by DuLida on 2016/10/20.
  */
-@Document(collection="person")
+@Document(collection = "person")
 public class Person implements Serializable {
 
     @Id
@@ -21,7 +21,7 @@ public class Person implements Serializable {
     public Person() {
     }
 
-    public Person( String name, int age, Address address) {
+    public Person(String name, int age, Address address) {
         this.name = name;
         this.age = age;
         this.address = address;

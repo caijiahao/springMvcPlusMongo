@@ -1,0 +1,104 @@
+//
+// jQueryUI
+// --------------------------------------------------
+
+// General
+// ------------------------- //
+
+.ui-widget-header {
+	border-color: @primaryColor;
+	background: @primaryColor;
+	color: #fff;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{
+	background: #fafafa;
+	border-color: #dddddd;
+	color: #797979;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active
+{
+	background: @primaryColor;
+	color: #fff;
+}
+.ui-widget-content { border: none; }
+
+// Datepicker
+// ------------------------- //
+
+.ui-datepicker {
+	padding: 10px;
+	background: #fff;
+	font-size: 12px;
+	.ui-widget-header {
+		background: none;
+		color: #4d4d4d;
+		border: none;
+	}
+	.ui-datepicker-calendar {
+		border-collapse: collapse;
+		thead { 
+			background: #cecece;
+			th { padding: .5em .3em; } 
+		}
+		tbody {
+			td { 
+				padding: 0;
+				span { text-align: center; }
+				a {
+					text-align: center;
+					&.ui-state-default { 
+						background: none;
+						color: #4d4d4d;
+						font-weight: 600; 
+					}
+					&.ui-state-active {
+						background: @primaryColor;
+						color: #fff;
+					}
+				} 
+			}
+		}
+	}
+}
+
+.widget-body-gray {
+	.ui-datepicker {
+		background: none;
+		padding: 0;
+		font-size: 12px;
+		.ui-widget-header {
+			background: none;
+			color: #4d4d4d;
+			border: none;
+		}
+		.ui-datepicker-calendar {
+			border-collapse: collapse;
+			thead { 
+				background: #cecece;
+				th { padding: .5em .3em; } 
+			}
+			tbody {
+				td { 
+					padding: 0;
+					span { text-align: center; }
+					a {
+						text-align: center;
+						&.ui-state-default { 
+							background: none;
+							color: #4d4d4d;
+							font-weight: 600; 
+						}
+						&.ui-state-active {
+							background: @primaryColor;
+							color: #fff;
+						}
+					} 
+				}
+			}
+		}
+	}
+}
+
+.ui-datepicker-inline { width: 100%; padding: 0; }
+.datepicker-inline { margin: 0 0 5px; }

@@ -12,8 +12,8 @@ import java.util.Date;
 @Component("annotationTask")
 public class TestTask {
     @Scheduled(cron = "*/5 * * * * ?")
-    public void print(){
+    public void print() {
         String time = DateFormat.getDateTimeInstance().format(new Date());
-        System.out.println("定时器触发打印"+time);
+        System.out.println("定时器触发打印" + time);
     }
 }

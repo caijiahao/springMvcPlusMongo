@@ -24,26 +24,26 @@ public class PersonMongoImpl implements PersonMongoDao {
 
     @Override
     public List<Person> findAll() {
-        return mongoTemplate.findAll(Person.class,"person");
+        return mongoTemplate.findAll(Person.class, "person");
     }
 
     @Override
     public void insertPerson(Person person) {
-        mongoTemplate.insert(person,"person");
+        mongoTemplate.insert(person, "person");
     }
 
     @Override
     public void removePerson(String userName) {
-        mongoTemplate.remove(Query.query(Criteria.where("name").is(userName)),"person");
+        mongoTemplate.remove(Query.query(Criteria.where("name").is(userName)), "person");
     }
 
     @Override
     public void updatePerson() {
-        mongoTemplate.updateMulti(Query.query(Criteria.where("age").gt(3).lte(5)), Update.update("age",3),"person");
+        mongoTemplate.updateMulti(Query.query(Criteria.where("age").gt(3).lte(5)), Update.update("age", 3), "person");
     }
 
     @Override
     public List<Person> findForRequery(String userName) {
-        return mongoTemplate.find(Query.query(Criteria.where("name").is(userName)),Person.class);
+        return mongoTemplate.find(Query.query(Criteria.where("name").is(userName)), Person.class);
     }
 }

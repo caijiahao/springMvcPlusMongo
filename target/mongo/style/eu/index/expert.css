@@ -1,0 +1,37 @@
+.searchexpert{ width: 240px; height: 35px; background: url("../images/index/sss.png") no-repeat; position: relative; cursor: pointer;}
+.searchexpert input{ width: 190px; height: 35px; border: 0px transparent; padding: 0px 10px; font-size: 16px; background: transparent; outline: none; font-family: "微软雅黑", "宋体", "Times New Roman";}
+
+
+
+.categorySearch { margin-top: 20px; border: 1px solid #19840E; padding: 5px; width: 220px;}
+.categoryHead { border-bottom: solid 1px #89CDAC;}
+.categoryHead span b{ font-size: 18px;}
+table.categoryList tr{ height: 30px; overflow: hidden;}
+table.categoryList tr td{ vertical-align: middle;}
+table.categoryList span.categoryicon{ display: block; width: 16px; height:16px; background: url("../images/index/category_icon.png") no-repeat;}
+table.categoryList a { cursor: pointer;}
+
+
+
+.expertlist{ width:680px;}
+.expertlist ul li .pic{  float:left; display:block; overflow:hidden;}
+.expertlist li .time{ width:100%; display:block;color:#eb302f; font-size:14px; line-height:1.5em; }
+.expertlist li a{ font-size:18px; line-height:2em; color:#333; text-decoration:none;}
+.expertlist ul li p{ font-size:12px; color:#999;}
+.expertlist ul li{ width:670px;float:left; padding :10px 0 ; border-bottom: dashed #D5D5D5 1px;}
+.expertlist img { width: 150px !important; height: 150px !important; float: left; border-radius: 4px; margin: 1px 10px 5px 0;}
+.expertlist .expertname { font-family: "微软雅黑", "宋体", "Times New Roman"; font-size:16px;}
+.expertlist .expertcontent { font-size: 13px; color: #888;}
+
+.expertlist table{}
+.expertlist table tr{ height: 32px; line-height: 32px;}
+.expertlist table a{ line-height: 32px;}
+
+
+.articletitle{ width: 100%; border-bottom: dashed #D5D5D5 1px; padding 10px; display: block; text-align: center;}
+.articletitle .title{ font-size: 28px; line-height: 1.5em; color: #333; font-weight: bold;}
+.articletitle .time{ font-size: 18px; line-height: 2em; color: #333;}
+
+.news_model ul li{ width: 256px; float: left; padding: 4px 0; border-bottom: dashed #D5D5D5 1px; }
+.news_model ul li a { font-size: 12px; color: #333; text-decoration: none; float: left;}
+.news_model ul li .time { float: right; width: 50px; }

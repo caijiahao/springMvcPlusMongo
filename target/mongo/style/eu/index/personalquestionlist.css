@@ -1,0 +1,16 @@
+.personaltabs { width: 100%; outline: 0;}
+.personaltabs .personal_message_head{ margin: 0 auto; padding: 0; width: 350px; border: 1px solid #ABE9F1; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.3);}
+.personal_message_container{ outline: 0;}
+
+.personal_message_item { float: left; width: 50%; text-align: center; vertical-align: middle; position: relative; cursor: pointer; background: 0 0; border: 0; outline: 0;}
+button.personal_message_item{ padding: 0; line-height: 1.7; border-radius: 10px;}
+.personal_message_item .icon { position: relative; width: 22px; line-height: 40px; margin: 9px; opacity: .6; font-size: 14pt; font-weight: bold; color: #11798C;}
+.personal_message_item.current{ background-color: #40ADAD; box-shadow: 0 1px 3px rgba(0,0,0,.3);}
+.personal_message_item.current span{ color: white;}
+
+.personal_message_border{ height: 3px; width: 100%; position: relative; background: linear-gradient(to right,rgba(250,250,250,.1) 0,rgba(240,240,240,.8) 1%,#ddd 4%,#ddd 96%,rgba(240,240,240,.8) 99%,rgba(250,250,250,.1) 100%); box-shadow: 0 1px 1px rgba(0,0,0,.05);}
+
+.clearfix:before, .clearfix:after { display: table; content: "";}
+.clearfix:after { clear: both;}
+
+.personal_message_frame{ width: 100%; position: relative;}

@@ -1,0 +1,59 @@
+.searchbox{ position: relative;}
+.searchbox input{ padding: 7px 50px 7px 10px; width: 100%; color: #49525c; font-size: 14px; line-height: 17px; background-color: #e1eaf2; border: 1px solid #045bb2; border-radius: 4px; box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1); outline: 0; box-sizing: border-box;}
+.searchbox button{ position: absolute; top: 0; right: 0; width: 40px; height: 100%; background: #0e78e7; background: -webkit-linear-gradient(top,#0e7bef,#0d73da); background: linear-gradient(to bottom,#0e7bef,#0d73da); border: 1px solid #045bb2; border-top-right-radius: 4px; border-bottom-right-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,.05),inset 0 1px 1px rgba(255,255,255,.15); box-sizing: border-box; outline: 0; cursor: pointer;}
+.searchbox button i{ background: transparent url("../images/littleicon2.png") no-repeat; }
+.searchbox button .search_icon{ background-position: -82px 0; width: 15px; height: 15px; position:absolute; top: 8px; left: 10px;}
+
+.searchquestion{ width: 240px; height: 35px; background: url("../images/index/sss.png") no-repeat; position: relative; cursor: pointer;}
+.searchquestion input{ width: 190px; height: 35px; border: 0px transparent; padding: 0px 10px; font-size: 16px; background: transparent; outline: none; font-family: "微软雅黑", "宋体", "Times New Roman";}
+
+.askquestion{ width: 173px; height: 43px; cursor: pointer; background: url("../images/index/askquestion.png"); }
+.askquestion:hover{ background: url("../images/index/askquestion_s.png"); }
+.myquestion{ width: 120px; height: 35px; line-height: 30px; margin-top: 15px; margin-right: 15px; border: 1px solid #045bb2; border-radius: 4px; background: #0e78e7; background: -webkit-linear-gradient(top,#0e7bef,#0d73da); background: linear-gradient(to bottom,#0e7bef,#0d73da); box-shadow: 0 1px 2px rgba(0,0,0,.05),inset 0 1px 1px rgba(255,255,255,.15); color: #fff; font-size: 24px; text-align: center; text-shadow: 0 1px 1px rgba(0,0,0,.12); outline: 0; cursor: pointer;}
+
+.comment_list{width: 620px;}
+.comment_list ul{ border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 1px 1px rgba(0,0,0,.05);}
+.comment_list ul li.commentitem{ list-style: none; display: block; background: none; width: 100%; overflow: hidden; clear: both; margin: 0;}
+.comment_list textarea{ outline:none; resize: none; font-size: 13px; line-height: 20px;}
+
+.comment_list .comment_post{ position: relative; padding: 0px 10px;}
+.comment_list .comment_post .avatar{box-shadow: 0 1px 1px rgba(255,255,255,0.75); position: relative; border-radius: 3px; background-color: #fff; float: left;}
+.comment_list .comment_post .avatar img{ display: block; width: 50px; height: 50px; max-width: none; box-shadow: 0 1px 3px rgba(0,0,0,0.22); -webkit-border-radius: 3px; border-radius: 3px;}
+
+.comment_list .comment_post .comment_body{ padding-left: 60px;}
+.comment_list .comment_post .comment_body .comment_header{ padding-top: 1px;}
+.comment_list .comment_post .comment_body .comment_header .user_name{ font-size: 14px; margin-right: 8px; color: #d32 !important;}
+.comment_list .comment_post .comment_body p{ font-size: 13px; line-height: 1.5em; margin: .5em 0; word-wrap: break-word; text-indent: 0; clear: none;}
+.comment_list .comment_post .comment_body .comment_footer{ line-height: 1.5em; font-size: 12px; color: #999;}
+.comment_list .comment_post .comment_body .comment_footer .comment_time{ margin-right: 8px;}
+.comment_list .comment_post .comment_body .comment_footer a{ margin: 0 6px 0 0; padding: 0 6px 0 0; color: #999;}
+.comment_list .comment_post .comment_body .comment_footer .comment_icon{ vertical-align: middle; display: inline-block; overflow: hidden; background: transparent url("../images/Sprites_Embed.png") no-repeat; position: relative; top: -1px;}
+.comment_list .comment_post .comment_body .comment_footer .comment_icon_reply{ width: 18px; height: 13px; background-position: 0 -105px;}
+.comment_list .comment_post .comment_body .comment_footer .comment_icon_like{ width: 14px; height: 13px; background-position: 0 -117px;}
+.comment_list .comment_post .comment_body .comment_footer .comment_likes_count{ float:right; color: #999; font-size: 13px;}
+.comment_list .comment_post .comment_body .comment_replylittlebox{ padding: 3px 30px;}
+.comment_list .comment_post .comment_body .replylittlebox_textarea{ position: relative; border: 1px solid #ccc; border-bottom: none; padding-right: 20px; background: #fff; overflow: hidden; border-top-right-radius: 3px; border-top-left-radius: 3px;}
+.comment_list .comment_post .comment_body .replylittlebox_textarea textarea{ display: block; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; border: none; box-shadow: none; -webkit-appearance: none; overflow: auto; padding: 10px; height: 20px; margin: 0; color: #999; width: 100%;}
+.comment_list .comment_post .comment_body .replylittlebox_toolbar{position: relative; width: 100%; box-shadow: 0 1px 0 rgba(255,255,255,0.6);}
+.comment_list .comment_post .comment_body .replylittlebox_toolbar .replylittlebox_gradient{position: relative; margin-right: 100px; height: 30px; border: 1px solid #ccc; border-right: none; border-bottom-color: #aaa; border-bottom-left-radius: 3px; -webkit-border-bottom-left-radius: 3px;}
+.comment_list .comment_post .comment_body .replylittlebox_toolbar .replylittlebox_button{outline:none;cursor: pointer; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; position: absolute; right: 0; top: 0; height: 32px; width: 100px; text-align: center; text-shadow: 0 1px 0 #fff; color: #555; font-size: 14px; font-weight: bold; border: 1px solid #ccc; border-bottom-color: #aaa; border-bottom-right-radius: 3px;  -webkit-border-bottom-right-radius: 3px; background-color: #e6e6e6; background-repeat: no-repeat; background-image: linear-gradient(#fcfcfc, #fcfcfc 25%, #e6e6e6); transition: all .15s linear; box-shadow: inset 0 0 1px #fff;}
+
+.comment_list .comment_paginator{ text-align: right; padding: 10px 0px; clear: both; line-height: 1em;}
+.comment_list .comment_paginator a{ font-size: 12px; margin: 0 3px; padding: 2px 5px; border: 1px solid transparent; cursor: pointer; text-decoration: none; color: #777;}
+.comment_list .comment_paginator a.paginator_current{ border-radius: 3px; background-color: rgba(0,0,0,0.03); border: 1px solid #ccc; color: #d32; }
+.comment_list .comment_paginator a:hover{ border-radius: 3px; background-color: rgba(0,0,0,0.03); border: 1px solid #ccc; }
+
+.comment_list .comment_replybox{width: auto; font-size: 12px; z-index: 3; margin: 0;  padding: 0 0 0 60px; position: relative;}
+.comment_list .comment_replybox .replybox_avatar{ position: absolute; top: 0; left: 0; float: left; box-shadow: 0 1px 3px rgba(0,0,0,0.22); -webkit-border-radius: 3px; border-radius: 3px;}
+.comment_list .comment_replybox .replybox_textarea{ position: relative; border: 1px solid #ccc; border-bottom: none; padding-right: 20px; background: #fff; overflow: hidden; border-top-right-radius: 3px; border-top-left-radius: 3px;}
+.comment_list .comment_replybox .replybox_textarea textarea{ display: block; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; border: none; box-shadow: none; -webkit-appearance: none; overflow: auto; padding: 10px; height: 54px; margin: 0; color: #999; width: 100%;}
+.comment_list .comment_replybox .replybox_toolbar{position: relative; width: 100%; box-shadow: 0 1px 0 rgba(255,255,255,0.6);}
+.comment_list .comment_replybox .replybox_toolbar .replybox_gradient{position: relative; margin-right: 100px; height: 30px; border: 1px solid #ccc; border-right: none; border-bottom-color: #aaa; border-bottom-left-radius: 3px; -webkit-border-bottom-left-radius: 3px;}
+.comment_list .comment_replybox .replybox_toolbar .replybox_button{outline:none;cursor: pointer; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; position: absolute; right: 0; top: 0; height: 32px; width: 100px; text-align: center; text-shadow: 0 1px 0 #fff; color: #555; font-size: 14px; font-weight: bold; border: 1px solid #ccc; border-bottom-color: #aaa; border-bottom-right-radius: 3px;  -webkit-border-bottom-right-radius: 3px; background-color: #e6e6e6; background-repeat: no-repeat; background-image: linear-gradient(#fcfcfc, #fcfcfc 25%, #e6e6e6); transition: all .15s linear; box-shadow: inset 0 0 1px #fff;}
+
+.answerlist{ width:630px;}
+.answerlist li .time{ float: right; width: 50px; padding-right: 18px}
+.answerlist li a{ font-size: 14px;color: #333;text-decoration: none;float: left;}
+.answerlist li p{ margin-top: 20px; margin-left: 10px; font-size: 13px; line-height: 1.5; color: #999;}
+.answerlist ul li{ width:620px;float:left; padding: 3px 0; border-bottom: dashed #D5D5D5 1px;}
+.answerlist ul li .highline{ color: red;}

@@ -1,0 +1,49 @@
+// Choose Preview
+// -------------------------
+
+#choose-preview {
+    padding: 50px 0;
+    h2 {
+    	span.text-primary { font-size: 26pt; font-weight: bold; top: auto; }
+    	margin-left: 0;
+    }
+    .control-group { margin: 0 0 5px; }
+    select { color: #000; }
+    .heading-buttons { margin-bottom: 10px; }
+   	.box {
+   		padding: 10px;
+   		.options { display: none; }
+   		.actions a { 
+   			display: none;
+   			&.btn-active { display: inline-block; }
+   		}
+   		h3 { text-transform: uppercase; margin: 0 0 12px; }
+   		&.active {
+   			background: @widgetBg;
+			box-shadow: 0 3px 0 0 @contentShadow1;
+			-moz-box-shadow: 0 3px 0 0 @contentShadow1;
+			-webkit-box-shadow: 0 3px 0 0 @contentShadow1;
+			.rounded(5px,5px,5px,5px);
+			border: 1px solid @contentBorder;
+			padding: @spacing;
+   			.options { display: block; }
+   			h3 { color: #000; text-shadow: 0 1px 0 #fff; }
+   		} 
+   	}
+   	&.style-dark {
+   		.well {
+   			background: @widgetBg;
+   		}
+   		.box {
+   			&.active {
+   				background: @contentBg1;
+   				border-color: @contentBorder2;
+   				h3 {
+   					text-shadow: none;
+   					color: #fff;
+   				}
+   				hr { border-top-color: @contentBorder2; }
+   			}
+   		}
+   	}
+}

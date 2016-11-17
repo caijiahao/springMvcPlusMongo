@@ -2,10 +2,10 @@ package com.lida.mongo.service;
 
 
 public class TemplateMesService {
-	/*
+    /*
 	*//**
-	 * 体验店新订单提醒模板消息	
-	 *//*
+     * 体验店新订单提醒模板消息
+     *//*
 	public void neworders(String order_sn){
 		//获取订单信息
 		YlOrderInfo ylOrderInfo=ylOrderInfoDao.neworder(order_sn);
@@ -34,8 +34,8 @@ public class TemplateMesService {
 		}
 	}
 	*//**
-	 * 供货商发货提醒
-	 *//*
+     * 供货商发货提醒
+     *//*
 	public void ordersshipments(String order_sn) {
 		Map<String, String> mesinfo = new HashMap<String, String>();
 		//获取子订单信息
@@ -61,8 +61,8 @@ public class TemplateMesService {
 		}
 	}
 	*//**
-	 *体验店收益提醒
-	 *//*
+     *体验店收益提醒
+     *//*
 	public void Earnings(String order_sn) {
 		YeOrderInfo yeOrderInfo= yeOrderInfoDao.getyeordersn(order_sn);
 		//获取绑定该体验店的企业会员信息
@@ -89,8 +89,8 @@ public class TemplateMesService {
 		
 	}
 	*//**
-	 * 供货商商品缺货预警
-	 *//*
+     * 供货商商品缺货预警
+     *//*
 	public void goodsstockout(int product_id) {
 		Map<String, String> mesinfo = new HashMap<String, String>();
 		YeEtSupplyProducts yeEtSupplyProducts=yeEtSupplyProductsDao.stock(product_id);
@@ -109,5 +109,5 @@ public class TemplateMesService {
 		
 	}
 	*/
-	
+
 }

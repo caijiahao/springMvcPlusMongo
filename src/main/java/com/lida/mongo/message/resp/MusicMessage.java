@@ -2,17 +2,16 @@ package com.lida.mongo.message.resp;
 
 /**
  * ������Ϣ
- * 
  */
 public class MusicMessage extends BaseMessage {
-	// ����
-	private Music Music;
+    // ����
+    private Music Music;
 
-	public Music getMusic() {
-		return Music;
-	}
+    public Music getMusic() {
+        return Music;
+    }
 
-	public void setMusic(Music music) {
-		Music = music;
-	}
+    public void setMusic(Music music) {
+        Music = music;
+    }
 }

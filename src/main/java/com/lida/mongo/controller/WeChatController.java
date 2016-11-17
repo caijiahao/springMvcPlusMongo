@@ -12,8 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 
 
-
-
 /**
  * Created by stevenfen on 2016/11/12.
  */
@@ -22,6 +20,7 @@ import java.io.PrintWriter;
 public class WeChatController {
     @Resource
     private CoreService coreService;
+
     @RequestMapping(method = RequestMethod.GET)
     public void doget(HttpServletRequest request, HttpServletResponse response, PrintWriter out) {
         // 微信加密签名
@@ -43,14 +42,14 @@ public class WeChatController {
         out.close();
     }
 
-    @RequestMapping(method = { RequestMethod.POST })
-    public void dopose(HttpServletRequest request, HttpServletResponse response)throws Exception {
-	        /* 消息的接收、处理、响应 */
+    @RequestMapping(method = {RequestMethod.POST})
+    public void dopose(HttpServletRequest request, HttpServletResponse response) throws Exception {
+            /* 消息的接收、处理、响应 */
         // 将请求、响应的编码均设置为UTF-8（防止中文乱码）
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         // 调用核心业务类接收消息、处理消息
-        String respMessage = coreService.processRequest(request,response);
+        String respMessage = coreService.processRequest(request, response);
         // 响应消息
         PrintWriter out = response.getWriter();
         out.print(respMessage);

@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 //告诉junit spring配置文件
-@ContextConfiguration({"classpath:spring/spring-context.xml","classpath:spring/spring-mongo.xml"})
+@ContextConfiguration({"classpath:spring/spring-context.xml", "classpath:spring/spring-mongo.xml"})
 public class MongoTemplateTest {
     private static Logger log = LoggerFactory.getLogger(MongoTemplateTest.class);
 
@@ -29,7 +29,7 @@ public class MongoTemplateTest {
     @Test
     public void testMongoTemplate() {
 
-        personMongo.insertPerson(new Person("weiwei",24,new Address("南王","鑫达路",10)));
+        personMongo.insertPerson(new Person("weiwei", 24, new Address("南王", "鑫达路", 10)));
         personMongo.removePerson("name3");
         personMongo.updatePerson();
         log.debug("========================================================");

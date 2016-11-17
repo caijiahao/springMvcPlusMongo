@@ -1,6 +1,8 @@
 package com.lida.mongo.controller;
 
 import com.lida.mongo.dao.PersonDao;
+import com.lida.mongo.entity.Address;
+import com.lida.mongo.entity.Person;
 import com.lida.mongo.mongoDao.PersonMongoImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +21,17 @@ public class MongoController {
     @Resource
     private PersonMongoImpl personMongo;
     private static Logger log = LoggerFactory.getLogger(MongoController.class);
-    @RequestMapping(value = "/list",method = RequestMethod.GET)
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String go() {
 
-        log.debug(personMongo.findAll()+"=========================================================================");
+        personMongo.insertPerson(new Person("weiwei", 24, new Address("南王", "鑫达路", 10)));
+        personMongo.removePerson("name3");
+        personMongo.updatePerson();
+        log.debug("========================================================");
+        System.out.println(personMongo.findAll());
+        System.out.println(personMongo.findForRequery("weiwei"));
+        log.debug("=========================================================================");
         return "mogoList";
     }
 

@@ -1,0 +1,5 @@
+.footable { width: 100%; }
+.footable.breakpoint > tbody > tr > td.expand { background: url('img/plus.png') no-repeat 5px center; padding-left: 40px; }
+.footable.breakpoint > tbody > tr.footable-detail-show > td.expand { background: url('img/minus.png') no-repeat 5px center; }
+.footable.breakpoint > tbody > tr.footable-row-detail { background: #eee; }
+.footable > tbody img { vertical-align:middle; }

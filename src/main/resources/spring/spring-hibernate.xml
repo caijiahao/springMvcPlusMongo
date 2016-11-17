@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- 配置数据源 -->
+    <bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="url" value="${jdbc_url}"/>
+        <property name="username" value="${jdbc_username}"/>
+        <property name="password" value="${jdbc_password}"/>
+
+        <!-- 初始化连接大小 -->
+        <property name="initialSize" value="0"/>
+        <!-- 连接池最大使用连接数量 -->
+        <property name="maxActive" value="20"/>
+        <!-- 连接池最小空闲 -->
+        <property name="minIdle" value="0"/>
+        <!-- 获取连接最大等待时间 -->
+        <property name="maxWait" value="60000"/>
+
+        <!-- <property name="poolPreparedStatements" value="true" /> <property name="maxPoolPreparedStatementPerConnectionSize" value="33" /> -->
+
+        <property name="validationQuery" value="${validationQuery}"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="testWhileIdle" value="true"/>
+
+        <!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
+        <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="25200000"/>
+
+        <!-- 打开removeAbandoned功能 -->
+        <property name="removeAbandoned" value="true"/>
+        <!-- 1800秒，也就是30分钟 -->
+        <property name="removeAbandonedTimeout" value="1800"/>
+        <!-- 关闭abanded连接时输出错误日志 -->
+        <property name="logAbandoned" value="true"/>
+
+        <!-- 监控数据库 -->
+        <!-- <property name="filters" value="mergeStat" /> -->
+        <property name="filters" value="stat"/>
+    </bean>
+
+    <!-- 配置hibernate session工厂 -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <prop key="hibernate.use_sql_comments">${hibernate.use_sql_comments}</prop>
+            </props>
+        </property>
+
+        <!-- 自动扫描注解方式配置的hibernate类文件 -->
+        <property name="packagesToScan">
+            <list>
+                <value>light.mvc.model</value>
+            </list>
+        </property>
+
+    </bean>
+
+    <!-- 配置事务管理器 -->
+    <bean name="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <!-- 注解方式配置事物 -->
+    <!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+
+    <!-- 拦截器方式配置事物 -->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="append*" propagation="REQUIRED"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="modify*" propagation="REQUIRED"/>
+            <tx:method name="edit*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="remove*" propagation="REQUIRED"/>
+            <tx:method name="init" propagation="REQUIRED"/>
+            <tx:method name="delAndInit" propagation="REQUIRED"/>
+
+            <tx:method name="get*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="load*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="search*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="datagrid*" propagation="REQUIRED" read-only="true"/>
+
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="transactionPointcut" expression="execution(* light.mvc.service..*Impl.*(..))"/>
+        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice"/>
+    </aop:config>
+
+</beans>

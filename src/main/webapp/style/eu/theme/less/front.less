@@ -1,0 +1,126 @@
+//
+// Front customizations
+// --------------------------------------------------
+
+// Top menu
+// ------------------------- //
+
+html.front {
+	.menu-hidden {
+		.navbar.main { height: 99px; }
+	}
+	.navbar.main {
+		height: auto;
+		left: 0 !important;
+		.secondary {
+			height: 49px;
+			line-height: 49px;
+			position: relative;
+			overflow: hidden;
+			background-color: @navbarSecondaryBg;
+			border-bottom: 1px solid @topnavBorder1;
+			.appbrand {
+				font-weight: 700;
+				font-size: 25pt;
+				color: #fff;
+				text-decoration: none;
+				padding: 0 8px;
+			}
+		}
+		ul.topnav:first-of-type {
+			border-left: none;
+			margin-left: -8px;
+			> li:first-of-type {
+				border-left: none;
+			}
+		}
+		li.search { 
+			#reset .boxShadow();  
+		}
+		li.glyphs + .glyphs {
+			padding-left: 0;
+		}
+		li.glyphs {
+			border: none; 
+			#reset .boxShadow(); 
+			margin-left: 0;
+			ul li {
+				.glyphicons {
+					color: @navbarGlypsText;
+					i {
+						display: inline-block;
+						width: 32px;
+						vertical-align: top;
+					} 
+				}
+				&.active, &:hover {
+					.glyphicons { color: #fff; }
+				}
+				&.single { 
+					&, &:last-child { .rounded(5px,5px,5px,5px); }
+				}
+			}
+		}
+	}
+	#content {
+		margin: 0;
+	}
+	#footer {
+		background: #1f2123;
+		color: #919192;
+		a:not(.btn) { color: @primaryColor; }
+		.copy { 
+			background: #000; 
+			color: #2a2a2a;
+			a { color: #2a2a2a; text-decoration: none; }
+			text-align: left;
+			.appbrand {
+				position: absolute;
+				right: 10px;
+				text-transform: uppercase;
+				font-size: 15px;
+				font-weight: 700;
+			} 
+		}
+		.box-generic {
+			#reset .boxShadow();
+			background: #191a1c;
+			border: none;
+		}
+		h4 {
+			text-transform: uppercase;
+			font-size: 15px;
+			font-weight: 700;
+			text-shadow: none;
+			color: #fff;
+			margin: 0 0 8px;
+		}
+		ul {
+			list-style: none;
+			margin: 0 0 @spacing;
+			padding: 0;
+			li {
+				display: block;
+				background: #191a1c;
+				margin: 0 0 1px;
+				line-height: 30px;
+				height: 30px;
+				a {
+					line-height: 30px;
+					height: 30px;
+					display: block;
+					padding: 0 10px;
+				}
+				&:first-of-type { .rounded(5px,5px,0,0); }
+				&:last-of-type { margin: 0; .rounded(0,0,5px,5px); }
+			}
+			&.icons {
+				li {
+					padding: 0 10px 0 35px;
+					i:before { top: 7px; left: 10px; }
+				}
+			}
+		}
+	}
+	#contact_gmap { height: 400px; }
+}

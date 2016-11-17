@@ -1,0 +1,36 @@
+//
+// Popovers
+// --------------------------------------------------
+
+// Popovers
+// -------------------------
+
+.popover {
+	border-color: @contentBorder;
+	background: @widgetBg;
+	box-shadow: 0 3px 0 0 @contentShadow1;
+	-moz-box-shadow: 0 3px 0 0 @contentShadow1;
+	-webkit-box-shadow: 0 3px 0 0 @contentShadow1;
+	.popover-title {
+		font-weight: 600;
+		padding: 0 10px;
+		height: 29px;
+		line-height: 29px;
+		#gradient > .vertical(@contentGradient1, @contentGradient2);
+		border-bottom: 1px solid @contentBorder;
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+// Popovers Demo ONLY (UI page)
+// -------------------------
+
+#demo_popovers {
+	.popover {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+}
