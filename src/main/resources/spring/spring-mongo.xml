@@ -11,7 +11,6 @@
             http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
 
     <!-- 加载mongodb的属性配置文件 -->
- <!--   <context:property-placeholder location="classpath:mongo.properties" ignore-unresolvable="true"/>-->
     <!-- spring连接mongodb数据库的配置 -->
     <mongo:mongo-client replica-set="${mongo.hostport}" id="mongo">
         <mongo:client-options connections-per-host="${mongo.connectionsPerHost}"
