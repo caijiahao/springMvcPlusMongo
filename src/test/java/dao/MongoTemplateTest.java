@@ -1,14 +1,12 @@
 package dao;
 
-import com.lida.mongo.dao.PersonDao;
-import com.lida.mongo.entity.Address;
-import com.lida.mongo.entity.Person;
-import com.lida.mongo.mongoDao.PersonMongoImpl;
+import com.lida.mongo.person.entity.Address;
+import com.lida.mongo.person.entity.Person;
+import com.lida.mongo.person.mongoDao.PersonMongoImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
