@@ -217,6 +217,12 @@
             <artifactId>aspectjrt</artifactId>
             <version>1.5.3</version>
         </dependency>
+        <!--java爬虫插件-->
+        <dependency>
+            <groupId>cn.wanghaomiao</groupId>
+            <artifactId>SeimiCrawler</artifactId>
+            <version>0.1.0</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
