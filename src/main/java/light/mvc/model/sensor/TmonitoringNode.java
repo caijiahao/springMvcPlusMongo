@@ -11,137 +11,194 @@ import javax.persistence.Table;
 @Table(name = "monitoringnode")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class TmonitoringNode extends baseEntity implements java.io.Serializable {
+public class TmonitoringNode extends baseEntity implements java.io.Serializable{
+	
 
-
-    private String name;
-
-    private String code;
-
-    private Double locationX;
-
+	
+	private String name;
+	
+	private String code;
+	
+	private Double locationX;
+	   
     private Double locationY;
-
+    
     private Long type;
-
+    
     private Long station;
+    
+	private Integer fps;
+	
+	private String address;//保留字段
+	
+	private String description;
 
-    private Integer fps;
+	private Integer sensor_ch;
 
-    private String address;//保留字段
+	private String map;
+	
+	private String dataKey;
 
-    private String description;
-
-
-    public TmonitoringNode() {
-        super();
-    }
-
-
-    public TmonitoringNode(String name, String code, Double locationX,
-                           Double locationY, Long type, Long station, Integer fps,
-                           String address, String description) {
-        super();
-        this.name = name;
-        this.code = code;
-        this.locationX = locationX;
-        this.locationY = locationY;
-        this.type = type;
-        this.station = station;
-        this.fps = fps;
-        this.address = address;
-        this.description = description;
-    }
+	public TmonitoringNode()
+	{
+		super();
+	}
 
 
-    public String getName() {
-        return name;
-    }
+	public TmonitoringNode(String name, String code, Double locationX,
+			Double locationY, Long type, Long station, Integer fps,
+			String address, String description, Integer sensor_ch, String map,
+			String dataKey) {
+		super();
+		this.name = name;
+		this.code = code;
+		this.locationX = locationX;
+		this.locationY = locationY;
+		this.type = type;
+		this.station = station;
+		this.fps = fps;
+		this.address = address;
+		this.description = description;
+		this.sensor_ch = sensor_ch;
+		this.map = map;
+		this.dataKey = dataKey;
+	}
 
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getDataKey() {
+		return dataKey;
+	}
 
 
-    public String getCode() {
-        return code;
-    }
+	public void setDataKey(String dataKey) {
+		this.dataKey = dataKey;
+	}
 
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+	public Integer getSensor_ch() {
+		return sensor_ch;
+	}
 
 
-    public Double getLocationX() {
-        return locationX;
-    }
+	public void setSensor_ch(Integer sensor_ch) {
+		this.sensor_ch = sensor_ch;
+	}
 
 
-    public void setLocationX(Double locationX) {
-        this.locationX = locationX;
-    }
+	public String getName() {
+		return name;
+	}
 
 
-    public Double getLocationY() {
-        return locationY;
-    }
 
 
-    public void setLocationY(Double locationY) {
-        this.locationY = locationY;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCode() {
+		return code;
+	}
 
 
-    public Long getType() {
-        return type;
-    }
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public Double getLocationX() {
+		return locationX;
+	}
+
+	public void setLocationX(Double locationX) {
+		this.locationX = locationX;
+	}
+
+	public Double getLocationY() {
+		return locationY;
+	}
 
 
-    public void setType(Long type) {
-        this.type = type;
-    }
+	public void setLocationY(Double locationY) {
+		this.locationY = locationY;
+	}
 
 
-    public Long getStation() {
-        return station;
-    }
+	public Long getType() {
+		return type;
+	}
 
 
-    public void setStation(Long station) {
-        this.station = station;
-    }
+	public void setType(Long type) {
+		this.type = type;
+	}
 
 
-    public Integer getFps() {
-        return fps;
-    }
+	public Long getStation() {
+		return station;
+	}
+
+	public void setStation(Long station) {
+		this.station = station;
+	}
 
 
-    public void setFps(Integer fps) {
-        this.fps = fps;
-    }
 
 
-    public String getAddress() {
-        return address;
-    }
+	public Integer getFps() {
+		return fps;
+	}
 
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
 
-    public String getDescription() {
-        return description;
-    }
+	public void setFps(Integer fps) {
+		this.fps = fps;
+	}
 
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
+
+	public String getAddress() {
+		return address;
+	}
+
+
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+
+
+	public String getDescription() {
+		return description;
+	}
+
+
+
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+
+
+	public String getMap() {
+		return map;
+	}
+
+
+
+
+	public void setMap(String map) {
+		this.map = map;
+	}
+
+
+	
+	
 
 }

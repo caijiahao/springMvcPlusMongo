@@ -12,70 +12,70 @@ import javax.persistence.*;
 @Table(name = "sys_dictionarytype", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class Tdictionarytype extends IdEntity implements java.io.Serializable {
+public class Tdictionarytype extends IdEntity implements java.io.Serializable{
+	
+	private String code;
+	private String name;
+	private Integer seq;
+	private String description;
+	private Tdictionarytype dictionarytype;
+	
+	public Tdictionarytype(){
+		
+	}
+	
+	public Tdictionarytype(String code, String name, Integer seq,
+			String description) {
+		super();
+		this.code = code;
+		this.name = name;
+		this.seq = seq;
+		this.description = description;
+	}
 
-    private String code;
-    private String name;
-    private Integer seq;
-    private String description;
-    private Tdictionarytype dictionarytype;
+	@NotBlank
+	public String getCode() {
+		return code;
+	}
 
-    public Tdictionarytype() {
+	public void setCode(String code) {
+		this.code = code;
+	}
 
-    }
+	@NotBlank
+	public String getName() {
+		return name;
+	}
 
-    public Tdictionarytype(String code, String name, Integer seq,
-                           String description) {
-        super();
-        this.code = code;
-        this.name = name;
-        this.seq = seq;
-        this.description = description;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    @NotBlank
-    public String getCode() {
-        return code;
-    }
+	public Integer getSeq() {
+		return seq;
+	}
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+	public void setSeq(Integer seq) {
+		this.seq = seq;
+	}
 
-    @NotBlank
-    public String getName() {
-        return name;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public Integer getSeq() {
-        return seq;
-    }
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "pid")
+	public Tdictionarytype getDictionarytype() {
+		return dictionarytype;
+	}
 
-    public void setSeq(Integer seq) {
-        this.seq = seq;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "pid")
-    public Tdictionarytype getDictionarytype() {
-        return dictionarytype;
-    }
-
-    public void setDictionarytype(Tdictionarytype dictionarytype) {
-        this.dictionarytype = dictionarytype;
-    }
+	public void setDictionarytype(Tdictionarytype dictionarytype) {
+		this.dictionarytype = dictionarytype;
+	}
 
 
 }

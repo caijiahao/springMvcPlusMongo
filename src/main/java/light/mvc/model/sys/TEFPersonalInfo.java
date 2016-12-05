@@ -20,167 +20,158 @@ import java.util.Set;
 @Table(name = "personalinfo", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class TEFPersonalInfo extends baseEntity implements java.io.Serializable {
+public class TEFPersonalInfo  extends baseEntity implements java.io.Serializable{
 
-    private String realName;
-    private String phoneNumber;
-    private Integer sex;
-    private Integer age;
-    private String email;
-    private String address;
+	private String realName;
+	private String phoneNumber;
+	private Integer sex;
+	private Integer age;
+	private String email;
+	private String address;
 
-    private String techType;
-    private String description;
-    private String techTitle;
-    private Integer needPublish;
+	private String techType;
+	private String description;
+	private String techTitle;
+	private Integer needPublish;
 
-    private TEFOrganization organization;
-    private TEFRole role;
+	private TEFOrganization organization;
+	private TEFRole role;
+	
+	private Set<TEFmanualCategory> manualCategorys= new  HashSet<TEFmanualCategory>(0);
 
-    private Set<TEFmanualCategory> manualCategorys = new HashSet<TEFmanualCategory>(0);
-
-    public TEFPersonalInfo() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-
-    public TEFPersonalInfo(String realName, String phoneNumber, Integer sex,
-                           Integer age, String email, String address, String techType,
-                           String description, String techTitle, Integer needPublish, TEFOrganization organization, TEFRole role) {
-        super();
-        this.realName = realName;
-        this.phoneNumber = phoneNumber;
-        this.sex = sex;
-        this.age = age;
-        this.email = email;
-        this.address = address;
-        this.techType = techType;
-        this.description = description;
-        this.techTitle = techTitle;
-        this.needPublish = needPublish;
-        this.organization = organization;
-        this.role = role;
-    }
-
-
-    public String getRealName() {
-        return realName;
-    }
-
-    public void setRealName(String realName) {
-        this.realName = realName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public Integer getSex() {
-        return sex;
-    }
-
-    public void setSex(Integer sex) {
-        this.sex = sex;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getTechType() {
-        return techType;
-    }
-
-    public void setTechType(String techType) {
-        this.techType = techType;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public TEFPersonalInfo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	public TEFPersonalInfo(String realName, String phoneNumber, Integer sex,
+			Integer age, String email, String address, String techType,
+			String description, String techTitle, Integer needPublish, TEFOrganization organization, TEFRole role) {
+		super();
+		this.realName = realName;
+		this.phoneNumber = phoneNumber;
+		this.sex = sex;
+		this.age = age;
+		this.email = email;
+		this.address = address;
+		this.techType = techType;
+		this.description = description;
+		this.techTitle = techTitle;
+		this.needPublish = needPublish;
+		this.organization = organization;
+		this.role = role;
+	}
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "OrganizationID")
-    public TEFOrganization getOrganization() {
-        return organization;
-    }
+
+	public String getRealName() {
+		return realName;
+	}
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Integer getSex() {
+		return sex;
+	}
+	public void setSex(Integer sex) {
+		this.sex = sex;
+	}
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getTechType() {
+		return techType;
+	}
+	public void setTechType(String techType) {
+		this.techType = techType;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 
-    public void setOrganization(TEFOrganization organization) {
-        this.organization = organization;
-    }
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "OrganizationID")
+	public TEFOrganization getOrganization() {
+		return organization;
+	}
 
 
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "RoleID")
-    public TEFRole getRole() {
-        return role;
-    }
+
+	public void setOrganization(TEFOrganization organization) {
+		this.organization = organization;
+	}
 
 
-    public void setRole(TEFRole role) {
-        this.role = role;
-    }
+	@NotNull
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "RoleID")
+	public TEFRole getRole() {
+		return role;
+	}
 
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "personalmanual", joinColumns = {@JoinColumn(name = "PersonalID", nullable = false, updatable = false)}, inverseJoinColumns = {@JoinColumn(name = "ManualCategoryID", nullable = false, updatable = false)})
-    @OrderBy("AutoID ASC")
-    public Set<TEFmanualCategory> getManualCategorys() {
-        return manualCategorys;
-    }
+
+	public void setRole(TEFRole role) {
+		this.role = role;
+	}
 
 
-    public void setManualCategorys(Set<TEFmanualCategory> manualCategorys) {
-        this.manualCategorys = manualCategorys;
-    }
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "personalmanual", joinColumns = { @JoinColumn(name = "PersonalID", nullable = false, updatable = false) }, inverseJoinColumns = { @JoinColumn(name = "ManualCategoryID", nullable = false, updatable = false) })
+	@OrderBy("AutoID ASC")
+	public Set<TEFmanualCategory> getManualCategorys() {
+		return manualCategorys;
+	}
 
 
-    public String getTechTitle() {
-        return techTitle;
-    }
 
-    public void setTechTitle(String techTitle) {
-        this.techTitle = techTitle;
-    }
+	public void setManualCategorys(Set<TEFmanualCategory> manualCategorys) {
+		this.manualCategorys = manualCategorys;
+	}
 
-    public Integer getNeedPublish() {
-        return needPublish;
-    }
-
-    public void setNeedPublish(Integer needPublish) {
-        this.needPublish = needPublish;
-    }
-
+	
+	public String getTechTitle() {
+		return techTitle;
+	}
+	
+	public void setTechTitle(String techTitle) {
+		this.techTitle = techTitle;
+	}
+	
+	public Integer getNeedPublish(){
+		return needPublish;
+	}
+	
+	public void setNeedPublish(Integer needPublish) {
+		this.needPublish = needPublish;
+	}
+	
 }

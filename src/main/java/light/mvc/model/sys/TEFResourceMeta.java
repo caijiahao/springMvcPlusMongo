@@ -12,70 +12,70 @@ import javax.validation.constraints.NotNull;
 @DynamicInsert(true)
 @DynamicUpdate(true)
 public class TEFResourceMeta extends baseEntity implements java.io.Serializable {
+	
+	private TEFDictionary dictionary;
+	private Long metaID;
+	private String metaPath;
+	private String thumbMetaPath;
+	private String metaDescription;
 
-    private TEFDictionary dictionary;
-    private Long metaID;
-    private String metaPath;
-    private String thumbMetaPath;
-    private String metaDescription;
-
-    public TEFResourceMeta() {
-        super();
-    }
-
-
-    public TEFResourceMeta(TEFDictionary dictionary, Long metaID,
-                           String metaPath, String thumbMetaPath, String metaDescription) {
-        super();
-        this.dictionary = dictionary;
-        this.metaID = metaID;
-        this.metaPath = metaPath;
-        this.thumbMetaPath = thumbMetaPath;
-        this.metaDescription = metaDescription;
-    }
-
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Type")
-    public TEFDictionary getDictionary() {
-        return dictionary;
-    }
+	public TEFResourceMeta() {
+		super();
+	}
 
 
-    public void setDictionary(TEFDictionary dictionary) {
-        this.dictionary = dictionary;
-    }
+	public TEFResourceMeta(TEFDictionary dictionary, Long metaID,
+			String metaPath, String thumbMetaPath, String metaDescription) {
+		super();
+		this.dictionary = dictionary;
+		this.metaID = metaID;
+		this.metaPath = metaPath;
+		this.thumbMetaPath = thumbMetaPath;
+		this.metaDescription = metaDescription;
+	}
+
+	@NotNull
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "Type")
+	public TEFDictionary getDictionary() {
+		return dictionary;
+	}
 
 
-    public Long getMetaID() {
-        return metaID;
-    }
+	public void setDictionary(TEFDictionary dictionary) {
+		this.dictionary = dictionary;
+	}
 
-    public void setMetaID(Long metaID) {
-        this.metaID = metaID;
-    }
+	
+	public Long getMetaID() {
+		return metaID;
+	}
 
-    public String getMetaPath() {
-        return metaPath;
-    }
+	public void setMetaID(Long metaID) {
+		this.metaID = metaID;
+	}
 
-    public void setMetaPath(String metaPath) {
-        this.metaPath = metaPath;
-    }
+	public String getMetaPath() {
+		return metaPath;
+	}
 
-    public String getThumbMetaPath() {
-        return thumbMetaPath;
-    }
+	public void setMetaPath(String metaPath) {
+		this.metaPath = metaPath;
+	}
+	
+	public String getThumbMetaPath() {
+		return thumbMetaPath;
+	}
 
-    public void setThumbMetaPath(String thumbMetaPath) {
-        this.thumbMetaPath = thumbMetaPath;
-    }
+	public void setThumbMetaPath(String thumbMetaPath) {
+		this.thumbMetaPath = thumbMetaPath;
+	}
+	
+	public String getMetaDescription() {
+		return metaDescription;
+	}
 
-    public String getMetaDescription() {
-        return metaDescription;
-    }
-
-    public void setMetaDescription(String metaDescription) {
-        this.metaDescription = metaDescription;
-    }
+	public void setMetaDescription(String metaDescription) {
+		this.metaDescription = metaDescription;
+	}
 }

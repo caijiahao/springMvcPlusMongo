@@ -12,55 +12,66 @@ import javax.persistence.Table;
 @Table(name = "newscategory")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class TEFcategory extends baseEntity implements java.io.Serializable {
+public class TEFcategory extends baseEntity implements java.io.Serializable{
+	
+	private String categoryName;
+	private String categoryDescription;
+	private Long type;
 
-    private String categoryName;
-    private String categoryDescription;
-    private Long type;
-
-
-    public TEFcategory() {
-        super();
-    }
-
-
-    public TEFcategory(String categoryName, String categoryDescription,
-                       Long type) {
-        super();
-        this.categoryName = categoryName;
-        this.categoryDescription = categoryDescription;
-        this.type = type;
-    }
+	
+	
+	public TEFcategory()
+	{
+		super();
+	}
 
 
-    public String getCategoryName() {
-        return categoryName;
-    }
+
+	public TEFcategory(String categoryName, String categoryDescription,
+			Long type) {
+		super();
+		this.categoryName = categoryName;
+		this.categoryDescription = categoryDescription;
+		this.type = type;
+	}
 
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
+
+	public String getCategoryName() {
+		return categoryName;
+	}
 
 
-    public String getCategoryDescription() {
-        return categoryDescription;
-    }
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
 
 
-    public void setCategoryDescription(String categoryDescription) {
-        this.categoryDescription = categoryDescription;
-    }
+
+	public String getCategoryDescription() {
+		return categoryDescription;
+	}
 
 
-    public Long getType() {
-        return type;
-    }
+
+	public void setCategoryDescription(String categoryDescription) {
+		this.categoryDescription = categoryDescription;
+	}
 
 
-    public void setType(Long type) {
-        this.type = type;
-    }
 
+	public Long getType() {
+		return type;
+	}
+
+
+
+	public void setType(Long type) {
+		this.type = type;
+	}
+	
+
+	
 
 }

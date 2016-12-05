@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>农技推广综合管理平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=9" >
+	<link rel="shortcut icon" href="./styles/images/ico.ico" type="image/x-icon" />
+	<link href="./styles/index/themepark.css" rel="stylesheet" media="screen">
+	<link href="./styles/index/default.css" rel="stylesheet" media="screen">
+  <script type="text/javascript" src="./scripts/index/jquery-1.11.0.js"></script>
+  <script type="text/javascript" src="./scripts/index/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="./scripts/index/jquery.lazyload.js"></script>
+  <script type="text/javascript" src="./scripts/index/pngtm.js"></script> 
+  <script type="text/javascript" src="./scripts/index/lrscroll.js"></script> 
+</head>
+<body class="home blog">
+
+<div id="wpthemedemobar" style="position:fixed!important;_position:absolute; _top:expression(eval(document.documentElement.scrollTop+0)); top:0px; z-index:99999;">
+<div class="wpthemedemobar_wrapper">
+<div class="wptdb_right">
+<a id="btnlogin" href="login.html">立即登录</a>
+<a id="btnregister" href="register.html">注册用户</a>
+<a id="btnlogout" href="#">退出</a>
+</div>
+<div class="wptdb_current">当前登录用户：<span class="wptdb_themename">超级门户</span></div></div>
+</div>
+
+   <!-- start:头部导航 -->
+   <div id="header">
+            <div id="header_in">
+                <img src="./styles/images/logo.png"/>
+            </div>
+            <div id="nav">
+            <a class="home_url"></a>
+            <div class="menu-dai_you_she_qu_de_dao_hang_cai_dan-container">
+            	<ul id="menu-dai_you_she_qu_de_dao_hang_cai_dan" class="menu_nav">
+            		<li id="menu-item-253" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-253 current-menu-item"><a href="./index.html">首页</a><div class="hover"></div></li>
+				<li id="menu-item-254" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-254"><a href="./articlelist.html">最新新闻</a> <div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-260" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-260"><a href="./informationlist.html">通知公告</a><div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-261" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-261"><a href="./questionlist.html">在线交流</a><div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-262" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-262"><a href="./">视频会议</a><div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-263" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-263"><a href="./">农业物联网</a><div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-264" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-264"><a href="./personalcenter.html">个人中心</a><div class="hover" style="display: none;"></div></li>
+			</ul>
+		</div>            
+            </div>
+<script>
+$('#nav .menu_nav li').not(".sub-menu li").append('<div class="hover"><\/div>');
+$('#nav .menu_nav li .sub-menu li').children("ul").addClass("block")
+$('#nav .menu_nav li').hover(
+function() {
+$(this).children(".sub-menu").not(".block").stop(true, true).fadeIn('200');},
+function() {
+$(this).children(".sub-menu").not(".block").stop(true, true).fadeOut('1000');
+	}
+)
+$('#nav .menu_nav li').not(".current-menu-item,.current-menu-ancestor,.current-category-ancestor").hover(
+function() {
+$(this).children('.hover').stop(true, true).fadeIn('200');
+},
+function() {
+$(this).children('.hover').stop(true, true).fadeOut('1000');
+});            
+</script>
+		</div>
+  <!-- end:头部导航-->
+
+<!--head:内容项目-->
+<div id="index_model">
+  <div id="index_model_in">
+  
+  
+  <!-- head:最新新闻 -->
+  <div class="widget" id="widget_news">
+   <div class="widge_hd">
+   <span>
+       <b>最新新闻</b><p>News</p>
+   </span>
+   <a href="./articlelist.html">更多</a>
+   </div>
+
+<ul>
+
+<li><a href="./">华农与榄核镇签订合作框架协议，香云纱成果发布惊艳全场</a>
+<span class="time">2016-07-12</span>
+<p>4月28日下午，我校与广州市南沙区榄核镇政府签订了战略合作框架协议，双方将致力于研究和挖掘非物质文化遗产香云纱的文化价值...</p>
+</li>
+
+<li><a href="./">从8000元到市值2000亿，华农助力小养鸡场完美“逆袭”</a>
+<span class="time">2016-07-10</span>
+<p>据悉，我校在榄核镇跟进香云纱生产已有八年，并于2015年11月27日成立了香云纱研发中心和体验馆。针对区域特色产业发展和榄核文创小镇建设需求...</p>
+</li>
+
+<li><a href="./">2016高校科技成果转化排名，华南农大广东第3，全国第23</a>
+<span class="time">2016-07-05</span>
+<p>系统主要分为农技推广综合管理web前台、农技推广综合管理后台服务系统和“农技通”Android客户端三部分构成，其中后台服务系统负责处理web前台和app端的数据请求...</p>
+</li>
+
+</ul>
+</div>
+<!-- end:最新新闻 -->
+
+<!--head:扁平图标导航-->
+<div class="widget func_nav">
+   <div class="widge_hd">
+   <span>
+       <b>功能导航</b><p>Function</p>
+   </span>
+   </div>
+<ul>
+<li><a href="./countrysidelist.html"><img src="./styles/images/xiaxiang_nav.png"></a></li>
+<li><a href="./performancelist.html"><img src="./styles/images/jixiao_nav.png"></a></li>
+<li><a href="./knowledgedata.html"><img src="./styles/images/zhishiku_nav.png"></a></li>
+<li><a href="./questionlist.html"><img src="./styles/images/wenda_nav.png"></a></li>
+</ul>
+</div>
+<!--head:扁平图标导航-->
+
+
+<!-- head:通知公告 -->
+  <div class="widget" id="widget_inform">
+   <div class="widge_hd">
+   <span>
+       <b>通知公告</b><p>Information</p>
+   </span>
+   <a href="./informationlist.html">更多</a>
+   </div>
+<ul>
+	<li><a href="./">新农村发展研究院</a><span class="time">2016/7/11</span></li>
+	<li><a href="./">华农与榄核镇签订合作框架协议，香云纱成果发布惊艳全场</a><span class="time">2016/7/1</span></li>
+	<li><a href="./">互联网+现代农业三年 行动实施方案</a><span class="time">2016/6/20</span></li>
+	<li><a href="./">2016高校科技成果转化排名，华南农大广东第3，全国第23</a><span class="time">2016/6/12</span></li>
+	<li><a href="./">湖北省高校大学生创新创业工作考察团来校交流</a><span class="time">2016/5/30</span></li>
+	<li><a href="./">泰国宋卡王子大学师生代表团来校交流</a><span class="time">2016/5/27</span></li>
+</ul>
+</div>
+<!-- end:通知公告 -->
+
+<!-- head:相关链接 -->
+  <div class="widget" id="widget_link">
+   <div class="widge_hd">
+   <span>
+       <b>相关链接</b><p>Information</p>
+   </span>
+   </div>
+<ul>
+	<li><a href="http://www.scau.edu.cn/">华南农业大学官方网站</a></li>
+	<li><a href="http://meeting.tenchong.com/9?userParameter=streaming">视频会议系统</a></li>
+	<li><a href="http://localhost:8080/thingToInternet/">物联网监测平台</a></li>
+	<li><a href="http://125.88.25.226:8006/XiaxiangManage/admin/index">华南农业大学下乡管理后台</a></li>
+	<li><a href="http://info.scau.edu.cn/">数学与信息学院</a></li>
+	<li><a href="./">中华人民共和国农业部</a></li>
+</ul>
+</div>
+<!-- end:相关链接 -->
+
+
+<!-- head:在线交流 -->
+  <div class="widget" id="widget_question">
+   <div class="widge_hd">
+   <span>
+       <b>在线交流</b><p>Communication</p>
+   </span>
+   <a href="./questionlist.html">更多</a>
+   </div>
+<ul>
+	<!--head:一条问题-->
+	<li>
+		<a class="question_title" href="./">【养猪】求救，家里的猪最近总是没食欲</a>
+		<div class="question_expandable">
+			<img src="./upload/p1.png">
+			朱元璋御膳菜单:早膳:羊肉炒、猪肉炒黄菜、蒸猪蹄肚、两熟煎鲜鱼、香米饭、豆汤、泡茶.(话说早晨吃这么多荤的真没问题?)午膳:胡椒醋鲜虾、烧鹅、燌羊头蹄、鹅肉巴子、咸鼓芥末羊肚盘、蒜醋白血汤、五味蒸鸡、元汁羊骨头、糊辣醋腰子、蒸鲜鱼、羊肉水晶角儿…
+			<a class="toggle-expand">显示全部</a>
+		</div>
+		<div class="question_content" style="display: none;">
+朱元璋御膳菜单：
+早膳：羊肉炒、猪肉炒黄菜、蒸猪蹄肚、两熟煎鲜鱼、香米饭、豆汤、泡茶。（话说早晨吃这么多荤的真没问题？）
+午膳：胡椒醋鲜虾、烧鹅、燌羊头蹄、鹅肉巴子、咸鼓芥末羊肚盘、蒜醋白血汤、五味蒸鸡、元汁羊骨头、糊辣醋腰子、蒸鲜鱼、羊肉水晶角儿、椒末羊肉、香米饭、蒜酪、三鲜汤、豆汤、泡茶。
+
+万历皇帝御膳菜单：
+米面食：八宝馒头、攒馅馒头、蒸卷、海清卷子、蝴蝶卷子；大蒸饼、椒盐饼、夹糖饼、芝麻烧饼、奶皮烧饼、薄脆饼、灵芝饼；枣糕、白馓子、糖馓子、芝麻象眼减煠；鸡蛋面、白切面、水晶饭。
+肉食：烧天鹅（天鹅……）、烧鹅、清蒸鸡、暴腌鸡、川炒鸡、烧肉、白煮肉、清蒸肉、猪屑骨、荔枝猪肉、鲟鳇鲊、蒸鱼、猪耳脆、煮鲜肫肝、玉丝肚肺、蒸羊、燌羊。
+汤品：牡丹头汤、鸡脆饼汤、猪肉龙松汤、玛瑙糕子汤、锦丝糕子汤、木樨糕子汤、酸甜汤、葡萄汤、蜜汤、牛奶。
+【谢评论区 @杨海晨 提醒，煮鲜肫肝并不是猪内脏，我一个天天吃鸭肫的竟然忘了没有猪肫这种说法……】
+
+永乐二年郊祀结束后的庆成宴菜单：
+上卓：按酒五般。果子五般。茶食五般。烧煠五般。汤三品。双下馒头。马肉饭。酒五钟。
+中卓：按酒四般。果子四般。汤三品。双下馒头。马猪羊肉饭（神一般的荤菜三拼？）。酒五钟。
+随驾将军：按酒一般。粉汤。双下馒头猪肉饭。酒一钟。
+		</div>
+		<div class="question_actions">
+			<a class="comments_count"><i class="icon_comment"></i><span class="highlight">24</span>条评论</a>
+			<a class="like_count"><i class="icon_like"></i><span class="highlight">6</span>个喜欢</a>
+			<button class="question_collapse" style="display: none;"><i></i>收起</button>
+		</div>
+	</li>
+	<!--end:一条问题-->
+	<!--head:一条问题-->
+	<li>
+		<a class="question_title" href="./">【种菜】怎么种番茄</a>
+		<div class="question_expandable">
+			<img src="./upload/p2.png">
+			开车久了，其实每个人都有了一些不好的习惯，我虽然说开车算稳，但是在加挡的时候还是会冲一下，这冲一下虽小，驾驶员自己一般感受不到，但是看到副驾驶的人身体会轻微的动一下，后来研究了一下，其实不冲很简单...
+			<a class="toggle-expand">显示全部</a>
+		</div>
+		<div class="question_content" style="display: none;">
+开车久了，其实每个人都有了一些不好的习惯，我虽然说开车算稳，但是在加挡的时候还是会冲一下，这冲一下虽小，驾驶员自己一般感受不到，但是看到副驾驶的人身体会轻微的动一下，后来研究了一下，其实不冲很简单。
+开车久了为了加速快，我们都是踩一脚油门后在高转速的时候加档，这样能获得较快的加速，如果想要开的平稳，很简单，从1档开始，加油之后不要在最高转速的时候摘挡挂档，脚离开油门后，等2到3秒转速自己降下来后再摘空挡加档，用这种开法的话基本上冲劲就完全没了，但是缺点就是加速比较慢，可能后面的车会哔哔。。。。。。这方法适合追求极致的朋友驾驶。。。。
+——————————————更新分割线————————————————
+刚拿驾照就上高速很危险！！！
+
+　　一脚油门踩到底的驾驶技巧我 8 岁时开碰碰车的时候就学会了 _(:3 」∠)_ _(:3 」∠)_ _(:3 」∠)_
+
+　　鉴于之前的答案太乱了，整理一下方便阅读。以下均为个人经验，有不对之处请指正。
+
+　　上长途高速驾驶之前建议在环城高速上有一定的驾驶经验，比如北京的五环路，不堵车的情况下能开到 100，而且上面车多，能练习好超车跟车经验，这样不会到了跨省市高速上看到旁边的车 120 甚至 150 开过去的时候自己心慌。
+
+　　一个司机想要安全驾驶，有两点很重要，一个是预判，另一个是让。
+
+		</div>
+		<div class="question_actions">
+			<a class="comments_count"><i class="icon_comment"></i><span class="highlight">19</span>条评论</a>
+			<a class="like_count"><i class="icon_like"></i><span class="highlight">10</span>个喜欢</a>
+			<button class="question_collapse" style="display: none;"><i></i>收起</button>
+		</div>
+	</li>
+	<!--end:一条问题-->
+	<!--head:一条问题-->
+	<li>
+		<a class="question_title" href="./">【种菜】花生喷药技巧</a>
+		<div class="question_expandable">
+			
+			上周，据美国科技网站 VentureBeat 报道，苹果公司准备招聘4位体育相关的 Siri 软件工程师。此举是为了解决各种球赛后，Siri 听到大量的 「F*ck, SH*t, Bitch」而无法还嘴的窘境（这句是吐槽）。总之一句话，苹果公司要在体育语音搜索中发力了。当然你不要...
+			<a class="toggle-expand">显示全部</a>
+		</div>
+		<div class="question_content" style="display: none;">
+			上周，据美国科技网站 VentureBeat 报道，苹果公司准备招聘4位体育相关的 Siri 软件工程师。此举是为了解决各种球赛后，Siri 听到大量的 「F*ck, SH*t, Bitch」而无法还嘴的窘境（这句是吐槽）。总之一句话，苹果公司要在体育语音搜索中发力了。
+
+当然你不要理解错，语音发力不是弄个篮球/足球解说员搞个语音包。
+
+「霍霍，你车开得挺合理呀！」
+「你这是邦邦邦乱开。」
+「前方50米有一收费站，请勿力劈华山。」
+「嘿嘿嘿。」
+		</div>
+		<div class="question_actions">
+			<a class="comments_count"><i class="icon_comment"></i><span class="highlight">22</span>条评论</a>
+			<a class="like_count"><i class="icon_like"></i><span class="highlight">5</span>个喜欢</a>
+			<button class="question_collapse" style="display: none;"><i></i>收起</button>
+		</div>
+	</li>
+	<!--end:一条问题-->
+</ul>
+<script>
+//展开问题
+$(".question_expandable").click(function(){
+	$(this).hide();
+	$(this).nextAll(".question_content").show();
+	$(this).nextAll(".question_actions").find(".question_collapse").show();
+});
+
+//折叠问题
+$(".question_collapse").click(function(){
+	$(this).hide();
+	$(this).parent(".question_actions").prevAll(".question_content").hide();
+	$(this).parent(".question_actions").prevAll(".question_expandable").show();
+});
+</script>
+</div>
+<!-- end:在线交流 -->
+
+
+<!-- head:农企信息 -->
+  <div class="widget" id="widget_company">
+   <div class="widge_hd">
+   <span>
+       <b>农企信息</b><p>Cooperative Company</p>
+   </span>
+   <a href="./commpanylist.html">更多</a>
+   </div>
+<ul>
+	<li><a href="./">常德恒凤渔业有限公司</a><p>地址： 湖南省常德市鼎城区蒿子港镇长安村八组<br/>网址： www.sf3.com</p></li>
+	<li><a href="./">建德市大同镇锦惠农庄</a><p>主营： 热食类食品制售（小型餐饮）（依法须经批准的项目，经相关部门批准后方可开展经营活动）<br/>网址： www.kskd.com</p></li>
+	<li><a href="./">兰溪市野狐山寨休闲农庄</a><p>主营： 饭馆；中餐类制售；农家乐；不含凉菜；不含裱花蛋糕；不含生食海产品<br/>网址： www.23ckkcom</p></li>
+	<li><a href="./">诸暨市枫桥良禹农庄</a><p>主营： 食品经营（具体经营项目以许可证或批准文件核定的为准） 养殖销售：淡水产 <br/>网址： www.dedsc.com</p></li>
+	<li><a href="./">诸暨市岭北晋坤农庄</a><p>主营： 食品经营（具体经营项目以许可证或批准文件核定的为准） 种植：蔬菜、水果<br/>网址： www.kkiw.com</p></li>
+</ul>
+</div>
+<!-- end:农企信息 -->
+
+
+<!--head:农情图片展示--
+<div class="widget case1">
+   <div class="widge_hd">
+   <span>
+       <b>农情图片展示</b><p>Picture column</p>
+   </span>
+  <a href="./">MORE</a>
+   </div>
+<div id="case1" class="caseleft" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 972px;">
+<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 2916px; left: -1458px;">
+<li style="overflow: hidden; float: left; width: 230px; height: 150px;"><a href="./">
+<img src="./upload/p1.png">
+</a></li>
+
+<li style="overflow: hidden; float: left; width: 230px; height: 150px;"><a href="./">
+<img src="./upload/p2.png">
+</a></li>
+<li style="overflow: hidden; float: left; width: 230px; height: 150px;"><a href="./">
+<img src="./upload/p3.png">
+</a></li>
+
+<li style="overflow: hidden; float: left; width: 230px; height: 150px;"><a href="./">
+<img src="./upload/p4.png">
+</a></li>
+
+</ul>
+<div class="loop_big_caj_nav">
+<a class="prve"> &lt; 上一页</a>
+<a class="next"> 下一页 &gt; </a>
+
+</div>
+</div>
+ 
+ <script>
+$(function() {
+$("#case1").jCarouselLite({
+btnNext: "#case1 .next",
+btnPrev: "#case1 .prve",
+speed:1000,//滚动动画的时间
+auto:3000,//滚动间隔时间
+visible:4,
+onMouse:true,
+start:0,
+easing: "easeOutCubic",
+});
+});
+ </script>
+</div>
+ <!--end:农情图片展示-->
+ 
+ <!--head:滑动图片--
+  <div class="widget" style="width:440px;">
+<div id="pic_out" style="width:420px; height: 300px; margin: 0px;">
+<div id="pic" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 420px; height: 320px; border: 0px;">
+ <ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 4700px; left: -1880px;">
+    <li style="overflow: hidden; float: left; width: 400px; height: 320px;"><a href="./"> <img src="./upload/p1.png"> </a>
+    </li>                                      
+		   
+    <li style="overflow: hidden; float: left; width: 400px; height: 320px;"><a href="./"> <img src="./upload/p2.png"> </a>
+    </li>
+    
+      <li style="overflow: hidden; float: left; width: 400px; height: 320px;"><a href="./"> <img src="./upload/p3.png"> </a>
+    </li>
+    
+       <li style="overflow: hidden; float: left; width: 400px; height: 320px;"><a href="./"> <img src="./upload/p4.png"> </a>
+    </li>
+    </ul>
+
+<a class="prve" style="left: 0.41492502334286px;"></a>
+<a class="next" style="right: 0.41492502334286px;">  </a>
+<script>
+$(function() {
+$("#pic").jCarouselLite({
+btnNext: "#pic .next",
+btnPrev: "#pic .prve",
+speed:2000,//滚动动画的时间
+auto:4000,//滚动间隔时间
+visible:1,
+onMouse:true,
+start:0,
+easing: "easeInOutBack",
+});
+});
+</script>
+      
+</div>
+</div>
+</div>
+  <!-- end:滑动图片 -->
+  
+  <!--head:视频中心--
+<div class="widget" id="vedios">
+   <div class="widge_hd">
+   <span>
+       <b>视频中心</b><p>Video Center</p>
+   </span>
+   <a href="./">MORE</a>
+   </div>
+<ul>
+<div class="vedio_kuang">
+  <iframe width="510" height="498" frameborder="0" allowfullscreen="" src="./showvideopage.html"></iframe>  
+</div>
+
+<li><a class="in" href="./">芽苗菜的高产栽培技术</a></li>
+<li><a href="./">未来农业信息管理系统</a></li>
+<li><a href="./">走进华农农业大学信息学院</a></li>
+
+</ul>
+</div>
+<!--end:视频中心-->
+
+
+  </div>
+ </div>
+  <!-- end:内容项目 -->
+  
+<!--head:底部信息-->
+<div id="footer">
+	<div id="footer_in">
+             <div class="footer_shadow"></div>
+                <p> 版权所有： SCAU Copyright © 2015华南农业大学.All rights reserved.   |   粤ICP备05008874号 　备案编号：4401060500010</p>
+                <p>地址：广州市天河区五山华南农业大学</p>
+        	</div>	  
+  	</div>
+<!--end:底部信息-->
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>农技推广综合管理平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=9" >
+	<link rel="shortcut icon" href="./styles/images/ico.ico" type="image/x-icon" />
+	<link href="./styles/index/themepark.css" rel="stylesheet" media="screen">
+	<link href="./styles/index/default.css" rel="stylesheet" media="screen">
+	<link href="./styles/index/commpany.css" rel="stylesheet" media="screen">
+  <script type="text/javascript" src="./scripts/index/jquery-1.11.0.js"></script>
+  <script type="text/javascript" src="./scripts/index/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="./scripts/index/jquery.lazyload.js"></script>
+  <script type="text/javascript" src="./scripts/index/pngtm.js"></script> 
+  <script type="text/javascript" src="./scripts/index/lrscroll.js"></script> 
+</head>
+<body class="page page-id-2 page-parent page-template page-template-aboutus page-template-aboutus-php">
+
+<div id="wpthemedemobar" style="position:fixed!important;_position:absolute; _top:expression(eval(document.documentElement.scrollTop+0)); top:0px; z-index:99999;">
+<div class="wpthemedemobar_wrapper">
+<div class="wptdb_right">
+<a id="btnlogin" href="login.html">立即登录</a>
+<a id="btnregister" href="register.html">注册用户</a>
+<a id="btnlogout" href="#">退出</a>
+</div>
+<div class="wptdb_current">当前登录用户：<span class="wptdb_themename">超级门户</span></div></div>
+</div>
+
+   <!-- start:头部导航 -->
+   <div id="header">
+            <div id="header_in">
+                <img src="./styles/images/logo.png"/>
+            </div>
+            <div id="nav">
+            <a class="home_url"></a>
+            <div class="menu-dai_you_she_qu_de_dao_hang_cai_dan-container">
+            <ul id="menu-dai_you_she_qu_de_dao_hang_cai_dan" class="menu_nav">
+            		<li id="menu-item-253" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-253"><a href="./index.html">首页</a><div class="hover"></div></li>
+				<li id="menu-item-254" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-254"><a href="./articlelist.html">最新新闻</a> <div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-260" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-260"><a href="./informationlist.html">通知公告</a><div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-261" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-261"><a href="./questionlist.html">在线交流</a><div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-262" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-262"><a href="./">视频会议</a><div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-263" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-263"><a href="./">农业物联网</a><div class="hover" style="display: none;"></div></li>
+				<li id="menu-item-264" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-264  current-menu-item"><a href="./personalcenter.html">个人中心</a><div class="hover" style="display: none;"></div></li>
+	 	</ul>
+	</div>            
+   </div>
+<script>
+$('#nav .menu_nav li').not(".sub-menu li").append('<div class="hover"><\/div>');
+$('#nav .menu_nav li .sub-menu li').children("ul").addClass("block")
+$('#nav .menu_nav li').hover(
+function() {
+$(this).children(".sub-menu").not(".block").stop(true, true).fadeIn('200');},
+function() {
+$(this).children(".sub-menu").not(".block").stop(true, true).fadeOut('1000');
+	}
+)
+$('#nav .menu_nav li').not(".current-menu-item,.current-menu-ancestor,.current-category-ancestor").hover(
+function() {
+$(this).children('.hover').stop(true, true).fadeIn('200');
+},
+function() {
+$(this).children('.hover').stop(true, true).fadeOut('1000');
+});            
+</script>
+		</div>
+  <!-- end:头部导航-->
+
+<!--head:所在位置-->
+<div id="page_muen_nav">  <b>您现在所在的位置：</b><a href="index.html">首页</a> <a> &gt; </a><a href="./commpanylist.html"> 农企信息列表</a></div>
+<!--end:所在位置-->
+
+<!--head:内容项目-->
+<div id="content">
+
+<!--head:左侧内容-->
+<div class="left_mian"> 
+<!--head:查询农企-->
+<div class="widget">
+<ul>
+<li>
+	<div class="searchbox">
+		<input type="text" id="input_search" autocomplete="off" value="" placeholder="搜索你感兴趣的公司...">
+		<button id="btn_search"><i class="search_icon"></i></button>
+	</div>
+</li>
+<li>
+	<a href="applycommpany.html" target="_blank"><button class="applycommpany" id="btn_applycommpany">发布农企信息</button></a>
+</li>
+</ul>
+</div>
+<!--end:查询农企-->
+
+<!-- head:农企信息 -->
+<div class="widget" id="widget_company">
+   <div class="widge_hd">
+   <span>
+       <b>待审核农企信息</b>
+   </span>
+   </div>
+<ul>
+	<li><a href="./">常德恒凤渔业有限公司</a><p>地址： 湖南省常德市鼎城区蒿子港镇长安村八组<br/>成立日期： 2016/5/31<br/>状态：<span style="color: red;">未审核</span></p></li>
+	<li><a href="./">建德市大同镇锦惠农庄</a><p>主营： 热食类食品制售（小型餐饮）（依法须经批准的项目，经相关部门批准后方可开展经营活动）<br/>成立日期： 2016/6/16<br/>状态：<span style="color: red;">未审核</span></p></li>
+</ul>
+</div>
+<!-- end:农企信息 -->
+
+<!--head:扁平图标导航-->
+<div class="widget func_nav">
+   <div class="widge_hd">
+   <span>
+       <b>功能导航</b><p>Function</p>
+   </span>
+   </div>
+<ul>
+<li><a href="./countrysidelist.html"><img src="./styles/images/xiaxiang_nav.png"></a></li>
+<li><a href="./performancelist.html"><img src="./styles/images/jixiao_nav.png"></a></li>
+<li><a href="./knowledgedata.html"><img src="./styles/images/zhishiku_nav.png"></a></li>
+<li><a href="./questionlist.html"><img src="./styles/images/wenda_nav.png"></a></li>
+</ul>
+</div>
+<!--head:扁平图标导航-->
+
+</div>
+<!--end:左侧内容-->
+
+
+<!--head:右侧内容-->
+<div class="right_mian">
+
+<!-- head:农企信息 -->
+  <div class="widget companylist" id="widget_companylist">
+<ul>
+	<li><a href="./">常德恒凤渔业有限公司</a><br/><p>地址： 湖南省常德市鼎城区蒿子港镇长安村八组<br/>网址： www.2333.com</p></li>
+	<li><a href="./">建德市大同镇锦惠农庄</a><br/><p>主营： 热食类食品制售（小型餐饮）（依法须经批准的项目，经相关部门批准后方可开展经营活动）<br/>网址： www.23112.com</p></li>
+	<li><a href="./">兰溪市野狐山寨休闲农庄</a><br/><p>主营： 饭馆；中餐类制售；农家乐；不含凉菜；不含裱花蛋糕；不含生食海产品<br/>网址： www.atkd.com.cn</p></li>
+	<li><a href="./">诸暨市枫桥良禹农庄</a><br/><p>主营： 食品经营（具体经营项目以许可证或批准文件核定的为准） 养殖销售：淡水产 <br/>网址： www.rerr3.com</p></li>
+	<li><a href="./">诸暨市岭北晋坤农庄</a><br/><p>主营： 食品经营（具体经营项目以许可证或批准文件核定的为准） 种植：蔬菜、水果<br/>网址： www.2877.com</p></li>
+</ul>
+<!--head:列表分页-->
+<div class="list_paginator">
+	<a data-page="1" href="javascript:void(0);" class="paginator_current">1</a> 
+	<a data-page="2" href="javascript:void(0);">2</a>
+</div>
+<!--end:列表分页-->
+</div>
+<!-- end:农企信息 -->
+
+</div>
+<!--end:右侧内容-->
+</div>  
+<!--end:内容项目-->
+
+<!--head:底部信息-->
+<div id="footer">
+	<div id="footer_in">
+		<div class="footer_shadow"></div>
+                <p> 版权所有： SCAU Copyright © 2015华南农业大学.All rights reserved.   |   粤ICP备05008874号 　备案编号：4401060500010</p>
+                <p>地址：广州市天河区五山华南农业大学</p>
+		</div>	  
+	</div>
+<!--end:底部信息-->
+
+<script type="text/javascript" src="./scripts/index/thickbox.js"></script>
+<script type="text/javascript" src="./scripts/index/themepark.js"></script>
+</body>
+</html>

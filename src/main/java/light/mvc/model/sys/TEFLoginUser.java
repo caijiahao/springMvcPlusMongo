@@ -21,83 +21,99 @@ import java.util.Date;
 @DynamicUpdate(true)
 public class TEFLoginUser extends baseEntity implements java.io.Serializable {
 
-    private String loginName; // 登录名
-    private String password; // 密码
-    private Date lastLoginTime; // 创建时间
+	private String loginName; // 登录名
+	private String password; // 密码
+	private Date lastLoginTime; // 创建时间
 
-    private Integer status; // 状态
-
+	private Integer status; // 状态
+	
     private TEFPersonalInfo personalInfo;
-
-    public TEFLoginUser() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-
-    public TEFLoginUser(String loginName, String password, Date lastLoginTime,
-                        Integer status, TEFPersonalInfo personalInfo) {
-        super();
-        this.loginName = loginName;
-        this.password = password;
-        this.lastLoginTime = lastLoginTime;
-        this.status = status;
-        this.personalInfo = personalInfo;
-    }
+    
+	public TEFLoginUser() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 
-    @NotBlank
-    public String getLoginName() {
-        return loginName;
-    }
+
+	public TEFLoginUser(String loginName, String password, Date lastLoginTime,
+			Integer status, TEFPersonalInfo personalInfo) {
+		super();
+		this.loginName = loginName;
+		this.password = password;
+		this.lastLoginTime = lastLoginTime;
+		this.status = status;
+		this.personalInfo = personalInfo;
+	}
 
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
-    }
+	@NotBlank
+	public String getLoginName() {
+		return loginName;
+	}
 
 
-    public String getPassword() {
-        return password;
-    }
+
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
 
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+
+	public String getPassword() {
+		return password;
+	}
 
 
-    public Date getLastLoginTime() {
-        return lastLoginTime;
-    }
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 
-    public void setLastLoginTime(Date lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
-    }
+
+	public Date getLastLoginTime() {
+		return lastLoginTime;
+	}
 
 
-    public Integer getStatus() {
-        return status;
-    }
+
+	public void setLastLoginTime(Date lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
 
 
-    public void setStatus(Integer states) {
-        this.status = states;
-    }
+
+	public Integer getStatus() {
+		return status;
+	}
 
 
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "PersonalID")
-    public TEFPersonalInfo getPersonalInfo() {
-        return personalInfo;
-    }
+
+	public void setStatus(Integer states) {
+		this.status = states;
+	}
 
 
-    public void setPersonalInfo(TEFPersonalInfo personalInfo) {
-        this.personalInfo = personalInfo;
-    }
+
+
+
+	@NotNull
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "PersonalID")
+	public TEFPersonalInfo getPersonalInfo() {
+		return personalInfo;
+	}
+
+
+
+	public void setPersonalInfo(TEFPersonalInfo personalInfo) {
+		this.personalInfo = personalInfo;
+	}
+
+
+
+
 
 
 }

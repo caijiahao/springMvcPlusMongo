@@ -18,99 +18,96 @@ import java.util.Set;
 @Table(name = "organization", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class TEFOrganization extends baseEntity implements java.io.Serializable {
+public class TEFOrganization  extends baseEntity implements java.io.Serializable{
 
-    private String departmentName;
-    private String address;
-    private String departmentCode;
-    private String icon;
-    private Integer seq;
-    private TEFOrganization organization;
-    private Set<TEFOrganization> organizations = new HashSet<TEFOrganization>(0);
+	private String departmentName;
+	private String address;
+	private String departmentCode;
+	private String icon;
+	private Integer seq;
+	private TEFOrganization organization;
+	private Set<TEFOrganization> organizations = new HashSet<TEFOrganization>(0);
 
-    public TEFOrganization() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-
-    public TEFOrganization(String departmentName, String address,
-                           String departmentCode, String icon, Integer seq,
-                           TEFOrganization organization, Set<TEFOrganization> organizations) {
-        super();
-        this.departmentName = departmentName;
-        this.address = address;
-        this.departmentCode = departmentCode;
-        this.icon = icon;
-        this.seq = seq;
-        this.organization = organization;
-        this.organizations = organizations;
-    }
-
-
-    @NotBlank
-    public String getDepartmentName() {
-        return departmentName;
-    }
-
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getDepartmentCode() {
-        return departmentCode;
-    }
-
-    public void setDepartmentCode(String departmentCode) {
-        this.departmentCode = departmentCode;
-    }
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public Integer getSeq() {
-        return seq;
-    }
-
-    public void setSeq(Integer seq) {
-        this.seq = seq;
-    }
+	public TEFOrganization() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	public TEFOrganization(String departmentName, String address,
+			String departmentCode, String icon, Integer seq,
+			TEFOrganization organization, Set<TEFOrganization> organizations) {
+		super();
+		this.departmentName = departmentName;
+		this.address = address;
+		this.departmentCode = departmentCode;
+		this.icon = icon;
+		this.seq = seq;
+		this.organization = organization;
+		this.organizations = organizations;
+	}
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ParentID")
-    public TEFOrganization getOrganization() {
-        return organization;
-    }
+	@NotBlank
+	public String getDepartmentName() {
+		return departmentName;
+	}
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getDepartmentCode() {
+		return departmentCode;
+	}
+	public void setDepartmentCode(String departmentCode) {
+		this.departmentCode = departmentCode;
+	}
+	public String getIcon() {
+		return icon;
+	}
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+	public Integer getSeq() {
+		return seq;
+	}
+	public void setSeq(Integer seq) {
+		this.seq = seq;
+	}
 
 
-    public void setOrganization(TEFOrganization organization) {
-        this.organization = organization;
-    }
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ParentID")
+	public TEFOrganization getOrganization() {
+		return organization;
+	}
 
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "organization")
-    public Set<TEFOrganization> getOrganizations() {
-        return organizations;
-    }
+
+	public void setOrganization(TEFOrganization organization) {
+		this.organization = organization;
+	}
 
 
-    public void setOrganizations(Set<TEFOrganization> organizations) {
-        this.organizations = organizations;
-    }
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "organization")
+	public Set<TEFOrganization> getOrganizations() {
+		return organizations;
+	}
 
 
+
+	public void setOrganizations(Set<TEFOrganization> organizations) {
+		this.organizations = organizations;
+	}
+	
+
+	
+	
+	
 }

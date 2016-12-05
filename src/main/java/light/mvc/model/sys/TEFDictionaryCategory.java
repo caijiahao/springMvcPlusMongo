@@ -17,72 +17,73 @@ import javax.persistence.*;
 @Table(name = "dictionarycategory", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class TEFDictionaryCategory extends baseEntity implements java.io.Serializable {
+public class TEFDictionaryCategory extends baseEntity implements java.io.Serializable{
+	
+	private String code;
+	private String name;
+	private Integer seq;
+	private String description;
+	private TEFDictionaryCategory dictionaryCategory;
+	
 
-    private String code;
-    private String name;
-    private Integer seq;
-    private String description;
-    private TEFDictionaryCategory dictionaryCategory;
+	
+	public TEFDictionaryCategory() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
+	public TEFDictionaryCategory(String code, String name, Integer seq,
+			String description) {
+		super();
+		this.code = code;
+		this.name = name;
+		this.seq = seq;
+		this.description = description;
+	}
 
-    public TEFDictionaryCategory() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	@NotBlank
+	public String getCode() {
+		return code;
+	}
 
-    public TEFDictionaryCategory(String code, String name, Integer seq,
-                                 String description) {
-        super();
-        this.code = code;
-        this.name = name;
-        this.seq = seq;
-        this.description = description;
-    }
+	public void setCode(String code) {
+		this.code = code;
+	}
 
-    @NotBlank
-    public String getCode() {
-        return code;
-    }
+	@NotBlank
+	public String getName() {
+		return name;
+	}
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    @NotBlank
-    public String getName() {
-        return name;
-    }
+	public Integer getSeq() {
+		return seq;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setSeq(Integer seq) {
+		this.seq = seq;
+	}
 
-    public Integer getSeq() {
-        return seq;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setSeq(Integer seq) {
-        this.seq = seq;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ParentID")
+	public TEFDictionaryCategory getDictionaryCategory() {
+		return dictionaryCategory;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ParentID")
-    public TEFDictionaryCategory getDictionaryCategory() {
-        return dictionaryCategory;
-    }
-
-    public void setDictionaryCategory(TEFDictionaryCategory dictionaryCategory) {
-        this.dictionaryCategory = dictionaryCategory;
-    }
+	public void setDictionaryCategory(TEFDictionaryCategory dictionaryCategory) {
+		this.dictionaryCategory = dictionaryCategory;
+	}
 
 
 }

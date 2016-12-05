@@ -13,27 +13,27 @@ import java.util.List;
  * */
 public interface EFNoticeServiceI {
 
-    public List<EFNotice> dataGrid(EFNotice notice, PageFilter ph);
+	public List<EFNotice> dataGrid(EFNotice notice, PageFilter ph);
+	
+	public Long count(EFNotice notice, PageFilter ph);
+	
+	public Long add(EFNotice notice);
+	
+	public void delete(Long id);
+	
+	public void edit(EFNotice notice);
+	
+	public EFNotice get(Long id);
+	
+	public List<EFNotice> gethaveNotice(Long personalID);
+	
+	public List<EFNotice> gethaveNotNotice(Long personalID);
+	
+	public List<EFNotice> gethaveNotice(Long personalID, PageFilter ph);
+	
+	public List<EFNotice> gethaveNotNotice(Long personalID, PageFilter ph);
 
-    public Long count(EFNotice notice, PageFilter ph);
+	public void setNotice(Long id);
 
-    public Long add(EFNotice notice);
-
-    public void delete(Long id);
-
-    public void edit(EFNotice notice);
-
-    public EFNotice get(Long id);
-
-    public List<EFNotice> gethaveNotice(Long personalID);
-
-    public List<EFNotice> gethaveNotNotice(Long personalID);
-
-    public List<EFNotice> gethaveNotice(Long personalID, PageFilter ph);
-
-    public List<EFNotice> gethaveNotNotice(Long personalID, PageFilter ph);
-
-    public void setNotice(Long id);
-
-
+	
 }

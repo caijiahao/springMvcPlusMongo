@@ -222,11 +222,11 @@
             <artifactId>webmagic-core</artifactId>
             <version>0.5.3</version>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>us.codecraft</groupId>
             <artifactId>webmagic-extension</artifactId>
             <version>0.5.3</version>
-        </dependency>-->
+        </dependency>
         <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
@@ -237,6 +237,11 @@
                 <artifactId>jsoup</artifactId>
                 <version>1.7.2</version>
             </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>

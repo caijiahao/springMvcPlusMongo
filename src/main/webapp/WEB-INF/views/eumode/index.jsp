@@ -6,7 +6,7 @@
 <head>
 <jsp:include page="inc.jsp"></jsp:include>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>myWebSite管理系统</title>
+<title>华南农业大学-大数据工程中心</title>
 <script type="text/javascript">
 	var index_layout;
 	var index_tabs;
@@ -143,13 +143,13 @@
 						<h2>系统介绍</h2>
 						<div class="light-info">
 							<div class="light-tip icon-tip"></div>
-							<div>欢迎您使用下乡管理系统。</div>
+							<div>欢迎您访问华南农业大学大数据工程中心管理系统。</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div data-options="region:'south',border:false" style="height: 30px; overflow: hidden;text-align: center;background-color: #daeef5" >Based on LightMVC </div>
+		<div data-options="region:'south',border:false" style="height: 30px; overflow: hidden;text-align: center;background-color: #daeef5" >华南农业大学-大数据工程中心 </div>
 	</div>
 	
 </body>

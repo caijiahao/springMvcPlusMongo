@@ -1,37 +1,39 @@
 package light.mvc.pageModel.base;
 
-public class JsonToMobile implements java.io.Serializable {
+public class JsonToMobile implements java.io.Serializable{
+	
+	private Result result;
+	
+	private Notice notice;
+	
+	private Object obj;
+	
 
-    private Result result;
 
-    private Notice notice;
+	public Result getResult() {
+		return result;
+	}
 
-    private Object obj;
+	public void setResult(Result result) {
+		this.result = result;
+	}
 
+	public Notice getNotice() {
+		return notice;
+	}
 
-    public Result getResult() {
-        return result;
-    }
+	public void setNotice(Notice notice) {
+		this.notice = notice;
+	}
 
-    public void setResult(Result result) {
-        this.result = result;
-    }
+	public Object getObj() {
+		return obj;
+	}
 
-    public Notice getNotice() {
-        return notice;
-    }
-
-    public void setNotice(Notice notice) {
-        this.notice = notice;
-    }
-
-    public Object getObj() {
-        return obj;
-    }
-
-    public void setObj(Object obj) {
-        this.obj = obj;
-    }
-
+	public void setObj(Object obj) {
+		this.obj = obj;
+	}
+	
+	
 
 }

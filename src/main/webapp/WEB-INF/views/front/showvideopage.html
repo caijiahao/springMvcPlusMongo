@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0043)http://player.youku.com/embed/XNzI4MjMxNTUy -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Youku Universal Player</title>
+    
+    <style>
+        html, body { height:100%; }
+        body { margin:0; }
+    </style>
+<link rel="stylesheet" type="text/css" href="play.css"></head>
+<body>
+<div id="youku-playerBox" style="width:100%;height:100%;"><object type="application/x-shockwave-flash" data="http://player.youku.com/player.php/sid/XNzYyNTk2ODIw/v.swf" width="100%" height="100%" id="youku-player"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><param name="movie" value="http://player.youku.com/player.php/sid/XNzYyNTk2ODIw/v.swf"><param name="flashvars" value="imglogo=&amp;paid=0&amp;partnerId=0edbfd2e4fc91b72"></object></div>
+<script id="_youkujs_" type="text/javascript" src="jsapi"></script>
+<script language="javascript">
+    // var wh = { };
+    window.onload = function(){
+        /*wh = function () {
+         var dimension = {};
+         dimension.width = window.innerWidth;
+         dimension.height = window.innerHeight;
+         //console.log(dimension);
+         return dimension;
+
+         }();*/
+
+     //   <!-- 这个页面是直接内嵌的，第三方用户不需要管 -->
+     //   <!-- 目前不支持starttime等动作参数 -->
+        var script = document.getElementById('_youkujs_');
+        script.src = 'http://player.youku.com/jsapi';
+        script.onload = script.onreadystatechange = function(){
+
+            if(!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete'){
+                var _QS = QS();
+                /*QS.width = QS.width ? QS.width : wh.width;
+                 QS.height = QS.height ? QS.height :wh.height;*/
+                var arr = window.location.pathname.split('/');
+                if(arr.length == 3 && arr[1] == 'embed' && arr[2].charAt(0) == 'X' ){
+                    _QS.vid = arr[2];
+                }
+                if(_QS.target == null ) _QS.target = "youku-playerBox";
+                if(_QS.client_id == null) _QS.client_id = "0edbfd2e4fc91b72";//"youkuind_";
+                var _select = new YoukuPlayerSelect(_QS);
+                _select.select();
+            }
+        };
+    };
+</script>
+
+
+</body></html>

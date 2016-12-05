@@ -10,8 +10,8 @@ import java.util.Date;
  */
 public class DateTimeUtil {
 
-    public static String getCurrentDateStr(String format) {
-        if (format == null || format.length() == 0) {
+    public static String getCurrentDateStr(String format){
+        if (format==null||format.length()==0){
             format = "yyyy-MM-dd";//定义默认格式
         }
         Date today = new Date();
@@ -19,28 +19,28 @@ public class DateTimeUtil {
         return sdf.format(today);
     }
 
-    public static Date getCurrentDate(String format) {
-        if (format == null || format.length() == 0) {
+    public static Date getCurrentDate(String format){
+        if (format==null||format.length()==0){
             format = "yyyy-MM-dd";//定义默认格式
         }
         Date today = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat(format);
-        String todayString = sdf.format(today);
+        String todayString = sdf .format (today);
         Date todayFormat = null;
         try {
-            todayFormat = sdf.parse(todayString);
+            todayFormat = sdf. parse(todayString);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return todayFormat;
+        return  todayFormat;
     }
 
-    //  获取当前时间几天前的日期时间
-    public static Date getPreDate(int preDate, String format) {
-        if (format == null || format.length() == 0) {
+//  获取当前时间几天前的日期时间
+    public static Date getPreDate(int preDate,String format){
+        if (format==null||format.length()==0){
             format = "yyyy-MM-dd";//定义默认格式
         }
-        long preDateTime = System.currentTimeMillis() - preDate * 24 * 60 * 60;
+        long preDateTime = System.currentTimeMillis()-preDate*24*60*60;
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         String d = sdf.format(preDateTime);
         Date date = null;
@@ -52,18 +52,18 @@ public class DateTimeUtil {
         return date;
     }
 
-    public static String getPreDateStr(int preDate, String format) {
-        if (format == null || format.length() == 0) {
+    public static String getPreDateStr(int preDate,String format){
+        if (format==null||format.length()==0){
             format = "yyyy-MM-dd";//定义默认格式
         }
         BigInteger now = BigInteger.valueOf(System.currentTimeMillis());
         BigInteger preDateBig = BigInteger.valueOf(preDate);
-        BigInteger dateTimeMillis = BigInteger.valueOf(24 * 60 * 60 * 1000);
+        BigInteger dateTimeMillis = BigInteger.valueOf(24*60*60*1000);
         BigInteger gap = preDateBig.multiply(dateTimeMillis);
-        BigInteger preDateTime = now.subtract(gap);
+        BigInteger preDateTime = now. subtract(gap);
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         String d = sdf.format(preDateTime);
-        return d;
+        return  d;
     }
 
 }

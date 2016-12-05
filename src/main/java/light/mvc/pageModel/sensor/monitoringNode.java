@@ -4,168 +4,202 @@ import java.util.Date;
 
 public class monitoringNode {
 
-    protected Long autoID;
-    protected Integer active; // 状态
-    protected Date createDate; // 创建时间
-    protected Long createBy;
-    protected Date updateDate;
-    protected Long updateBy;
-    protected Integer deleted;
-    protected Date TS;
-
-    private String name;
-
-    private String code;
-
-    private Double locationX;
-
+	protected Long autoID;
+	protected Integer active; // 状态
+	protected Date createDate; // 创建时间
+	protected Long createBy;
+	protected Date updateDate;
+	protected Long updateBy;
+	protected Integer deleted;
+	protected Date TS;
+	
+	private String name;
+	
+	private String code;
+	
+	private String map;
+	
+	private Double locationX;
+	   
     private Double locationY;
-
+    
     private Long type;
-
+    
     private Long station;
+    
+	private Integer fps;
+	
+	private String address;//保留字段
+	
+	private String description;
+	
+	private Integer sensor_ch;
+	
+	private String dataKey;
+	
+	
+	
+	
 
-    private Integer fps;
+	public String getDataKey() {
+		return dataKey;
+	}
 
-    private String address;//保留字段
+	public void setDataKey(String dataKey) {
+		this.dataKey = dataKey;
+	}
 
-    private String description;
+	public String getMap() {
+		return map;
+	}
 
-    public Long getAutoID() {
-        return autoID;
-    }
+	public void setMap(String map) {
+		this.map = map;
+	}
 
-    public void setAutoID(Long autoID) {
-        this.autoID = autoID;
-    }
+	public Integer getSensor_ch() {
+		return sensor_ch;
+	}
 
-    public Integer getActive() {
-        return active;
-    }
+	public void setSensor_ch(Integer sensor_ch) {
+		this.sensor_ch = sensor_ch;
+	}
 
-    public void setActive(Integer active) {
-        this.active = active;
-    }
+	public Long getAutoID() {
+		return autoID;
+	}
 
-    public Date getCreateDate() {
-        return createDate;
-    }
+	public void setAutoID(Long autoID) {
+		this.autoID = autoID;
+	}
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
+	public Integer getActive() {
+		return active;
+	}
 
-    public Long getCreateBy() {
-        return createBy;
-    }
+	public void setActive(Integer active) {
+		this.active = active;
+	}
 
-    public void setCreateBy(Long createBy) {
-        this.createBy = createBy;
-    }
+	public Date getCreateDate() {
+		return createDate;
+	}
 
-    public Date getUpdateDate() {
-        return updateDate;
-    }
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
 
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
+	public Long getCreateBy() {
+		return createBy;
+	}
 
-    public Long getUpdateBy() {
-        return updateBy;
-    }
+	public void setCreateBy(Long createBy) {
+		this.createBy = createBy;
+	}
 
-    public void setUpdateBy(Long updateBy) {
-        this.updateBy = updateBy;
-    }
+	public Date getUpdateDate() {
+		return updateDate;
+	}
 
-    public Integer getDeleted() {
-        return deleted;
-    }
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
 
-    public void setDeleted(Integer deleted) {
-        this.deleted = deleted;
-    }
+	public Long getUpdateBy() {
+		return updateBy;
+	}
 
-    public Date getTS() {
-        return TS;
-    }
+	public void setUpdateBy(Long updateBy) {
+		this.updateBy = updateBy;
+	}
 
-    public void setTS(Date tS) {
-        TS = tS;
-    }
+	public Integer getDeleted() {
+		return deleted;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setDeleted(Integer deleted) {
+		this.deleted = deleted;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public Date getTS() {
+		return TS;
+	}
 
-    public String getCode() {
-        return code;
-    }
+	public void setTS(Date tS) {
+		TS = tS;
+	}
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public Double getLocationX() {
-        return locationX;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setLocationX(Double locationX) {
-        this.locationX = locationX;
-    }
+	public String getCode() {
+		return code;
+	}
 
-    public Double getLocationY() {
-        return locationY;
-    }
+	public void setCode(String code) {
+		this.code = code;
+	}
 
-    public void setLocationY(Double locationY) {
-        this.locationY = locationY;
-    }
+	public Double getLocationX() {
+		return locationX;
+	}
 
-    public Long getType() {
-        return type;
-    }
+	public void setLocationX(Double locationX) {
+		this.locationX = locationX;
+	}
 
-    public void setType(Long type) {
-        this.type = type;
-    }
+	public Double getLocationY() {
+		return locationY;
+	}
 
-    public Long getStation() {
-        return station;
-    }
+	public void setLocationY(Double locationY) {
+		this.locationY = locationY;
+	}
 
-    public void setStation(Long station) {
-        this.station = station;
-    }
+	public Long getType() {
+		return type;
+	}
 
-    public Integer getFps() {
-        return fps;
-    }
+	public void setType(Long type) {
+		this.type = type;
+	}
 
-    public void setFps(Integer fps) {
-        this.fps = fps;
-    }
+	public Long getStation() {
+		return station;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public void setStation(Long station) {
+		this.station = station;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	public Integer getFps() {
+		return fps;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public void setFps(Integer fps) {
+		this.fps = fps;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public String getAddress() {
+		return address;
+	}
 
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	
 }

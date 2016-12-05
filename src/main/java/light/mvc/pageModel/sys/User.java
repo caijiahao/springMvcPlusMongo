@@ -8,343 +8,358 @@ import java.util.Date;
  * 特别注意：初步编写，尚未测试
  * */
 public class User implements java.io.Serializable {
-    //autoID为personalinfo表的AutoID
-    private Long autoID;
-    //loginAutoID为loginuser表的AutoID
-    private Long loginAutoID;
-
-    protected Integer active; // 状态
-    protected Date createDate; // 创建时间
-    protected Long createBy;
-    protected Date updateDate;
-    protected Long updateBy;
-    protected Integer Deleted;
-    protected Date TS;
-
-
-    private String loginName; // 登录名
-    private String password; // 密码
-    private Date lastLoginTime; // 上次登录时间
-    private Integer states; // 状态
+	//autoID为personalinfo表的AutoID
+	private Long autoID;
+	//loginAutoID为loginuser表的AutoID
+	private Long loginAutoID;
+	
+	protected Integer active; // 状态
+	protected Date createDate; // 创建时间
+	protected Long createBy;
+	protected Date updateDate;
+	protected Long updateBy;
+	protected Integer Deleted;
+	protected Date TS;
+	
+	
+	private String loginName; // 登录名
+	private String password; // 密码
+	private Date lastLoginTime; // 上次登录时间
+	private Integer states; // 状态
     private Integer isdefault;
+	
+	private String realName;
+	private String phoneNumber;
+	private Integer sex;
+	private Integer age;
+	private String email;
+	private String address;
 
-    private String realName;
-    private String phoneNumber;
-    private Integer sex;
-    private Integer age;
-    private String email;
-    private String address;
+	private String techType;
+	private String description;
+	private String techTitle;
+	private Integer needPublish;
 
-    private String techType;
-    private String description;
-    private String techTitle;
-    private Integer needPublish;
+	private Long organizationId;
+	private String organizationName;
 
-    private Long organizationId;
-    private String organizationName;
+	private Long roleIds;
+	private String roleNames;
+	
+	private String manualIDs;
+	private String manualNames;
+	
+	private String searchKey;
+	private String searchValue;
+	
+	private boolean auditor;
+	
+	private String imagePath;	//用户图像路径
 
-    private Long roleIds;
-    private String roleNames;
+	public User() {
+		super();
+	}
 
-    private String manualIDs;
-    private String manualNames;
 
-    private String searchKey;
-    private String searchValue;
 
-    private boolean auditor;
+	public Long getAutoID() {
+		return autoID;
+	}
 
-    private String imagePath;    //用户图像路径
 
-    public User() {
-        super();
-    }
 
+	public void setAutoID(Long autoID) {
+		this.autoID = autoID;
+	}
+	
+	public Long getLoginAutoID() {
+		return loginAutoID;
+	}
 
-    public Long getAutoID() {
-        return autoID;
-    }
 
 
-    public void setAutoID(Long autoID) {
-        this.autoID = autoID;
-    }
+	public void setLoginAutoID(Long loginAutoID) {
+		this.loginAutoID = loginAutoID;
+	}
+	
 
-    public Long getLoginAutoID() {
-        return loginAutoID;
-    }
 
 
-    public void setLoginAutoID(Long loginAutoID) {
-        this.loginAutoID = loginAutoID;
-    }
+	public Integer getActive() {
+		return active;
+	}
 
+	public void setActive(Integer active) {
+		this.active = active;
+	}
 
-    public Integer getActive() {
-        return active;
-    }
+	public Date getCreateDate() {
+		return createDate;
+	}
 
-    public void setActive(Integer active) {
-        this.active = active;
-    }
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
 
-    public Date getCreateDate() {
-        return createDate;
-    }
+	public Long getCreateBy() {
+		return createBy;
+	}
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
+	public void setCreateBy(Long createBy) {
+		this.createBy = createBy;
+	}
 
-    public Long getCreateBy() {
-        return createBy;
-    }
+	public Date getUpdateDate() {
+		return updateDate;
+	}
 
-    public void setCreateBy(Long createBy) {
-        this.createBy = createBy;
-    }
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
 
-    public Date getUpdateDate() {
-        return updateDate;
-    }
+	public Long getUpdateBy() {
+		return updateBy;
+	}
 
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
+	public void setUpdateBy(Long updateBy) {
+		this.updateBy = updateBy;
+	}
 
-    public Long getUpdateBy() {
-        return updateBy;
-    }
+	public Integer getDeleted() {
+		return Deleted;
+	}
+
+	public void setDeleted(Integer deleted) {
+		Deleted = deleted;
+	}
+
+	public Date getTS() {
+		return TS;
+	}
+
+	public void setTS(Date tS) {
+		TS = tS;
+	}
+
+	public String getLoginName() {
+		return loginName;
+	}
+
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Date getLastLoginTime() {
+		return lastLoginTime;
+	}
+
+	public void setLastLoginTime(Date lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
+
+	public Integer getStates() {
+		return states;
+	}
+
+	public void setStates(Integer states) {
+		this.states = states;
+	}
+
+	public Integer getIsdefault() {
+		return isdefault;
+	}
+
+	public void setIsdefault(Integer isdefault) {
+		this.isdefault = isdefault;
+	}
 
-    public void setUpdateBy(Long updateBy) {
-        this.updateBy = updateBy;
-    }
+	public String getRealName() {
+		return realName;
+	}
 
-    public Integer getDeleted() {
-        return Deleted;
-    }
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
 
-    public void setDeleted(Integer deleted) {
-        Deleted = deleted;
-    }
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
 
-    public Date getTS() {
-        return TS;
-    }
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 
-    public void setTS(Date tS) {
-        TS = tS;
-    }
+	public Integer getSex() {
+		return sex;
+	}
 
-    public String getLoginName() {
-        return loginName;
-    }
+	public void setSex(Integer sex) {
+		this.sex = sex;
+	}
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
-    }
+	public Integer getAge() {
+		return age;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public Date getLastLoginTime() {
-        return lastLoginTime;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setLastLoginTime(Date lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public Integer getStates() {
-        return states;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public void setStates(Integer states) {
-        this.states = states;
-    }
+	public String getTechType() {
+		return techType;
+	}
 
-    public Integer getIsdefault() {
-        return isdefault;
-    }
+	public void setTechType(String techType) {
+		this.techType = techType;
+	}
 
-    public void setIsdefault(Integer isdefault) {
-        this.isdefault = isdefault;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public String getRealName() {
-        return realName;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public void setRealName(String realName) {
-        this.realName = realName;
-    }
+	public Long getOrganizationId() {
+		return organizationId;
+	}
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+	public void setOrganizationId(Long organizationId) {
+		this.organizationId = organizationId;
+	}
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+	public String getOrganizationName() {
+		return organizationName;
+	}
 
-    public Integer getSex() {
-        return sex;
-    }
+	public void setOrganizationName(String organizationName) {
+		this.organizationName = organizationName;
+	}
 
-    public void setSex(Integer sex) {
-        this.sex = sex;
-    }
+	public Long getRoleIds() {
+		return roleIds;
+	}
 
-    public Integer getAge() {
-        return age;
-    }
+	public void setRoleIds(Long roleIds) {
+		this.roleIds = roleIds;
+	}
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+	public String getRoleNames() {
+		return roleNames;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setRoleNames(String roleNames) {
+		this.roleNames = roleNames;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	public String getManualIDs() {
+		return manualIDs;
+	}
 
-    public String getTechType() {
-        return techType;
-    }
 
-    public void setTechType(String techType) {
-        this.techType = techType;
-    }
 
-    public String getDescription() {
-        return description;
-    }
+	public void setManualIDs(String manualIDs) {
+		this.manualIDs = manualIDs;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
-    public Long getOrganizationId() {
-        return organizationId;
-    }
 
-    public void setOrganizationId(Long organizationId) {
-        this.organizationId = organizationId;
-    }
+	public String getManualNames() {
+		return manualNames;
+	}
 
-    public String getOrganizationName() {
-        return organizationName;
-    }
 
-    public void setOrganizationName(String organizationName) {
-        this.organizationName = organizationName;
-    }
 
-    public Long getRoleIds() {
-        return roleIds;
-    }
+	public void setManualNames(String manualNames) {
+		this.manualNames = manualNames;
+	}
 
-    public void setRoleIds(Long roleIds) {
-        this.roleIds = roleIds;
-    }
+	public String getTechTitle() {
+		return techTitle;
+	}
+	
+	public void setTechTitle(String techTitle) {
+		this.techTitle = techTitle;
+	}
+	
+	public Integer getNeedPublish(){
+		return needPublish;
+	}
+	
+	public void setNeedPublish(Integer needPublish) {
+		this.needPublish = needPublish;
+	}
 
-    public String getRoleNames() {
-        return roleNames;
-    }
 
-    public void setRoleNames(String roleNames) {
-        this.roleNames = roleNames;
-    }
 
+	public String getSearchKey() {
+		return searchKey;
+	}
 
-    public String getManualIDs() {
-        return manualIDs;
-    }
 
 
-    public void setManualIDs(String manualIDs) {
-        this.manualIDs = manualIDs;
-    }
+	public void setSearchKey(String searchKey) {
+		this.searchKey = searchKey;
+	}
 
 
-    public String getManualNames() {
-        return manualNames;
-    }
 
+	public String getSearchValue() {
+		return searchValue;
+	}
 
-    public void setManualNames(String manualNames) {
-        this.manualNames = manualNames;
-    }
 
-    public String getTechTitle() {
-        return techTitle;
-    }
 
-    public void setTechTitle(String techTitle) {
-        this.techTitle = techTitle;
-    }
+	public void setSearchValue(String searchValue) {
+		this.searchValue = searchValue;
+	}
 
-    public Integer getNeedPublish() {
-        return needPublish;
-    }
 
-    public void setNeedPublish(Integer needPublish) {
-        this.needPublish = needPublish;
-    }
 
+	public boolean isAuditor() {
+		return auditor;
+	}
 
-    public String getSearchKey() {
-        return searchKey;
-    }
 
 
-    public void setSearchKey(String searchKey) {
-        this.searchKey = searchKey;
-    }
+	public void setAuditor(boolean auditor) {
+		this.auditor = auditor;
+	}
 
+	public String getImagePath(){
+		return imagePath;
+	}
+	
+	public void setImagePath(String imagePath){
+		this.imagePath = imagePath;
+	}
 
-    public String getSearchValue() {
-        return searchValue;
-    }
-
-
-    public void setSearchValue(String searchValue) {
-        this.searchValue = searchValue;
-    }
-
-
-    public boolean isAuditor() {
-        return auditor;
-    }
-
-
-    public void setAuditor(boolean auditor) {
-        this.auditor = auditor;
-    }
-
-    public String getImagePath() {
-        return imagePath;
-    }
-
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
-    }
-
-
+	
 }

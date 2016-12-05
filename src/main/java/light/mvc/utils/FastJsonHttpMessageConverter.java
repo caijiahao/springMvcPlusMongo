@@ -16,69 +16,69 @@ import java.nio.charset.Charset;
 
 public class FastJsonHttpMessageConverter extends AbstractHttpMessageConverter<Object> {
 
-    public final static Charset UTF8 = Charset.forName("UTF-8");
+	public final static Charset UTF8 = Charset.forName("UTF-8");
 
-    private Charset charset = UTF8;
+	private Charset charset = UTF8;
 
-    private SerializerFeature[] serializerFeature;
+	private SerializerFeature[] serializerFeature;
 
-    @Override
-    protected boolean supports(Class<?> clazz) {
-        return true;
-    }
+	@Override
+	protected boolean supports(Class<?> clazz) {
+		return true;
+	}
 
-    @Override
-    protected Object readInternal(Class<? extends Object> clazz, HttpInputMessage inputMessage) throws IOException,
+	@Override
+	protected Object readInternal(Class<? extends Object> clazz, HttpInputMessage inputMessage) throws IOException,
             HttpMessageNotReadableException {
 
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
-        InputStream in = inputMessage.getBody();
+		InputStream in = inputMessage.getBody();
 
-        byte[] buf = new byte[1024];
-        for (; ; ) {
-            int len = in.read(buf);
-            if (len == -1) {
-                break;
-            }
+		byte[] buf = new byte[1024];
+		for (;;) {
+			int len = in.read(buf);
+			if (len == -1) {
+				break;
+			}
 
-            if (len > 0) {
-                baos.write(buf, 0, len);
-            }
-        }
+			if (len > 0) {
+				baos.write(buf, 0, len);
+			}
+		}
 
-        byte[] bytes = baos.toByteArray();
-        if (charset == UTF8) {
-            return JSON.parseObject(bytes, clazz);
-        } else {
-            return JSON.parseObject(bytes, 0, bytes.length, charset.newDecoder(), clazz);
-        }
-    }
+		byte[] bytes = baos.toByteArray();
+		if (charset == UTF8) {
+			return JSON.parseObject(bytes, clazz);
+		} else {
+			return JSON.parseObject(bytes, 0, bytes.length, charset.newDecoder(), clazz);
+		}
+	}
 
-    @Override
-    protected void writeInternal(Object obj, HttpOutputMessage outputMessage) throws IOException,
+	@Override
+	protected void writeInternal(Object obj, HttpOutputMessage outputMessage) throws IOException,
             HttpMessageNotWritableException {
 
-        OutputStream out = outputMessage.getBody();
-        byte[] bytes;
+		OutputStream out = outputMessage.getBody();
+		byte[] bytes;
 
-        if (charset == UTF8) {
-            if (serializerFeature != null) {
-                bytes = JSON.toJSONBytes(obj, serializerFeature);
-            } else {
-                bytes = JSON.toJSONBytes(obj, SerializerFeature.WriteDateUseDateFormat, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty);
-            }
-        } else {
-            String text;
-            if (serializerFeature != null) {
-                text = JSON.toJSONString(obj, serializerFeature);
-            } else {
-                text = JSON.toJSONString(obj, SerializerFeature.WriteDateUseDateFormat, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty);
-            }
-            bytes = text.getBytes(charset);
-        }
+		if (charset == UTF8) {
+			if (serializerFeature != null) {
+				bytes = JSON.toJSONBytes(obj, serializerFeature);
+			} else {
+				bytes = JSON.toJSONBytes(obj, SerializerFeature.WriteDateUseDateFormat, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty);
+			}
+		} else {
+			String text;
+			if (serializerFeature != null) {
+				text = JSON.toJSONString(obj, serializerFeature);
+			} else {
+				text = JSON.toJSONString(obj, SerializerFeature.WriteDateUseDateFormat, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty);
+			}
+			bytes = text.getBytes(charset);
+		}
 
-        out.write(bytes);
-    }
+		out.write(bytes);
+	}
 
 }

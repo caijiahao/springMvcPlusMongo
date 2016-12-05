@@ -20,74 +20,74 @@ import javax.validation.constraints.NotNull;
 @Table(name = "dictionary", schema = "")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class TEFDictionary extends baseEntity implements java.io.Serializable {
+public class TEFDictionary extends baseEntity implements java.io.Serializable{
+	
+	private String code;
+	private String text;
+	private TEFDictionaryCategory dictionaryCategory;
+	private Integer seq;
+	private Integer isDefault; // 是否默认
+	
+	public TEFDictionary(){
+		
+	}
+	
+	public TEFDictionary(String code, String text,
+			TEFDictionaryCategory dictionaryCategory, Integer seq, Integer state,
+			Integer isdefault) {
+		super();
+		this.code = code;
+		this.text = text;
+		this.dictionaryCategory = dictionaryCategory;
+		this.seq = seq;
+		this.isDefault = isdefault;
+	}
 
-    private String code;
-    private String text;
-    private TEFDictionaryCategory dictionaryCategory;
-    private Integer seq;
-    private Integer isDefault; // 是否默认
+	@NotBlank
+	public String getCode() {
+		return code;
+	}
 
-    public TEFDictionary() {
+	public void setCode(String code) {
+		this.code = code;
+	}
 
-    }
+	@NotBlank
+	public String getText() {
+		return text;
+	}
 
-    public TEFDictionary(String code, String text,
-                         TEFDictionaryCategory dictionaryCategory, Integer seq, Integer state,
-                         Integer isdefault) {
-        super();
-        this.code = code;
-        this.text = text;
-        this.dictionaryCategory = dictionaryCategory;
-        this.seq = seq;
-        this.isDefault = isdefault;
-    }
-
-    @NotBlank
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    @NotBlank
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
+	public void setText(String text) {
+		this.text = text;
+	}
 
 
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "DictionaryCategoryID")
-    public TEFDictionaryCategory getDictionaryCategory() {
-        return dictionaryCategory;
-    }
+	@NotNull
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "DictionaryCategoryID")
+	public TEFDictionaryCategory getDictionaryCategory() {
+		return dictionaryCategory;
+	}
 
-    public void setDictionaryCategory(TEFDictionaryCategory dictionaryCategory) {
-        this.dictionaryCategory = dictionaryCategory;
-    }
+	public void setDictionaryCategory(TEFDictionaryCategory dictionaryCategory) {
+		this.dictionaryCategory = dictionaryCategory;
+	}
 
-    public Integer getIsDefault() {
-        return isDefault;
-    }
+	public Integer getIsDefault() {
+		return isDefault;
+	}
 
-    public void setIsDefault(Integer isDefault) {
-        this.isDefault = isDefault;
-    }
+	public void setIsDefault(Integer isDefault) {
+		this.isDefault = isDefault;
+	}
 
-    public Integer getSeq() {
-        return seq;
-    }
+	public Integer getSeq() {
+		return seq;
+	}
 
-    public void setSeq(Integer seq) {
-        this.seq = seq;
-    }
-
+	public void setSeq(Integer seq) {
+		this.seq = seq;
+	}
+	
 
 }

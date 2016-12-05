@@ -12,68 +12,69 @@ import javax.persistence.Table;
 @Table(name = "manualcontent")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class TEFmanualContent extends baseEntity implements java.io.Serializable {
+public class TEFmanualContent extends baseEntity implements java.io.Serializable{
+	
+	private Long manualCategoryID;
+	private String categoryCode;
+	private String content;
+	private String title;
+	private String filePath;
+	
+	public TEFmanualContent() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    private Long manualCategoryID;
-    private String categoryCode;
-    private String content;
-    private String title;
-    private String filePath;
+	public TEFmanualContent(Long manualCategoryID, String categoryCode,
+			String content, String title, String filePath) {
+		super();
+		this.manualCategoryID = manualCategoryID;
+		this.categoryCode = categoryCode;
+		this.content = content;
+		this.title = title;
+		this.filePath = filePath;
+	}
 
-    public TEFmanualContent() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	public Long getManualCategoryID() {
+		return manualCategoryID;
+	}
 
-    public TEFmanualContent(Long manualCategoryID, String categoryCode,
-                            String content, String title, String filePath) {
-        super();
-        this.manualCategoryID = manualCategoryID;
-        this.categoryCode = categoryCode;
-        this.content = content;
-        this.title = title;
-        this.filePath = filePath;
-    }
+	public void setManualCategoryID(Long manualCategoryID) {
+		this.manualCategoryID = manualCategoryID;
+	}
 
-    public Long getManualCategoryID() {
-        return manualCategoryID;
-    }
+	public String getCategoryCode() {
+		return categoryCode;
+	}
 
-    public void setManualCategoryID(Long manualCategoryID) {
-        this.manualCategoryID = manualCategoryID;
-    }
+	public void setCategoryCode(String categoryCode) {
+		this.categoryCode = categoryCode;
+	}
 
-    public String getCategoryCode() {
-        return categoryCode;
-    }
+	public String getContent() {
+		return content;
+	}
 
-    public void setCategoryCode(String categoryCode) {
-        this.categoryCode = categoryCode;
-    }
+	public void setContent(String content) {
+		this.content = content;
+	}
 
-    public String getContent() {
-        return content;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public String getFilePath() {
+		return filePath;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getFilePath() {
-        return filePath;
-    }
-
-    public void setFilePath(String filePath) {
-        this.filePath = filePath;
-    }
-
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
+	
+	
 
 }

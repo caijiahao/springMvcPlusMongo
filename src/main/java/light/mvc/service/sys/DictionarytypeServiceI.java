@@ -13,15 +13,15 @@ import java.util.List;
 public interface DictionarytypeServiceI {
 
 
-    public void add(Dictionarytype dictionarytype);
+	public void add(Dictionarytype dictionarytype);
 
-    public void delete(Long id);
+	public void delete(Long id);
 
-    public void edit(Dictionarytype dictionarytype);
+	public void edit(Dictionarytype dictionarytype);
 
-    public Dictionarytype get(Long id);
+	public Dictionarytype get(Long id);
 
-    public List<Tree> tree();
+	public List<Tree> tree();
 
 
 }

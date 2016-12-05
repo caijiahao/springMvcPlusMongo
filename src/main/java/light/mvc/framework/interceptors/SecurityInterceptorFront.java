@@ -11,58 +11,59 @@ import java.util.List;
 
 /**
  * 权限拦截器
+ * 
  */
 public class SecurityInterceptorFront implements HandlerInterceptor {
 
-    private List<String> excludeUrls;// 不需要拦截的资源
+	private List<String> excludeUrls;// 不需要拦截的资源
 
-    public List<String> getExcludeUrls() {
-        return excludeUrls;
-    }
+	public List<String> getExcludeUrls() {
+		return excludeUrls;
+	}
 
-    public void setExcludeUrls(List<String> excludeUrls) {
-        this.excludeUrls = excludeUrls;
-    }
+	public void setExcludeUrls(List<String> excludeUrls) {
+		this.excludeUrls = excludeUrls;
+	}
 
-    /**
-     * 完成页面的render后调用
-     */
-    @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object object,
-                                Exception exception) throws Exception {
+	/**
+	 * 完成页面的render后调用
+	 */
+	@Override
+	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object object,
+			Exception exception) throws Exception {
 
-    }
+	}
 
-    /**
-     * 在调用controller具体方法后拦截
-     */
-    @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object object,
-                           ModelAndView modelAndView) throws Exception {
+	/**
+	 * 在调用controller具体方法后拦截
+	 */
+	@Override
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object object,
+			ModelAndView modelAndView) throws Exception {
 
-    }
+	}
 
-    /**
-     * 在调用controller具体方法前拦截
-     */
-    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object) throws Exception {
-        String requestUri = request.getRequestURI();
-        String contextPath = request.getContextPath();
-        String url = requestUri.substring(contextPath.length());
-        SessionInfo sessionInfoExpert = (SessionInfo) request.getSession().getAttribute(GlobalConstant.SESSION_INFO_EXPERT);
-        SessionInfo sessionInfoMember = (SessionInfo) request.getSession().getAttribute(GlobalConstant.SESSION_INFO_MEMBER);
+	/**
+	 * 在调用controller具体方法前拦截
+	 */
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object) throws Exception {
+		String requestUri = request.getRequestURI();
+		String contextPath = request.getContextPath();
+		String url = requestUri.substring(contextPath.length());
+		SessionInfo sessionInfoExpert = (SessionInfo) request.getSession().getAttribute(GlobalConstant.SESSION_INFO_EXPERT);
+		SessionInfo sessionInfoMember = (SessionInfo) request.getSession().getAttribute(GlobalConstant.SESSION_INFO_MEMBER);
+		
+		if (excludeUrls.contains(url)|| (url.indexOf("/baseUtil/") > -1) || ((url.indexOf("/front") > -1)&&(url.indexOf("/base") > -1))||url.indexOf("/mobile/")>-1) {// 如果要访问的资源是不需要验证的
+			return true;
+		}
 
-        if (excludeUrls.contains(url) || (url.indexOf("/baseUtil/") > -1) || ((url.indexOf("/front") > -1) && (url.indexOf("/base") > -1)) || url.indexOf("/mobile/") > -1) {// 如果要访问的资源是不需要验证的
-            return true;
-        }
+		
+		if (((sessionInfoExpert == null) || (sessionInfoExpert.getId() == null))&&((sessionInfoMember == null) || (sessionInfoMember.getId() == null))) {// 如果没有登录或登录超时
+			request.getRequestDispatcher("/WEB-INF/views//front/login.jsp").forward(request, response);
+			return false;
+		}
 
-
-        if (((sessionInfoExpert == null) || (sessionInfoExpert.getId() == null)) && ((sessionInfoMember == null) || (sessionInfoMember.getId() == null))) {// 如果没有登录或登录超时
-            request.getRequestDispatcher("/WEB-INF/views//front/login.jsp").forward(request, response);
-            return false;
-        }
-
-        return true;
-    }
+		return true;
+	}
 }

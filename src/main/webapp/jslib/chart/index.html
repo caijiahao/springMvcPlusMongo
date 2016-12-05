@@ -1,0 +1,51 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>农技推广综合管理平台</title>
+<script type="text/javascript" src="./raphael.js"></script>
+<script type="text/javascript" src="./g.raphael.js"></script>
+<script type="text/javascript" src="./g.bar.js"></script>
+<script type="text/javascript" src="./g.line.js"></script>
+<script type="text/javascript" src="./g.pie.js"></script>
+<script type="text/javascript" src="./g.dot.js"></script>
+<script type="text/javascript" src="./jquery-2.1.4.js"></script>
+  <script type="text/javascript">
+var options = {
+	axis: "0 0 1 1", // Where to put the labels (trbl)
+	axisxstep: 6, // How many x interval labels to render (axisystep does the same for the y axis)
+	shade:true, // true, false
+	smooth:false, //曲线
+	symbol:"circle",
+	colors:["#F44"]
+};
+
+$(function () {
+	
+	// Make the raphael object
+	var r = Raphael("chartHolder"); 
+	var dateE=['07','08','09','10','11','12','13','14','15'];
+	var lines = r.linechart(
+		20, // X start in pixels
+		10, // Y start in pixels
+		600, // Width of chart in pixels
+		400, // Height of chart in pixels
+		[07,08,09,10,11,12,13,14,15], // Array of x coordinates equal in length to ycoords
+		[7,8,9,10,11,12,13,14,15], // Array of y coordinates equal in length to xcoords
+		options // opts object
+	);
+	lines.label(dateE,true);
+
+});
+</script>
+</head>
+<body>
+ <div id="chartHolder" style="width: 650px;height: 450px"></div>
+
+</body>
+</html>
+
+

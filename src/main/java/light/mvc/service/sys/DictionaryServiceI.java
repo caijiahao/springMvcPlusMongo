@@ -12,29 +12,29 @@ import java.util.List;
  * */
 public interface DictionaryServiceI {
 
-    public List<Dictionary> dataGrid(Dictionary dictionary, PageFilter ph);
+	public List<Dictionary> dataGrid(Dictionary dictionary, PageFilter ph);
 
-    public Long count(Dictionary dictionary, PageFilter ph);
+	public Long count(Dictionary dictionary, PageFilter ph);
 
-    public void add(Dictionary dictionary);
+	public void add(Dictionary dictionary);
 
-    public void delete(Long id);
+	public void delete(Long id);
 
-    public void edit(Dictionary dictionary);
+	public void edit(Dictionary dictionary);
 
-    public Dictionary get(Long id);
+	public Dictionary get(Long id);
 
-    public List<Dictionary> combox(String code);
+	public List<Dictionary> combox(String code);
+	
+	public List<Dictionary> getDictionaryByCategoryCode(String code);
+	
+	public List<Dictionary> getDictionaryByCategoryID(Long id);
 
-    public List<Dictionary> getDictionaryByCategoryCode(String code);
-
-    public List<Dictionary> getDictionaryByCategoryID(Long id);
-
-    public Dictionary checkUnique(Dictionary dictionary);
-
-    public Dictionary getDefaultDictionary(String categoryCode);
-
-    public Dictionary getDictionary(String categoryCode, String contentCode);
+	public Dictionary checkUnique(Dictionary dictionary);
+	
+	public Dictionary getDefaultDictionary(String categoryCode);
+	
+	public Dictionary getDictionary(String categoryCode, String contentCode);
 
 }
 

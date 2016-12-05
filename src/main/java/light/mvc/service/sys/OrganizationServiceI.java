@@ -12,17 +12,17 @@ import java.util.List;
  * */
 public interface OrganizationServiceI {
 
-    public List<Organization> treeGrid();
+	public List<Organization> treeGrid();
 
-    public void add(Organization organization);
+	public void add(Organization organization);
 
-    public void delete(Long id);
+	public void delete(Long id);
 
-    public void edit(Organization organization);
+	public void edit(Organization organization);
 
-    public Organization get(Long id);
+	public Organization get(Long id);
 
-    public List<Tree> tree();
-
-    public List<Organization> getAuditPath(Long organizationId);
+	public List<Tree> tree();
+	
+	public List<Organization> getAuditPath(Long organizationId);
 }

@@ -13,20 +13,20 @@ import java.util.List;
  * */
 public interface RoleServiceI {
 
-    public List<Role> dataGrid(Role role, PageFilter ph);
+	public List<Role> dataGrid(Role role, PageFilter ph);
 
-    public Long count(Role role, PageFilter ph);
+	public Long count(Role role, PageFilter ph);
 
-    public void add(Role role);
+	public void add(Role role);
 
-    public void delete(Long id);
+	public void delete(Long id);
 
-    public void edit(Role role);
+	public void edit(Role role);
 
-    public Role get(Long id);
+	public Role get(Long id);
 
-    public void grant(Role role);
+	public void grant(Role role);
 
-    public List<Tree> tree();
+	public List<Tree> tree();
 
 }
