@@ -5,18 +5,20 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
-import java.text.DateFormat;
-import java.util.Date;
 
 /**
- * Created by stevenfen on 2016/11/14.
+ * Created by stevenfen on 2016/12/7.
  */
-@Component("annotationTask")
-public class TestTask {
+@Component("updateDataTask")
+public class UpdateDataTask {
     @Resource
     private UpdateDataImpl updateData;
+
+    /**
+     * 每个9个小时更新一下站点9的数据
+     */
     @Scheduled(cron = "* * */9 * * ?")
-    public void print() {
-        //updateData.updateDataByCloud(9L);
+    public void updataStaionNine(){
+        updateData.updateDataByCloud(9L);
     }
 }

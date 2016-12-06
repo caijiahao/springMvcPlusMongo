@@ -1,9 +1,7 @@
 package com.lida.mongo.sensor.service.impl;
 
-import com.lida.mongo.sensor.dao.impl.SensorMongoImpl;
-import com.lida.mongo.sensor.entity.Sensor;
+import com.lida.mongo.sensor.Enum.StationType;
 import com.lida.mongo.sensor.service.UpdateData;
-import com.lida.mongo.util.StringUtil;
 import light.mvc.framework.constant.GlobalConstant;
 import light.mvc.pageModel.sensor.Station;
 import light.mvc.pageModel.sensor.monitoringNode;
@@ -59,12 +57,17 @@ public class UpdateDataImpl implements UpdateData {
 
     private static Logger log = LoggerFactory.getLogger(UpdateDataImpl.class);
 
+    /**
+     **更新数据的时间间隔
+     **/
+    private static final Long timeInterval = 1000L;
+
     @Override
     public void updateDataByCloud(Long stationId) {
         try {
 
             Station station = stationS.get(stationId);
-            if (station.getType() != 61) {
+            if (station.getType() != StationType.NoNeedUpdate.getValue()) {
                 log.info("该节点无需更新");
                 return ;
             }
@@ -87,6 +90,12 @@ public class UpdateDataImpl implements UpdateData {
                 node.setStation(stationId);
                 List<monitoringNode> nodeList = moniService.dataGrid(node, null);
                 sensorService.insertApi(array,station,nodeList);
+                Service.insertApi(array, station,nodeList);
+
+               //修改下次更新数据
+                light.mvc.pageModel.sensor.Sensor sLast = Service.getLastSensor(station.getSerialNum());
+                Date lastDate = new Date(sLast.getCreateDate().getTime()+timeInterval);
+                stationS.updateSensorLastTime(lastDate,stationId);
             }
             log.info("更新数据成功===================================================");
         } catch (Exception e) {
