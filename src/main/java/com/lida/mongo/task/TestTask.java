@@ -1,8 +1,10 @@
 package com.lida.mongo.task;
 
+import com.lida.mongo.sensor.service.impl.UpdateDataImpl;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.text.DateFormat;
 import java.util.Date;
 
@@ -11,9 +13,10 @@ import java.util.Date;
  */
 @Component("annotationTask")
 public class TestTask {
-    @Scheduled(cron = "*/5 * * * * ?")
+    @Resource
+    private UpdateDataImpl updateData;
+    @Scheduled(cron = "*/30 * * * * ?")
     public void print() {
-        String time = DateFormat.getDateTimeInstance().format(new Date());
-        System.out.println("定时器触发打印" + time);
+        updateData.updateDataByCloud(9L);
     }
 }

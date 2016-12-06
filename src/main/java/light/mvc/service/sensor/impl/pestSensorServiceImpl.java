@@ -156,7 +156,7 @@ public class pestSensorServiceImpl implements pestSensorServiceI{
 				columsName+=" "+node.getMap()+",";
 			//	value+=" :"+node.getDataKey()+",";
 			//	params.put(node.getDataKey(), jo.getString(node.getDataKey()));
-				value+=" "+jo.getString(node.getDataKey())+",";
+				value+=" "+jo.get(node.getDataKey())+",";
 				
 				
 			}
