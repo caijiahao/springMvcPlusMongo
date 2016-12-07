@@ -40,9 +40,13 @@
     <!-- 日志输出级别 -->
     <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="FILE"/>
+  <!--      <appender-ref ref="FILE"/>-->
     </root>
 
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+
+    </root>
     <!--日志异步到数据库 -->
     <!-- <appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
          &lt;!&ndash;日志异步到数据库 &ndash;&gt;
