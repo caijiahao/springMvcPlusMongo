@@ -37,16 +37,11 @@
     <logger name="org.hibernate.engine.QueryParameters" level="DEBUG"/>
     <logger name="org.hibernate.engine.query.HQLQueryPlan" level="DEBUG"/>
 
-    <!-- 日志输出级别 -->
-    <root level="DEBUG">
-        <appender-ref ref="STDOUT"/>
-  <!--      <appender-ref ref="FILE"/>-->
-    </root>
 
-    <root level="INFO">
-        <appender-ref ref="FILE"/>
 
-    </root>
+   <!-- <root level="INFO">
+        <appender-ref ref="MONGO" />
+    </root>-->
     <!--日志异步到数据库 -->
     <!-- <appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
          &lt;!&ndash;日志异步到数据库 &ndash;&gt;
@@ -60,4 +55,22 @@
              </dataSource>
          </connectionSource>
      </appender> -->
+
+    <!-- mongo 日志 -->
+    <appender name="MONGO" class="com.lida.mongo.log.Impl.MongoDBAppender">
+        <host>172.16.31.206</host>
+        <port>27017</port>
+        <dbName>mongoLida</dbName>
+        <username></username>
+        <password></password>
+        <collectionName>logdb</collectionName>
+        <source>XXX</source>
+    </appender>
+
+    <!-- 日志输出级别 -->
+    <root level="DEBUG">
+         <appender-ref ref="STDOUT"/>
+<!--                <appender-ref ref="FILE"/>-->
+        <appender-ref ref="MONGO" />
+    </root>
 </configuration>

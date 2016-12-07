@@ -5,7 +5,6 @@ import com.lida.mongo.sensor.entity.Sensor;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 /**
  * Created by lenovo on 2016/12/6.
  */
@@ -81,4 +80,5 @@ public class StringUtil {
         }
 
     }
+
 }
