@@ -4,6 +4,7 @@ import com.lida.mongo.sensor.entity.Sensor;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 /**
  * Created by lenovo on 2016/12/6.
@@ -79,6 +80,18 @@ public class StringUtil {
             sensor.setSensor20(value);
         }
 
+    }
+
+    /**
+     * 计算输入日期后的一个小时的时间
+     * @param date
+     * @return
+     */
+    public static Date plusOneHour(Date date){
+        Calendar calendar=Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.HOUR_OF_DAY, 1);
+        return calendar.getTime();
     }
 
 }

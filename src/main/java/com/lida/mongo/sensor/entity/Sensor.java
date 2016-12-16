@@ -19,11 +19,11 @@ public class Sensor {
      */
     private Integer Active;
     private String CreateBy;
-    private Date CreateDate;
+    private Date createDate;
     private String UpdateBy;
-    private Date UpdateDate;
+    private Date updateDate;
     private Integer Deleted;
-    private Date TS;
+    private Long timeLine;
     private BigInteger MonitoringNodeId;
     private BigInteger serialNum;
     private Integer sensor_ch;
@@ -83,11 +83,11 @@ public class Sensor {
     }
 
     public Date getCreateDate() {
-        return CreateDate;
+        return createDate;
     }
 
     public void setCreateDate(Date createDate) {
-        CreateDate = createDate;
+        this.createDate = createDate;
     }
 
     public String getUpdateBy() {
@@ -99,11 +99,11 @@ public class Sensor {
     }
 
     public Date getUpdateDate() {
-        return UpdateDate;
+        return updateDate;
     }
 
     public void setUpdateDate(Date updateDate) {
-        UpdateDate = updateDate;
+        this.updateDate = updateDate;
     }
 
     public Integer getDeleted() {
@@ -114,12 +114,12 @@ public class Sensor {
         Deleted = deleted;
     }
 
-    public Date getTS() {
-        return TS;
+    public Long getTimeLine() {
+        return timeLine;
     }
 
-    public void setTS(Date TS) {
-        this.TS = TS;
+    public void setTimeLine(Long timeLine) {
+        this.timeLine = timeLine;
     }
 
     public BigInteger getMonitoringNodeId() {

@@ -48,7 +48,7 @@ public class SensorServiceImpl implements SensorService{
             sensor.setCreateBy(station.getLoginName());
             sensor.setUpdateDate(StringUtil.string2Date(dateStr));
             sensor.setUpdateBy(station.getLoginName());
-            sensor.setTS(StringUtil.string2Date(dateStr));
+            sensor.setTimeLine(StringUtil.string2Date(dateStr).getTime());
 
             //初始化为未删除
             sensor.setDeleted(0);

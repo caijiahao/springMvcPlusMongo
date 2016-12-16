@@ -3,6 +3,7 @@ package com.lida.mongo.sensor.dao;
 import com.lida.mongo.sensor.entity.Sensor;
 
 import java.math.BigInteger;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,5 +18,7 @@ public interface SensorMongoDao {
     void batchInsertSensor(List<Sensor> sensors);
 
     List<Sensor> findForRequery(BigInteger serialNum);
+
+    List<Sensor> findByCreateDate(Date startDate,Date endDate,BigInteger serialNum);
 
 }

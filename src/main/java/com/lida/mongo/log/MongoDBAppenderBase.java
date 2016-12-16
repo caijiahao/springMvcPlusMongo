@@ -54,7 +54,7 @@ public abstract class MongoDBAppenderBase<E>  extends UnsynchronizedAppenderBase
     }
 
     private void connectToMongoDB() throws UnknownHostException {
-        mongo = new Mongo(new ServerAddress("172.16.31.206", 27017), buildOptions());
+        mongo = new Mongo(new ServerAddress("127.0.0.1", 27017), buildOptions());
         DB db = mongo.getDB(dbName);
         if (username != null && password != null)
             db.authenticate(username, password.toCharArray());
