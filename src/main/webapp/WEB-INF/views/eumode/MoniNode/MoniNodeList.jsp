@@ -20,16 +20,122 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>传感器管理</title>
 	<script type="text/javascript">
+		<!--将时间戳转为日期-->
+		function getTime() {
+			var ts = arguments[0] || 0;
+			var t, y, m, d, h, i, s;
+			t = ts ? new Date(ts) : new Date();
+			y = t.getFullYear();
+			m = t.getMonth() + 1;
+			d = t.getDate();
+			h = t.getHours();
+			i = t.getMinutes();
+			s = t.getSeconds();
+			// 可根据需要在这里定义时间格式
+			return y + '-' + (m < 10 ? '0' + m : m) + '-' + (d < 10 ? '0' + d : d) + ' ' + (h < 10 ? '0' + h : h) + ':' + (i < 10 ? '0' + i : i) + ':' + (s < 10 ? '0' + s : s);
+		}
 	var dataGrid;
 	var stationTree;
 	var sensorDateGrid;
 	$(function() {		
-	
+
+		var monitoringNode ={
+			station:"9"
+		}
+
 		stationTree = $('#stationTree').tree({
 			url : '${ctx}/station/tree',
 			parentField : 'pid',
 			lines : true,
 			onClick : function(node) {
+				monitoringNode.station=node.id
+				$.ajax({
+
+					type : 'post',
+
+					url : '${ctx}/pestMoniNode/getnodeinfo',
+
+					contentType : 'application/json',
+					//json数据
+
+					data : JSON.stringify(monitoringNode),
+
+					dataType: 'json',
+
+					//请求成功后的回调函数
+
+					success : function(data) {
+						if(data.length == 7){
+							sensorDateGrid=$('#sensorDateGrid').datagrid({
+								url : '${ctx}' + '/sensor/dataGrid',
+								striped : true,
+								rownumbers : false,//是否显示行号
+								pagination : true,
+								singleSelect : false,//允许选择多行
+								idField : 'autoID',
+								sortName : 'autoID',
+								sortOrder : 'desc',
+								pageSize : 50,
+								pageList : [ 10, 20, 30, 40, 50, 100, 200, 300, 400, 500 ],
+								frozenColumns : [ [ {
+									width : '30',
+									field : 'ck',
+									checkbox : true
+								},{
+									width : '100',
+									title : '监测点',
+									field : 'serialNum',
+									sortable : true
+								} ,{
+									width : '150',
+									title : '采集日期',
+									field : 'createDate',
+									sortable : true,
+									formatter:function(date){
+										return getTime(date)
+									}
+								},{
+									width : '60',
+									title : data[0].name,
+									field : 'sensor1',
+									sortable : true
+								},{
+									width : '60',
+									title : data[1].name,
+									field : 'sensor2',
+									sortable : true
+								},{
+									width : '60',
+									title : data[2].name,
+									field : 'sensor3',
+									sortable : true
+								},{
+									width : '60',
+									title : data[3].name,
+									field : 'sensor4',
+									sortable : true
+								},{
+									width : '60',
+									title : data[4].name,
+									field : 'sensor5',
+									sortable : true
+								},{
+									width : '60',
+									title : data[5].name,
+									field : 'sensor6',
+									sortable : true
+								},{
+									width : '60',
+									title : data[6].name,
+									field : 'sensor7',
+									sortable : true
+								}] ],
+								//toolbar : '#toolbar'
+							});
+						}
+					}
+
+				});
 				dataGrid.datagrid('load', {
 				    station: node.id
 				});
@@ -132,136 +238,59 @@
 				width : '150',
 				title : '采集日期',
 				field : 'createDate',
-				sortable : true
+				sortable : true,
+				formatter:function(date){
+					return getTime(date)
+				}
 			},{
 				width : '60',
-				title : 'sensor1',
+				title : '${sensor1}',
 				field : 'sensor1',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor2',
+				title : '${sensor2}',
 				field : 'sensor2',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor3',
+				title : '${sensor3}',
 				field : 'sensor3',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor4',
+				title : '${sensor4}',
 				field : 'sensor4',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor5',
+				title : '${sensor5}',
 				field : 'sensor5',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor6',
+				title : '${sensor6}',
 				field : 'sensor6',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor7',
+				title : '${sensor7}',
 				field : 'sensor7',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor8',
+				title : '${sensor8}',
 				field : 'sensor8',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor9',
+				title : '${sensor9}',
 				field : 'sensor9',
 				sortable : true
 			},{
 				width : '60',
-				title : 'sensor10',
+				title : '${sensor10}',
 				field : 'sensor10',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor11',
-				field : 'sensor11',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor12',
-				field : 'sensor12',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor13',
-				field : 'sensor13',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor14',
-				field : 'sensor14',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor15',
-				field : 'sensor15',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor16',
-				field : 'sensor16',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor17',
-				field : 'sensor17',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor18',
-				field : 'sensor18',
-				sortable : true
-			} ,{
-				width : '60',
-				title : 'sensor19',
-				field : 'sensor19',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor20',
-				field : 'sensor20',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor21',
-				field : 'sensor21',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor22',
-				field : 'sensor22',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor23',
-				field : 'sensor23',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor24',
-				field : 'sensor24',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor25',
-				field : 'sensor25',
-				sortable : true
-			},{
-				width : '60',
-				title : 'sensor26',
-				field : 'sensor26',
 				sortable : true
 			}] ],
 			//toolbar : '#toolbar'

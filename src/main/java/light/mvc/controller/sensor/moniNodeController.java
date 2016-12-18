@@ -1,5 +1,6 @@
 package light.mvc.controller.sensor;
 
+import com.alibaba.fastjson.JSONObject;
 import light.mvc.pageModel.base.Grid;
 import light.mvc.pageModel.base.Json;
 import light.mvc.pageModel.base.PageFilter;
@@ -9,10 +10,14 @@ import light.mvc.service.sensor.pestDataServiceI;
 import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 
 @Controller
@@ -25,7 +30,20 @@ public class moniNodeController {
 	private pestDataServiceI pestDataService;
 	
 	@RequestMapping("/getPage")
-	public String getPage() {
+	public String getPage(Model model) {
+		monitoringNode data = new monitoringNode();
+		data.setStation(9L);
+
+		PageFilter ph = new PageFilter();
+		ph.setPage(1);
+		ph.setSort("type");
+		ph.setRows(50);
+		ph.setOrder("asc");
+
+		List<monitoringNode> monitoringNode = moniService.dataGrid(data, ph);
+		for(monitoringNode m : monitoringNode){
+			model.addAttribute(m.getMap(),m.getName());
+		}
 		return "/eumode/MoniNode/MoniNodeList";
 	}
 	
@@ -39,7 +57,23 @@ public class moniNodeController {
 		grid.setTotal(moniService.count(data, ph));
 		return grid;
 	}
-	
+
+	@RequestMapping("/getnodeinfo")
+	@ResponseBody
+	public List<monitoringNode> getNodeInfo(@RequestBody JSONObject monitoringNode){
+
+		monitoringNode data = new monitoringNode();
+		data.setStation(monitoringNode.getLong("station"));
+
+		PageFilter ph = new PageFilter();
+		ph.setPage(1);
+		ph.setSort("type");
+		ph.setRows(50);
+		ph.setOrder("asc");
+
+		List<monitoringNode> monitoringNodeList = moniService.dataGrid(data, ph);
+		return monitoringNodeList;
+	}
 	@RequestMapping("/delete")
 	@ResponseBody
 	public Json delete(String ids,HttpServletRequest request) {
