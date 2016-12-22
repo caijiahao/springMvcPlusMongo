@@ -7,37 +7,37 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * ²Ëµ¥¹ÜÀíÆ÷Àà
+ * ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class MenuManager {
 
     private static Logger log = LoggerFactory.getLogger(MenuManager.class);
 
     public static void main(String[] args) {
-        // µÚÈý·½ÓÃ»§Î¨Ò»Æ¾Ö¤
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Î¨Ò»Æ¾Ö¤
         String appId = "wx796e5452641c1b3e";
-        // µÚÈý·½ÓÃ»§Î¨Ò»Æ¾Ö¤ÃÜÔ¿
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Î¨Ò»Æ¾Ö¤ï¿½ï¿½Ô¿
         String appSecret = "af9ebd266419f224d51e95bde72d727d";
 
-        // µ÷ÓÃ½Ó¿Ú»ñÈ¡access_token
+        // ï¿½ï¿½ï¿½Ã½Ó¿Ú»ï¿½È¡access_token
         AccessToken at = WeixinUtil.getAccessToken(appId, appSecret);
         System.out.println("token:" + at.getToken());
 
 
         if (null != at) {
-            // µ÷ÓÃ½Ó¿Ú´´½¨²Ëµ¥
+            // ï¿½ï¿½ï¿½Ã½Ó¿Ú´ï¿½ï¿½ï¿½ï¿½Ëµï¿½
             int result = WeixinUtil.createMenu(getMenu(), at.getToken());
 
-            // ÅÐ¶Ï²Ëµ¥´´½¨½á¹û
+            // ï¿½Ð¶Ï²Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             if (0 == result)
-                log.info("²Ëµ¥´´½¨³É¹¦£¡");
+                log.info("ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
             else
-                log.info("²Ëµ¥´´½¨Ê§°Ü£¬´íÎóÂë£º" + result);
+                log.info("ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º" + result);
         }
     }
 
     /**
-     * ×é×°²Ëµ¥Êý¾Ý
+     * ï¿½ï¿½×°ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class MenuManager {
 //		btn14.setSub_button("scancode_push");
 //		
 //		pic_sysphotoButton btn15 = new pic_sysphotoButton();
-//		btn15.setName("ÅÄÕÕ»òÕßÏà²á·¢Í¼");
+//		btn15.setName("ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½á·¢Í¼");
 //		btn15.setType("pic_photo_or_album");
 //		btn15.setKey("15");
 
@@ -111,23 +111,23 @@ public class MenuManager {
 
 
         ViewButton btn33 = new ViewButton();
-        btn33.setName("Ð¡Äñ");
+        btn33.setName("Ð¡ï¿½ï¿½");
         btn33.setType("view");
         btn33.setUrl("http://www.duopao.com/games/info?game_code=g20140212153040377809");
 
         ViewButton btn34 = new ViewButton();
-        btn34.setName("À×öª");
+        btn34.setName("ï¿½ï¿½ï¿½ï¿½");
         btn34.setType("view");
         btn34.setUrl("http://www.duopao.com/games/info?game_code=g20140120233048400063");
 
 
         ViewButton btn35 = new ViewButton();
-        btn35.setName("ÊÚÈ¨");
+        btn35.setName("ï¿½ï¿½È¨");
         btn35.setType("view");
         btn35.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx55cbb77820db8240&redirect_uri=http%3A%2F%2Fyw.ysh365.com%2FoauthServlet&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");
 
         ComplexButton mainBtn1 = new ComplexButton();
-        mainBtn1.setName("¶ÁÎï");
+        mainBtn1.setName("ï¿½ï¿½ï¿½ï¿½");
         mainBtn1.setSub_button(new Button[]{btn11, btn12, btn13, btn14});
 
         ComplexButton mainBtn2 = new ComplexButton();
@@ -135,14 +135,14 @@ public class MenuManager {
         mainBtn2.setSub_button(new Button[]{btn21, btn22, btn23, btn24, btn25});
 
         ComplexButton mainBtn3 = new ComplexButton();
-        mainBtn3.setName("ÓéÀÖ");
+        mainBtn3.setName("ï¿½ï¿½ï¿½ï¿½");
         mainBtn3.setSub_button(new Button[]{btn31, btn32, btn33, btn34, btn35});
 
         /**
-         * Ã¿¸öÒ»¼¶²Ëµ¥¶¼ÓÐ¶þ¼¶²Ëµ¥Ïî<br>
+         * Ã¿ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½<br>
          *
-         * ÔÚÄ³¸öÒ»¼¶²Ëµ¥ÏÂÃ»ÓÐ¶þ¼¶²Ëµ¥µÄÇé¿ö£¬menu¸ÃÈçºÎ¶¨ÒåÄØ£¿<br>
-         * ±ÈÈç£¬µÚÈý¸öÒ»¼¶²Ëµ¥Ïî²»ÊÇ¡°¸ü¶àÌåÑé¡±£¬¶øÖ±½ÓÊÇ¡°ÓÄÄ¬Ð¦»°¡±£¬ÄÇÃ´menuÓ¦¸ÃÕâÑù¶¨Òå£º<br>
+         * ï¿½ï¿½Ä³ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ã»ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½menuï¿½ï¿½ï¿½ï¿½Î¶ï¿½ï¿½ï¿½ï¿½Ø£ï¿½<br>
+         * ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ëµï¿½ï¿½î²»ï¿½Ç¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¡±ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½Ç¡ï¿½ï¿½ï¿½Ä¬Ð¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´menuÓ¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£º<br>
          * menu.setButton(new Button[] { mainBtn1, mainBtn2, btn33 });
          */
         Menu menu = new Menu();

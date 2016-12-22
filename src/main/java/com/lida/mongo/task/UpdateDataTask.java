@@ -17,9 +17,9 @@ public class UpdateDataTask {
     /**
      * 每个9个小时更新一下站点9的数据
      */
-    @Scheduled(cron = "* */30 * * * ?")
+    @Scheduled(cron = "*/5 * * * * ?")
     public void updataStaionNine(){
-        updateData.updateDataByCloud(9L);
+        //updateData.updateDataByCloud(9L);
     }
 
     /**
@@ -27,16 +27,16 @@ public class UpdateDataTask {
      */
     @Scheduled(cron = "*/5 * * * * ?")
     public void updatStationSeven(){
-        updateData.updateDataByCloud(7L);
+        //updateData.updateDataByCloud(7L);
     }
 
     @Scheduled(cron = "*/5 * * * * ?")
     public void updatStationFive(){
-        updateData.updateDataByCloud(5L);
+        //updateData.updateDataByCloud(5L);
     }
     @Scheduled(cron = "*/5 * * * * ?")
     public void updatStationThree(){
-        updateData.updateDataByCloud(3L);
+        //updateData.updateDataByCloud(3L);
     }
 
 
